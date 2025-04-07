@@ -1,9 +1,20 @@
 import Image from "next/image";
+import LandingPage from "@/components/landingPage/landingPage";
+import About from "@/components/about/about";
+import ClientFeedback from "@/components/ClientFeedback/clientFeedback";
+import BuildWithUs from "@/components/buildWithUs/buildWithUs";
+import ContactUs from "@/components/contactUs/contactUs";
+import Footer from "@/components/Footer/footer";
 
 export default function Home() {
   return (
-    <div className="grid bg-amber-100 grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-     
+    <div className="">
+      <LandingPage />
+      <About />
+      <ClientFeedback />
+      <BuildWithUs />
+      <ContactUs />
+      <Footer />
     </div>
   );
 }
