@@ -54,7 +54,7 @@ export default function Home() {
               alt="Workspace with laptop and phone"
               width={457}
               height={402}
-              className="w-full object-cover"
+              className="object-cover"
             />
           </div>
           <ContactForm />

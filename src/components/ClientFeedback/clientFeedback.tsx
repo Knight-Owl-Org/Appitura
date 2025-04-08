@@ -1,3 +1,5 @@
+"use client";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function TestimonialsSection() {
@@ -10,7 +12,7 @@ export default function TestimonialsSection() {
     },
     {
       text: "Appitura exceeded our expectations with their innovative solutions and seamless app development process. Partnering with Appitura was a game-changer for our business. Their expertise brought our vision to life.",
-      name: "SophiAlex Morgan",
+      name: "Sophi Alex Morgan",
       role: "Startup Founder",
       image: "/profile.png",
     },
@@ -20,6 +22,35 @@ export default function TestimonialsSection() {
       role: "Startup Founder",
       image: "/profile.png",
     },
+    {
+      text: "Appitura exceeded our expectations with their innovative solutions and seamless app development process. Partnering with Appitura was a game-changer for our business. Their expertise brought our vision to life.",
+      name: "Jessica Lee",
+      role: "Product Manager",
+      image: "/profile.png",
+    },
+    {
+      text: "Appitura exceeded our expectations with their innovative solutions and seamless app development process. Partnering with Appitura was a game-changer for our business. Their expertise brought our vision to life.",
+      name: "Michael Brown",
+      role: "CTO",
+      image: "/profile.png",
+    },
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % feedbacks.length); // Cycle through feedbacks
+    }, 3000); // 3 seconds interval
+
+    return () => clearInterval(interval); // Cleanup interval on component unmount
+  }, [feedbacks.length]);
+
+  // Reverse the order of displayed feedbacks
+  const displayedFeedbacks = [
+    feedbacks[(currentIndex + 2) % feedbacks.length],
+    feedbacks[(currentIndex + 1) % feedbacks.length],
+    feedbacks[currentIndex],
   ];
 
   return (
@@ -33,6 +64,7 @@ export default function TestimonialsSection() {
               fontFamily: "Inter",
               fontWeight: 400,
               textAlign: "center",
+              fontSize: "clamp(1.5rem, 5vw, 2.5rem)", // Responsive font size
             }}
           >
             What Our Clients Say <br /> About Us
@@ -44,6 +76,7 @@ export default function TestimonialsSection() {
               fontFamily: "Inter",
               fontWeight: 400,
               textAlign: "center",
+              fontSize: "clamp(1rem, 4vw, 1.25rem)", // Responsive font size
             }}
           >
             Our clients trust Appitura to deliver exceptional mobile app
@@ -51,11 +84,12 @@ export default function TestimonialsSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-55 justify-items-center">
-          {feedbacks.map((feedback, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-55 justify-items-center">
+          {/* Display reversed testimonials */}
+          {displayedFeedbacks.map((feedback, index) => (
             <div
               key={index}
-              className="bg-white rounded-4xl pt-15 pl-5 pr-5 pb-5 text-black mt-20 w-[430px]"
+              className="bg-white rounded-4xl pt-15 pl-5 pr-5 pb-5 text-black mt-20 w-full sm:w-[350px] lg:w-[430px] transition-transform duration-500 ease-in-out"
             >
               <p
                 className="text-sm mb-6 text-left"
@@ -65,7 +99,7 @@ export default function TestimonialsSection() {
                   fontWeight: 500,
                   textAlign: "left",
                   lineHeight: "110%",
-                  maxWidth: "430px",
+                  maxWidth: "100%", // Adjust width for responsiveness
                 }}
               >
                 {feedback.text}
@@ -74,7 +108,7 @@ export default function TestimonialsSection() {
                 style={{ border: "0.1px solid #0000004D", margin: "25px 0" }}
               />
 
-              <div className="flex items-center ">
+              <div className="flex items-center">
                 <div className="mr-3">
                   <Image
                     src={feedback.image}
@@ -91,6 +125,7 @@ export default function TestimonialsSection() {
                       color: "#000000CC",
                       fontFamily: "Inter",
                       fontWeight: 600,
+                      fontSize: "clamp(1rem, 3vw, 1.125rem)", // Responsive font size
                     }}
                   >
                     {feedback.name}
@@ -101,6 +136,7 @@ export default function TestimonialsSection() {
                       color: "#000000CC",
                       fontFamily: "Inter",
                       fontWeight: 600,
+                      fontSize: "clamp(0.75rem, 2vw, 0.875rem)", // Responsive font size
                     }}
                   >
                     {feedback.role}
@@ -114,3 +150,4 @@ export default function TestimonialsSection() {
     </section>
   );
 }
+

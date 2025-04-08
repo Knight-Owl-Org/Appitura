@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
@@ -30,7 +31,10 @@ export default function BuildWithUs() {
             </button>
           </div>
         </div>
-        <div style={{ width: 639, height: 346 }} className="relative flex-shrink-0">
+        <div
+          style={{ aspectRatio: "639 / 346" }}
+          className="relative flex-shrink-0 w-full md:w-[639px]"
+        >
           <Image
             src="/buildwithus1.png"
             alt="Team Work"
@@ -43,7 +47,10 @@ export default function BuildWithUs() {
 
       {/* Bottom image row */}
       <div className="flex flex-wrap justify-between items-start gap-4">
-        <div style={{ width: 226, height: 216 }} className="relative self-end">
+        <div
+          style={{ aspectRatio: "226 / 216", marginTop: "9.8rem" }}
+          className="relative w-[45%] sm:w-[226px]"
+        >
           <Image
             src="/buildwithus2.png"
             alt="Office view"
@@ -51,7 +58,10 @@ export default function BuildWithUs() {
             className="object-cover rounded-md"
           />
         </div>
-        <div style={{ width: 606, height: 374 }} className="relative">
+        <div
+          style={{ aspectRatio: "606 / 374" }}
+          className="relative w-full sm:w-[606px]"
+        >
           <Image
             src="/buildwithus3.png"
             alt="Light trails"
@@ -59,7 +69,10 @@ export default function BuildWithUs() {
             className="object-cover rounded-md"
           />
         </div>
-        <div style={{ width: 346, height: 314 }} className="relative">
+        <div
+          style={{ aspectRatio: "346 / 314" }}
+          className="relative w-[45%] sm:w-[346px]"
+        >
           <Image
             src="/buildwithus4.png"
             alt="Chess piece"
