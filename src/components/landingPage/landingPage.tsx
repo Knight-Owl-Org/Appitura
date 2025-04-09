@@ -1,104 +1,124 @@
-"use client";
-
-import { useRef } from "react";
-import Navbar from "./Navbar";
+import Image from "next/image";
+import Link from "next/link";
+import { Play } from "lucide-react";
 
 export default function Home() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
   return (
-    <main className="w-full h-full " style={{ backgroundColor: "#000000", minHeight: "100vh" }}>
-      <div style={{ display: "flex", minHeight: "100vh" }}>
-        {/* Video Container */}
-        <div className="video-container" style={{ paddingLeft: "91px", paddingTop: "80px", boxSizing: "border-box" }}>
-          <div style={{ position: "relative", width: "1195px", height: "816px", borderRadius: "30px", overflow: "hidden" }}>
-            {/* 🔵 Appitura Logo (Top Left) */}
-            <div style={{ position: "absolute", zIndex: 10 }}>
-              <div style={{ display: "flex", alignItems: "center", gap: "10px", backgroundColor: "#000000", padding: "8px 16px", borderRadius: "20px" }}>
-                <img src="/logo.png" alt="Appitura Logo" style={{ width: "84.31px", height: "86px" }} />
-                <span style={{ color: "#FFFFFF", fontSize: "64px", fontWeight: 400, fontFamily: "Jura", lineHeight: "100px" }}>Appitura</span>
-              </div>
+    <main className="min-h-screen bg-black text-white relative overflow-hidden">
+      {/* Main Content */}
+      <div className="flex flex-col md:flex-row">
+        {/* Left Section with Video */}
+        <div className="flex-1 relative pl-25 pt-20">
+          {/* Video Background */}
+          <div className="relative h-[calc(100vh-80px)]">
+            <div className="rounded-3xl overflow-hidden h-full">
+              <video autoPlay muted loop className="w-full h-full object-cover">
+                <source src="/home.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
 
-            {/* 🔘 Navbar */}
-            <div style={{ position: "absolute", top: "28px", right: "400px", zIndex: 10 }}>
-              <Navbar />
+            {/* 🔥 Logo on top-left corner of video */}
+            <div className="absolute top-0 z-20 flex items-center gap-3 bg-black/70 rounded-3xl py-2 pr-4 ">
+              <div className="relative">
+                <Image src="/logo.png" alt="Appitura Logo" width={84} height={86} className="object-contain" />
+              </div>
+              <h1 className="text-6xl font-light">Appitura</h1>
             </div>
 
-            {/* 🎥 Video */}
-            <video ref={videoRef} autoPlay loop muted width="1195" height="816" style={{ display: "block", width: "1195px", height: "816px", objectFit: "cover", borderRadius: "30px" }}>
-              <source src="/home.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-
-            {/* 📝 Text Block */}
-            <div style={{ position: "absolute", bottom: "50px", left: "87px", width: "600px" }}>
-              <div style={{ color: "#FFFFFF", fontFamily: "Inter, sans-serif", fontWeight: 700, fontSize: "55px", textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)", letterSpacing: "0%", lineHeight: "110%" }}>
-                Empowering your vision Through Innovative <span style={{ color: "#1B96C999" }}>Mobile Apps</span>
-              </div>
-              <div style={{ color: "#FFFFFF", fontFamily: "Inter, sans-serif", fontWeight: 400, fontSize: "20px", height: "82px", lineHeight: "110%", marginTop: "21px" }}>
-                At Appitura, we transform ideas into cutting-edge mobile applications that drive success and innovation. Discover the future of app development with us.
-              </div>
+            {/* Text Overlay */}
+            <div className="absolute bottom-20 left-10 flex flex-col z-10">
+              <h2 className="text-6xl font-[700] leading-tight max-w-xl" style={{ color: "#FFFFFF", fontFamily: "Inter" }}>
+                Empowering your vision Through Innovative{" "}
+                <span className="text-cyan-400">Mobile Apps</span>
+              </h2>
+              <p className="mt-6 max-w-lg text-white font-[400]" style={{ fontFamily: "Inter" }}>
+                At Appitura, we transform ideas into cutting-edge mobile applications that drive success and innovation.
+                Discover the future of app development with us.
+              </p>
             </div>
+
+            {/* Social Media Icons */}
+            <div className="absolute bottom-30 right-6 flex gap-4 bg-[#FFFFFF33] px-7 py-4 rounded-3xl z-10">
+              <Link href="#" className="rounded-full hover:bg-gray-700 transition">
+                <Image src="/linkedin.png" alt="LinkedIn" width={40} height={40} className="object-contain" />
+              </Link>
+              <Link href="#" className="rounded-full hover:bg-gray-700 transition">
+                <Image src="/tik tok.png" alt="TikTok" width={40} height={40} className="object-contain" />
+              </Link>
+              <Link href="#" className="rounded-full hover:bg-gray-700 transition">
+                <Image src="/insta.png" alt="Instagram" width={40} height={40} className="object-contain" />
+              </Link>
+            </div>
+{/* Explore the Experience Button */}
+<div className="absolute bottom-0 right-0 z-10">
+  <Link
+    href="/explore"
+    className="flex w-[461px] h-[84px] items-center justify-between px-6 border border-[#FFFFFF80] rounded-3xl hover:border-gray-600 transition"
+  >
+    <span className="text-lg font-medium flex-grow text-center">Explore the Experience</span>
+    <div className="rounded-full flex items-center justify-center mr-0">
+      <Image
+        src="/explore.png"
+        alt="Explore Icon"
+        width={64}
+        height={62}
+        className="object-contain"
+      />
+    </div>
+  </Link>
+</div>
+
+
           </div>
         </div>
 
-        {/* New Div Section */}
-        <div style={{ marginLeft: "17px", alignSelf: "center"  }}>
-          <div style={{ color: "#FFFFFF", fontFamily: "Jura", fontWeight: 700, fontSize: "45px", marginTop: "20px", width: "50px" , lineHeight: "110%"}}>
-            Your App’s Blueprint
+        {/* Right Sidebar */}
+        <div className="w-full md:w-80 bg-black p-3 flex flex-col justify-center">
+          <div className="flex justify-center mb-8">
+            <span className="text-sm text-cyan-400">Appitura Experience</span>
           </div>
-          <div style={{ color: "#FFFFFF", fontFamily: "Jura", fontWeight: 700, fontSize: "20px", marginTop: "20px" }}>
-            Top-notch Services
+
+          <div className="space-y-12">
+            <div>
+              <h3 className="text-5xl font-bold mb-6">
+                Your <br /> App&apos;s Blueprint
+              </h3>
+            </div>
+
+            <div className="space-y-8">
+              <div className="flex items-center justify-between">
+                <h1 className="text-xl font-semibold ">Top-notch Services</h1>
+                
+              </div>
+
+              <div className="space-y-8">
+                <div className="flex items-center">
+                  <Image src="/innavetive.png" alt="Innovative Solutions Logo" width={24} height={24} className="mr-4" />
+                  <span className="text-lg">Innovative Solutions</span>
+                </div>
+
+                <div className="flex items-center">
+                  <Image src="/expert.png" alt="Expert Development Logo" width={24} height={24} className="mr-4" />
+                  <span className="text-lg">Expert Development</span>
+                </div>
+
+                <div className="flex items-center">
+                  <Image src="/collabaration.png" alt="Collaborative Approach Logo" width={24} height={24} className="mr-4" />
+                  <span className="text-lg">Collaborative  <br /> Approach</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <div style={{ marginTop: "25px", display: "flex", flexDirection: "column", gap: "35px" }}>
-            {/* Innovative Solutions */}
-            <div style={{ display: "flex", alignItems: "center", gap: "11px" }}>
-              <img src="/innavetive.png" alt="Innovative Solutions Icon" style={{ width: "24px", height: "24px" }} />
-              <span style={{ color: "#FFFFFF", fontFamily: "Jura", fontWeight: 400, fontSize: "17px" }}>
-                Innovative Solutions
-              </span>
-            </div>
-            {/* Expert Development */}
-            <div style={{ display: "flex", alignItems: "center", gap: "11px" }}>
-              <img src="/expert.png" alt="Expert Development Icon" style={{ width: "24px", height: "24px" }} />
-              <span style={{ color: "#FFFFFF", fontFamily: "Jura", fontWeight: 400, fontSize: "17px" }}>
-                Expert Development
-              </span>
-            </div>
-            {/* Collaborative Approach */}
-            <div style={{ display: "flex", alignItems: "center", gap: "11px" }}>
-              <img src="/collabaration.png" alt="Collaborative Approach Icon" style={{ width: "24px", height: "24px" }} />
-              <span style={{ color: "#FFFFFF", fontFamily: "Jura", fontWeight: 400, fontSize: "17px" }}>
-                Collaborative Approach
-              </span>
-            </div>
+          <div className="mt-9">
+            <Link
+              href="/contact"
+              className=" border border-[#FFFFFF80] rounded-full py-4 px-20 text-center hover:bg-gray-900 transition"
+            >
+              Contact
+            </Link>
           </div>
-          <button style={{ 
-            width: "195px", 
-            height: "49px", 
-            borderRadius: "30px", 
-            border: "1px solid #FFFFFF80", 
-            background: "transparent", 
-            color: "#FFFFFF", 
-            fontFamily: "Jura, sans-serif", 
-            fontWeight: 400, 
-            fontSize: "18px", 
-            marginTop: "22px", 
-            cursor: "pointer" 
-          }}>
-            Contact
-          </button>
         </div>
-      </div>
-      {/* 🔴 Explore the Experience */}
-      <div style={{ position: "absolute", top: "710px", right: "39px", display: "flex", alignItems: "center", justifyContent: "space-between", width: "461px", height: "84px", borderRadius: "30px", border: "1px solid #FFFFFF80", padding: "0 31px" }}>
-        <div style={{ color: "#FFFFFF", fontFamily: "Jura", fontWeight: 400, fontSize: "18px", textAlign: "center", flex: 1 }}>
-          Explore the Experience
-        </div>
-        <button style={{ background: "transparent", border: "none", cursor: "pointer", padding: 0 }} onClick={() => { if (videoRef.current?.paused) { videoRef.current.play(); } else { videoRef.current?.pause(); } }}>
-          <img src="/explore.png" alt="Play button" style={{ width: "64px", height: "62px" }} />
-        </button>
       </div>
     </main>
   );
