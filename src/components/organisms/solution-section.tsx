@@ -1,12 +1,37 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 
 export default function MobileAppSolutions() {
   const [visibleTexts, setVisibleTexts] = useState<number[]>([])
+  const sectionRef = useRef<HTMLDivElement | null>(null)
+  const [inView, setInView] = useState(false)
 
   useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setInView(true)
+        }
+      },
+      {
+        threshold: 0.3, // Trigger when 30% of the section is in view
+      }
+    )
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current)
+    }
+
+    return () => {
+      if (sectionRef.current) observer.unobserve(sectionRef.current)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (!inView) return
+
     const textElements = [0, 1, 2, 3, 4, 5]
     let currentIndex = 0
 
@@ -20,7 +45,7 @@ export default function MobileAppSolutions() {
     }, 800)
 
     return () => clearInterval(interval)
-  }, [])
+  }, [inView])
 
   const textElements = [
     {
@@ -35,9 +60,9 @@ export default function MobileAppSolutions() {
     {
       id: 1,
       text: "Creative Innovation",
-      position: "top-[55%] left-[5%]",
+      position: "top-[65%] left-[5%]",
       arrowSrc: "/arrows/arrow2.png",
-      arrowClass: "top-2 left-24 rotate-[-10deg]",
+      arrowClass: "-top-15 left-24 rotate-[-10deg]",
       arrowWidth: 180,
       arrowHeight: 90,
     },
@@ -80,11 +105,11 @@ export default function MobileAppSolutions() {
   ]
 
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div ref={sectionRef} className="relative w-full h-screen overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image src="/bg1.png" alt="Background" fill className="object-cover" priority />
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div className="absolute inset-0"></div>
       </div>
 
       {/* Main content */}
