@@ -1,11 +1,17 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation"; // Import useRouter
 
 export default function Navbar() {
   const [active, setActive] = useState("Home");
+  const router = useRouter(); // Initialize useRouter
 
-  const navItems = ["Home", "Services", "About Us"];
+  const navItems = [
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services" },
+    { name: "About Us", path: "/about" },
+  ];
 
   return (
     <nav
@@ -19,12 +25,15 @@ export default function Navbar() {
       }}
     >
       {navItems.map((item) => {
-        const isActive = active === item;
+        const isActive = active === item.name;
 
         return (
           <button
-            key={item}
-            onClick={() => setActive(item)}
+            key={item.name}
+            onClick={() => {
+              setActive(item.name);
+              router.push(item.path); // Navigate to the respective path
+            }}
             style={{
               padding: "3.5px 15.5px", // Adjust padding for both top/bottom and left/right
               borderRadius: "10px",
@@ -40,7 +49,7 @@ export default function Navbar() {
               height: "auto", // Allow the button to adjust height based on padding
             }}
           >
-            {item}
+            {item.name}
           </button>
         );
       })}
