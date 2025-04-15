@@ -8,7 +8,7 @@ export default function HeroSection() {
       <div className="min-h-[300px] w-full flex flex-col px-4 py-6 md:px-[108px] md:py-25">
         {/* Back to Portfolio Link */}
         <div className="flex items-center mb-12 md:mb-[122px]">
-          <Link href="/portfolio" className="flex items-center text-white hover:text-blue-400 transition-colors">
+          <Link href="/aboutUs" className="flex items-center text-white hover:text-blue-400 transition-colors">
             <img src="/projectArrow.png" alt="Back" className="h-4 w-8 mr-2 md:mr-3" />
             <span className="text-base md:text-[20px] font-medium" style={{ fontFamily: "Inter" }}>
               Back to Portfolio

@@ -15,11 +15,15 @@ export default function Navbar() {
   ];
 
   useEffect(() => {
-    const currentItem = navItems.find((item) => item.path === pathname);
-    if (currentItem) {
-      setActive(currentItem.name); // Update active state based on current path
+    if (pathname === "/aboutUs" || pathname.startsWith("/projects")) {
+      setActive("About Us");
+    } else {
+      const currentItem = navItems.find((item) => item.path === pathname);
+      if (currentItem) {
+        setActive(currentItem.name);
+      }
     }
-  }, [pathname]); // Run effect when pathname changes
+  }, [pathname]);
 
   return (
     <nav

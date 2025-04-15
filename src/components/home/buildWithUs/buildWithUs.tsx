@@ -4,10 +4,10 @@ import { ArrowRight } from "lucide-react";
 
 export default function BuildWithUs() {
   return (
-    <div className="container mx-auto px-4 py-8 ">
+    <div className="container mx-auto py-8">
       {/* Top section */}
-      <div className="flex flex-col md:flex-row md:gap-30 mb-6 justify-center">
-        <div className=" flex flex-col ">
+      <div className="flex flex-col md:flex-row md:gap-27 mb-6 justify-center">
+        <div className="flex flex-col text-center md:text-left items-center md:items-start">
           <h2
             className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight"
             style={{ fontFamily: "Inter", fontWeight: 600, maxWidth: "500px" }}
@@ -33,7 +33,7 @@ export default function BuildWithUs() {
         </div>
         <div
           style={{ aspectRatio: "639 / 346" }}
-          className="relative flex-shrink-0 w-full md:w-[639px]"
+          className="relative flex-shrink-0 w-full md:w-[639px] mt-6 md:mt-0"
         >
           <Image
             src="/buildwithus1.png"
@@ -46,10 +46,10 @@ export default function BuildWithUs() {
       </div>
 
       {/* Bottom image row */}
-      <div className="flex flex-wrap justify-center items-start gap-[41px]">
+      <div className="flex flex-wrap justify-center items-start gap-6 sm:gap-[41px]">
         <div
-          style={{ aspectRatio: "226 / 216", marginTop: "9.8rem" }}
-          className="relative w-[45%] sm:w-[226px]"
+          style={{ aspectRatio: "226 / 216" }}
+          className="relative w-[45%] sm:w-[226px] md:mt-[9.8rem]"
         >
           <Image
             src="/buildwithus2.png"
