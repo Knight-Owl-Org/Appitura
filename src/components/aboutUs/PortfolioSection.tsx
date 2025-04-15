@@ -1,15 +1,13 @@
 import { Inter } from "next/font/google"
 import Link from "next/link"
 
+const inter = Inter({ subsets: ["latin"] })
+
 export default function PortfolioPage() {
   const projects = [
     {
       id: "01",
-      title: (
-        <>
-          Recipe<br />Nook
-        </>
-      ),
+      title: "Recipe Nook",
       description:
         "Recipe Nook is a simple, friendly app for saving and organizing your favorite home-cooked recipes. From family staples to creative experiments, you can add photos, notes, and cooking instructions. We believe every recipe has a story, and Recipe Nook helps you keep them close and easy to share.",
       logo: "/placeholder.svg?height=40&width=40",
@@ -18,11 +16,7 @@ export default function PortfolioPage() {
     },
     {
       id: "02",
-      title: (
-        <>
-          Date<br />Game
-        </>
-      ),
+      title: "Date Game",
       description:
         "Recipe Nook is a simple, friendly app for saving and organizing your favorite home-cooked recipes. From family staples to creative experiments, you can add photos, notes, and cooking instructions. We believe every recipe has a story, and Recipe Nook helps you keep them close and easy to share.",
       logo: "/placeholder.svg?height=40&width=40",
@@ -31,11 +25,7 @@ export default function PortfolioPage() {
     },
     {
       id: "03",
-      title: (
-        <>
-          Tailor my<br />clothes
-        </>
-      ),
+      title: "Tailor my clothes",
       description:
         "Recipe Nook is a simple, friendly app for saving and organizing your favorite home-cooked recipes. From family staples to creative experiments, you can add photos, notes, and cooking instructions. We believe every recipe has a story, and Recipe Nook helps you keep them close and easy to share.",
       logo: "/placeholder.svg?height=40&width=40",
@@ -46,61 +36,44 @@ export default function PortfolioPage() {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      <main className="container mx-auto px-4 py-16 md:py-24">
+      <main className="container mx-auto px-4 py-10 sm:py-16 md:py-24">
         <section className="mx-auto">
-          <div className="text-center mb-12 md:mb-16">
-            <h1
-              className="text-3xl md:text-4xl font-[600] mb-15"
-              style={{ fontFamily: "Inter" }}
-            >
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <h1 className={`text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 sm:mb-6 ${inter.className}`}>
               Our Portfolio
             </h1>
-            <p
-              className="text-sm md:text-base font-[400] max-w-[550px] mx-auto"
-              style={{ fontFamily: "Inter" }}
-            >
-              Explore our portfolio of innovative mobile apps designed to solve
-              real-world challenges. Each project showcases our commitment to
-              creativity, functionality, and user experience.
+            <p className={`text-sm sm:text-base font-normal max-w-[550px] mx-auto px-2 ${inter.className}`}>
+              Explore our portfolio of innovative mobile apps designed to solve real-world challenges. Each project
+              showcases our commitment to creativity, functionality, and user experience.
             </p>
           </div>
 
-          <div className="space-y-12">
+          <div className="space-y-8 sm:space-y-10 md:space-y-12">
             {projects.map((project) => (
-              <div
-                key={project.id}
-                className="border-t border-gray-700 pt-20 pb-15"
-              >
-                <div className="flex flex-wrap justify-between gap-y-10 px-5">
+              <div key={project.id} className="border-t border-gray-700 pt-8 sm:pt-12 md:pt-20 pb-8 sm:pb-10 md:pb-15">
+                <div className="flex flex-col lg:flex-row lg:justify-between gap-6 sm:gap-8 md:gap-10 px-2 sm:px-4 md:px-5">
                   {/* Left Section (ID + Title) */}
-                  <div className="flex items-start gap-[101px]">
-                    <span className="text-3xl font-[400]">{project.id}</span>
-                    <h2 className="text-5xl md:text-[80px] font-[700] leading-none">
-                      {project.title}
+                  <div className="flex items-start gap-4 sm:gap-6 md:gap-8 lg:gap-[101px]">
+                    <span className="text-xl sm:text-2xl md:text-3xl font-normal">{project.id}</span>
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[80px] font-bold leading-tight sm:leading-none">
+                      {formatTitle(project.title)}
                     </h2>
                   </div>
 
                   {/* Right Section (Description + Links) */}
-                  <div className="max-w-[430px] space-y-6">
-                    <p
-                      className="text-sm md:text-[16px]"
-                      style={{ fontFamily: "Inter" }}
-                    >
-                      {project.description}
-                    </p>
-                    <div className="flex justify-between items-center pr-9">
+                  <div className="max-w-full lg:max-w-[430px] space-y-4 sm:space-y-6 mt-4 lg:mt-0">
+                    <p className={`text-sm sm:text-base md:text-[16px] ${inter.className}`}>{project.description}</p>
+                    <div className="flex justify-between items-center pr-0 sm:pr-4 md:pr-9">
                       <Link
                         href={project.viewLink}
-                        className="text-[20px]"
-                        style={{ fontFamily: "Inter" }}
+                        className={`text-base sm:text-lg md:text-[20px] ${inter.className}`}
                       >
                         View
                       </Link>
-                      <hr className="mx-4 border-t border-white w-full" />
+                      <hr className="mx-2 sm:mx-4 border-t border-white w-full" />
                       <Link
                         href={project.projectLink}
-                        className="text-[20px]"
-                        style={{ fontFamily: "Inter" }}
+                        className={`text-base sm:text-lg md:text-[20px] ${inter.className}`}
                       >
                         Project
                       </Link>
@@ -114,4 +87,39 @@ export default function PortfolioPage() {
       </main>
     </div>
   )
+}
+
+// Helper function to format title with line breaks for larger screens
+function formatTitle(title: string) {
+  const words = title.split(" ")
+
+  // For "Recipe Nook" and "Date Game"
+  if (words.length === 2) {
+    return (
+      <>
+        <span className="sm:hidden">{title}</span>
+        <span className="hidden sm:inline">
+          {words[0]}
+          <br />
+          {words[1]}
+        </span>
+      </>
+    )
+  }
+
+  // For "Tailor my clothes"
+  if (words.length === 3) {
+    return (
+      <>
+        <span className="sm:hidden">{title}</span>
+        <span className="hidden sm:inline">
+          {words[0]} {words[1]}
+          <br />
+          {words[2]}
+        </span>
+      </>
+    )
+  }
+
+  return title
 }
