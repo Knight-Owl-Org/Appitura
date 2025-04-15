@@ -38,7 +38,7 @@ export default function HeroSection() {
       {/* About Section */}
       <div className="px-4 py-10 md:px-[91px] md:py-20 flex flex-col gap-8">
         <div className="flex flex-col md:flex-row justify-between md:gap-[100px] mb-10 md:mb-20">
-          <h2 className="text-[#1A97C7] text-2xl sm:text-4xl md:text-[50px] font-bold">
+          <h2 className="text-[#1A97C7] sm:mb-7 text-2xl sm:text-4xl md:text-[50px] font-bold">
             About
           </h2>
           <p
@@ -79,7 +79,7 @@ export default function HeroSection() {
       {/* Objective Section */}
       <div className="p-4 md:p-[91px] flex flex-col md:flex-row justify-between md:gap-[100px]">
         <h2 className="text-[#1A97C7] text-3xl md:text-[50px] font-[700] mb-8 md:mb-0">Objective</h2>
-        <p className="text-white font-[400] text-[25px] leading-relaxed max-w-[753px]" style={{ fontFamily: "Inter" }}>
+        <p className="text-white font-[400] text-xl md:text-[25px] leading-relaxed max-w-[753px]" style={{ fontFamily: "Inter" }}>
           Recipe Nook is a modern mobile app designed for home cooks, food enthusiasts, and kitchen creatives. It offers
           a cozy and intuitive space to store, organize, and revisit your favorite recipes—whether they're handwritten
           family treasures or new discoveries. With features like photo uploads, personal notes, and a visual recipe
@@ -90,7 +90,7 @@ export default function HeroSection() {
       {/* User Section */}
       <div className="p-4 md:p-[91px] flex flex-col md:flex-row justify-between md:gap-[100px]">
         <h2 className="text-[#1A97C7] text-3xl md:text-[50px] font-[700] mb-8 md:mb-0">User</h2>
-        <p className="text-white font-[400] text-[25px] leading-relaxed max-w-[753px]" style={{ fontFamily: "Inter" }}>
+        <p className="text-white font-[400] text-xl md:text-[25px] leading-relaxed max-w-[753px]" style={{ fontFamily: "Inter" }}>
           Recipe Nook is a modern mobile app designed for home cooks, food enthusiasts, and kitchen creatives. It offers
           a cozy and intuitive space to store, organize, and revisit your favorite recipes—whether they're handwritten
           family treasures or new discoveries. With features like photo uploads, personal notes, and a visual recipe
@@ -102,13 +102,13 @@ export default function HeroSection() {
       <div className="p-4 md:p-[91px] flex flex-col md:flex-row justify-between mb-17">
         <h2 className="text-[#1A97C7] text-3xl md:text-[50px] font-[700] mb-8 md:mb-0">Solutions</h2>
         <div className="max-w-[753px]">
-          <p className="text-white font-[400] text-[25px] leading-relaxed mb-8" style={{ fontFamily: "Inter" }}>
+          <p className="text-white font-[400] text-xl md:text-[25px] leading-relaxed mb-8" style={{ fontFamily: "Inter" }}>
             Whether it's grandma's legendary lasagna, your latest TikTok-inspired bake, or a quick weeknight stir-fry,
             this is the place where every recipe gets the spotlight it deserves. Built for cooks of all kinds, Recipe
             Nook helps you:
           </p>
 
-          <ul className="text-white font-[400] text-[25px] space-y-6" style={{ fontFamily: "Inter" }}>
+          <ul className="text-white font-[400] text-xl md:text-[25px] space-y-6" style={{ fontFamily: "Inter" }}>
             <li className="flex items-start">
               <span className="text-white mr-3">•</span>
               <span>Save and organize your favorite recipes with ease</span>
@@ -127,7 +127,7 @@ export default function HeroSection() {
             </li>
           </ul>
 
-          <p className="text-white font-[400] text-[25px] leading-relaxed mt-8" style={{ fontFamily: "Inter" }}>
+          <p className="text-white font-[400] text-xl md:text-[25px] leading-relaxed mt-8" style={{ fontFamily: "Inter" }}>
             We believe cooking is more than just food — it's connection, creativity, and comfort. Recipe Nook is here to
             support you every step of the way, from planning to plating. So grab your apron, let's cook, and let's cook
             up something extraordinary together.

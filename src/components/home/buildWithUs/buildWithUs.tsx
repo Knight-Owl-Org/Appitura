@@ -4,10 +4,10 @@ import { ArrowRight } from "lucide-react";
 
 export default function BuildWithUs() {
   return (
-    <div className="container mx-auto px-4 py-8 max-w-7xl">
+    <div className="container mx-auto px-4 py-8 ">
       {/* Top section */}
-      <div className="flex flex-col md:flex-row gap-8 mb-6 items-start">
-        <div className="flex-1 flex flex-col justify-center">
+      <div className="flex flex-col md:flex-row md:gap-30 mb-6 justify-center">
+        <div className=" flex flex-col ">
           <h2
             className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight"
             style={{ fontFamily: "Inter", fontWeight: 600, maxWidth: "500px" }}
@@ -46,7 +46,7 @@ export default function BuildWithUs() {
       </div>
 
       {/* Bottom image row */}
-      <div className="flex flex-wrap justify-between items-start gap-4">
+      <div className="flex flex-wrap justify-center items-start gap-[41px]">
         <div
           style={{ aspectRatio: "226 / 216", marginTop: "9.8rem" }}
           className="relative w-[45%] sm:w-[226px]"
