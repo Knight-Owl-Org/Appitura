@@ -3,6 +3,7 @@
 import Image from "next/image"
 import { Jura } from "next/font/google"
 import { useState, useEffect } from "react"
+import Navbar from "../molecules/Navbar";
 
 const jura = Jura({ subsets: ["latin"] })
 
@@ -31,7 +32,8 @@ export default function ExpertiseSection() {
   ))
 
   return (
-    <section className="bg-black text-white py-16 px-4 md:px-8 lg:px-16">
+    <section className="bg-black text-white py-46 px-4 md:px-8 lg:px-16">
+
       <div className="max-w-7xl mx-auto">
         <div className="mb-16">
           <h2 className={`text-4xl md:text-5xl font-light mb-4 leading-tight ${jura.className}`}>

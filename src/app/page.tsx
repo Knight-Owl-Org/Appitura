@@ -1,10 +1,9 @@
 import Image from "next/image";
-import LandingPage from "@/components/landingPage/landingPage";
-import About from "@/components/about/about";
-import ClientFeedback from "@/components/ClientFeedback/clientFeedback";
-import BuildWithUs from "@/components/buildWithUs/buildWithUs";
-import ContactUs from "@/components/contactUs/contactUs";
-import Footer from "@/components/Footer/footer";
+import LandingPage from "@/components/home/landingPage/landingPage";
+import About from "@/components/home/about/about";
+import ClientFeedback from "@/components/home/ClientFeedback/clientFeedback";
+import BuildWithUs from "@/components/home/buildWithUs/buildWithUs";
+import ContactUs from "@/components/home/contactUs/contactUs";
 
 export default function Home() {
   return (
@@ -14,7 +13,6 @@ export default function Home() {
       <ClientFeedback />
       <BuildWithUs />
       <ContactUs />
-      <Footer />
     </div>
   );
 }

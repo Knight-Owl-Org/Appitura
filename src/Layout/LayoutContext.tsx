@@ -1,5 +1,6 @@
 import React from "react";
 import Footer from "../components/molecules/footer";
+import Navbar from "@/components/molecules/Navbar";
 
 import { ReactNode } from "react";
 
@@ -12,6 +13,9 @@ const LayoutContext = ({ children }: BaseLayoutProps) => {
     <div className="home-background">
       {/* <ParticlesBackground /> */}
       {children}
+      <section id="footer">
+        <Navbar />
+      </section>
       <section id="footer">
         <Footer />
       </section>

@@ -1,21 +1,29 @@
 "use client";
 
-import { useState } from "react";
-import { useRouter } from "next/navigation"; // Import useRouter
+import { useState, useEffect } from "react";
+import { useRouter, usePathname } from "next/navigation"; // Import usePathname
 
 export default function Navbar() {
   const [active, setActive] = useState("Home");
   const router = useRouter(); // Initialize useRouter
+  const pathname = usePathname(); // Get the current path
 
   const navItems = [
     { name: "Home", path: "/" },
     { name: "Services", path: "/services" },
-    { name: "About Us", path: "/about" },
+    { name: "About Us", path: "/aboutUs" },
   ];
+
+  useEffect(() => {
+    const currentItem = navItems.find((item) => item.path === pathname);
+    if (currentItem) {
+      setActive(currentItem.name); // Update active state based on current path
+    }
+  }, [pathname]); // Run effect when pathname changes
 
   return (
     <nav
-      className="absolute top-0 left-0 flex items-center space-x-4 p-4"
+      className="absolute flex items-center space-x-4 p-4 top-[108px] right-[364px]"
       style={{
         width: "365px",
         backgroundColor: "#FFFFFF80",

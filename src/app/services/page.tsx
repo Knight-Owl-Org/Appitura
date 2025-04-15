@@ -1,4 +1,4 @@
-import Footer from "@/components/molecules/footer";
+
 import ExpertiseSection from "@/components/organisms/expertise-section";
 import ProcessSection from "@/components/organisms/process-section";
 import DevelopmentRoadmap from "@/components/organisms/roadmap-section";

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Play } from "lucide-react";
-import Navbar from "./Navbar";
+import Navbar from "../../molecules/Navbar";
 
 export default function Home() {
   return (
@@ -20,10 +20,7 @@ export default function Home() {
                 Your browser does not support the video tag.
               </video>
 
-              {/* Navbar positioned 111px from video (inside container) */}
-              <div className="absolute top-8 right-110 z-30">
-                <Navbar />
-              </div>
+             
 
               {/* 🔥 Logo on top-left corner of video */}
               <div className="absolute top-0 z-20 flex items-center gap-3 bg-black/70 rounded-3xl py-2 pr-4 ">
