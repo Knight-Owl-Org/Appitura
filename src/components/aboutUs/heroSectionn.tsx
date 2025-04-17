@@ -1,17 +1,30 @@
+"use client"
+
 import Image from "next/image"
+import { motion } from "framer-motion"
 
 export default function HeroSection() {
   return (
-    <main className="min-h-screen w-full bg-black flex items-center justify-center overflow-hidden relative ">
-      {/* Cloud in top left */}
-      <div className="hidden sm:block absolute top-[180px] lg:top-[80px] md:top-[90px] sm:top-[130px] left-0 z-10 w-[150px] h-[100px] sm:w-[240px] sm:h-[180px]  lg:w-[340px] lg:h-[250px] pointer-events-none">
+    <main className="min-h-screen w-full bg-black flex items-center justify-center overflow-hidden relative">
+      {/* Cloud in top left with animation */}
+      <motion.div
+        initial={{ x: -200, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1.4, ease: "easeOut" }}
+        className="hidden sm:block absolute top-[180px] lg:top-[80px] md:top-[90px] sm:top-[130px] left-0 z-10 w-[150px] h-[100px] sm:w-[240px] sm:h-[180px] lg:w-[340px] lg:h-[250px] pointer-events-none"
+      >
         <Image src="/cloud-left.png" alt="Cloud decoration" fill style={{ objectFit: "contain" }} priority />
-      </div>
+      </motion.div>
 
-      {/* Cloud in bottom right */}
-      <div className="hidden sm:block absolute bottom-47 lg:bottom-25 md:bottom-20 sm:bottom-40 right-0 z-10 w-[150px] h-[90px] sm:w-[270px] sm:h-[180px] lg:w-[374px] md:h-[221px] pointer-events-none">
+      {/* Cloud in bottom right with animation */}
+      <motion.div
+        initial={{ x: 200, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1.4, ease: "easeOut", delay: 0.3 }}
+        className="hidden sm:block absolute bottom-47 lg:bottom-25 md:bottom-20 sm:bottom-40 right-0 z-10 w-[150px] h-[90px] sm:w-[270px] sm:h-[180px] lg:w-[374px] md:h-[221px] pointer-events-none"
+      >
         <Image src="/cloud-right.png" alt="Cloud decoration" fill style={{ objectFit: "contain" }} />
-      </div>
+      </motion.div>
 
       {/* Main content with blue border */}
       <div

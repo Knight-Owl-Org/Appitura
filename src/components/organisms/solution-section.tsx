@@ -105,7 +105,7 @@ export default function MobileAppSolutions() {
   ]
 
   return (
-    <div ref={sectionRef} className="relative w-full h-screen overflow-hidden">
+    <div ref={sectionRef} className="relative w-full h-screen overflow-hidden bg-black">
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image src="/bg1.png" alt="Background" fill className="object-cover" priority />

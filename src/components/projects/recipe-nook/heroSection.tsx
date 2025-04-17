@@ -1,7 +1,20 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
+import { motion } from "framer-motion"
+
 
 export default function HeroSection() {
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, ease: "easeOut" },
+    },
+  }
+  
   return (
     <div className=" bg-black text-white">
       {/* Hero Section */}
@@ -37,7 +50,10 @@ export default function HeroSection() {
 
       {/* About Section */}
       <div className="px-4 py-10 md:px-[91px] md:py-20 flex flex-col gap-8">
-        <div className="flex flex-col md:flex-row justify-between md:gap-[100px] mb-10 md:mb-20">
+        <motion.div className="flex flex-col md:flex-row justify-between md:gap-[100px] mb-10 md:mb-20"variants={fadeInUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}>
           <h2 className="text-[#1A97C7] sm:mb-7 text-2xl sm:text-4xl md:text-[50px] font-bold">
             About
           </h2>
@@ -50,7 +66,7 @@ export default function HeroSection() {
             handwritten family treasures or new discoveries. With features like smart search, personal notes, and a
             visual recipe dashboard, Recipe Nook turns everyday cooking into a more joyful and personal experience.
           </p>
-        </div>
+        </motion.div>
 
         <div className="w-full mb-8">
           <p
@@ -77,7 +93,12 @@ export default function HeroSection() {
       </div>
 
       {/* Objective Section */}
-      <div className="p-4 md:p-[91px] flex flex-col md:flex-row justify-between md:gap-[100px]">
+      <motion.div className="p-4 md:p-[91px] flex flex-col md:flex-row justify-between md:gap-[100px]"
+      variants={fadeInUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }}>
+
         <h2 className="text-[#1A97C7] text-3xl md:text-[50px] font-[700] mb-8 md:mb-0">Objective</h2>
         <p className="text-white font-[400] text-xl md:text-[25px] leading-relaxed max-w-[753px]" style={{ fontFamily: "Inter" }}>
           Recipe Nook is a modern mobile app designed for home cooks, food enthusiasts, and kitchen creatives. It offers
@@ -85,10 +106,13 @@ export default function HeroSection() {
           family treasures or new discoveries. With features like photo uploads, personal notes, and a visual recipe
           dashboard, Recipe Nook turns everyday cooking into a more joyful and personal experience.
         </p>
-      </div>
+      </motion.div>
 
       {/* User Section */}
-      <div className="p-4 md:p-[91px] flex flex-col md:flex-row justify-between md:gap-[100px]">
+      <motion.div className="p-4 md:p-[91px] flex flex-col md:flex-row justify-between md:gap-[100px]"variants={fadeInUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }}>
         <h2 className="text-[#1A97C7] text-3xl md:text-[50px] font-[700] mb-8 md:mb-0">User</h2>
         <p className="text-white font-[400] text-xl md:text-[25px] leading-relaxed max-w-[753px]" style={{ fontFamily: "Inter" }}>
           Recipe Nook is a modern mobile app designed for home cooks, food enthusiasts, and kitchen creatives. It offers
@@ -96,10 +120,13 @@ export default function HeroSection() {
           family treasures or new discoveries. With features like photo uploads, personal notes, and a visual recipe
           dashboard, Recipe Nook turns everyday cooking into a more joyful and personal experience.
         </p>
-      </div>
+      </motion.div>
 
       {/* Solutions Section */}
-      <div className="p-4 md:p-[91px] flex flex-col md:flex-row justify-between mb-17">
+      <motion.div className="p-4 md:p-[91px] flex flex-col md:flex-row justify-between mb-17"variants={fadeInUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }}>
         <h2 className="text-[#1A97C7] text-3xl md:text-[50px] font-[700] mb-8 md:mb-0">Solutions</h2>
         <div className="max-w-[753px]">
           <p className="text-white font-[400] text-xl md:text-[25px] leading-relaxed mb-8" style={{ fontFamily: "Inter" }}>
@@ -133,7 +160,7 @@ export default function HeroSection() {
             up something extraordinary together.
           </p>
         </div>
-      </div>
+      </motion.div>
 
       {/* Gallery Section */}
       <div className=" "> 

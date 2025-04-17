@@ -5,19 +5,19 @@ import Image from "next/image";
 export default function TestimonialsSection() {
   const feedbacks = [
     {
-      text: "Appitura exceeded our expectations with their innovative solutions and seamless app development process.Partnering with Appitura was a game-changer for our business. Their expertise brought our vision to life.",
+      text: "Appitura exceeded our expectations with their innovative solutions and seamless app development process. Partnering with Appitura was a game-changer for our business. Their expertise brought our vision to life.",
       name: "Alex Morgan",
       role: "Startup Founder",
       image: "/profile.png",
     },
     {
-      text: "Appitura exceeded our expectations with their innovative solutions and seamless app development process.Partnering with Appitura was a game-changer for our business. Their expertise brought our vision to life.",
+      text: "Appitura exceeded our expectations with their innovative solutions and seamless app development process. Partnering with Appitura was a game-changer for our business. Their expertise brought our vision to life.",
       name: "Sophi Alex Morgan",
       role: "Startup Founder",
       image: "/profile.png",
     },
     {
-      text: "Appitura exceeded our expectations with their innovative solutions and seamless app development process.Partnering with Appitura was a game-changer for our business. Their expertise brought our vision to life.",
+      text: "Appitura exceeded our expectations with their innovative solutions and seamless app development process. Partnering with Appitura was a game-changer for our business. Their expertise brought our vision to life.",
       name: "Jessica Lee",
       role: "Product Manager",
       image: "/profile.png",
@@ -30,7 +30,7 @@ export default function TestimonialsSection() {
     },
   ];
 
-  const duplicatedFeedbacks = [...feedbacks, ...feedbacks]; // Double it
+  const duplicatedFeedbacks = [...feedbacks, ...feedbacks]; // Duplicate the feedbacks for infinite loop
 
   const containerRef = useRef<HTMLDivElement>(null);
   const [isDragging, setIsDragging] = useState(false);
@@ -42,7 +42,7 @@ export default function TestimonialsSection() {
     setStartX(e.pageX - (containerRef.current?.offsetLeft || 0));
     setScrollLeft(containerRef.current?.scrollLeft || 0);
     if (containerRef.current) {
-      containerRef.current.style.animationPlayState = "paused"; // Pause animation
+      containerRef.current.style.animationPlayState = "paused"; // Pause animation while dragging
     }
   };
 
@@ -50,7 +50,7 @@ export default function TestimonialsSection() {
     if (!isDragging) return;
     e.preventDefault();
     const x = e.pageX - (containerRef.current?.offsetLeft || 0);
-    const walk = (x - startX) * 2; // Adjust the multiplier for sensitivity
+    const walk = (x - startX) * 2; // Reverse the direction of the scroll (Right to Left)
     if (containerRef.current) {
       containerRef.current.scrollLeft = scrollLeft - walk;
     }
@@ -59,9 +59,17 @@ export default function TestimonialsSection() {
   const handleMouseUpOrLeave = () => {
     setIsDragging(false);
     if (containerRef.current) {
-      containerRef.current.style.animationPlayState = "running"; // Resume animation
+      containerRef.current.style.animationPlayState = "running"; // Resume animation after dragging
     }
   };
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (container) {
+      // Ensure the scroll starts at the middle of the duplicated feedbacks to avoid showing blank space
+      container.scrollLeft = container.scrollWidth / 2;
+    }
+  }, []);
 
   return (
     <section className="w-full bg-black text-white py-20 px-4 overflow-hidden">
@@ -70,8 +78,7 @@ export default function TestimonialsSection() {
           What Our Clients Say <br /> About Us
         </h2>
         <p className="text-lg font-[400] md:font-[20px] mx-auto " style={{ fontFamily: "Inter" }}>
-          Our clients trust Appitura to deliver exceptional mobile app
-          solutions that drive results.
+          Our clients trust Appitura to deliver exceptional mobile app solutions that drive results.
         </p>
       </div>
 
@@ -113,7 +120,9 @@ export default function TestimonialsSection() {
                       <h4 className="text-[18px] font-[600] text-black/80" style={{ fontFamily: "Inter" }}>
                         {feedback.name}
                       </h4>
-                      <p className="text-[10px] font-[600] text-black/60" style={{fontFamily:"Inter"}}>{feedback.role}</p>
+                      <p className="text-[10px] font-[600] text-black/60" style={{ fontFamily: "Inter" }}>
+                        {feedback.role}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -129,7 +138,7 @@ export default function TestimonialsSection() {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(-50%);
+            transform: translateX(50%); /* Scroll from right to left */
           }
         }
         .animate-scroll {

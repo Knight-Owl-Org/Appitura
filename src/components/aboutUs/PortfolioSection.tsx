@@ -1,7 +1,31 @@
+"use client"
+
 import { Inter } from "next/font/google"
 import Link from "next/link"
+import { motion } from "framer-motion"
 
 const inter = Inter({ subsets: ["latin"] })
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.8, // increased stagger delay for slower animation
+    },
+  },
+}
+
+const projectVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1.5, // increased duration for smoother animation
+      ease: "easeInOut",
+    },
+  },
+}
 
 export default function PortfolioPage() {
   const projects = [
@@ -18,7 +42,7 @@ export default function PortfolioPage() {
       id: "02",
       title: "Date Game",
       description:
-        "Recipe Nook is a simple, friendly app for saving and organizing your favorite home-cooked recipes. From family staples to creative experiments, you can add photos, notes, and cooking instructions. We believe every recipe has a story, and Recipe Nook helps you keep them close and easy to share.",
+        "Date Game is a fun app for couples to explore creative date ideas. Browse challenges, track memories, and unlock experiences together.",
       logo: "/placeholder.svg?height=40&width=40",
       viewLink: "#",
       projectLink: "#",
@@ -27,7 +51,7 @@ export default function PortfolioPage() {
       id: "03",
       title: "Tailor my clothes",
       description:
-        "Recipe Nook is a simple, friendly app for saving and organizing your favorite home-cooked recipes. From family staples to creative experiments, you can add photos, notes, and cooking instructions. We believe every recipe has a story, and Recipe Nook helps you keep them close and easy to share.",
+        "Tailor My Clothes helps you schedule fittings and manage alterations from the comfort of your home. Upload designs, get quotes, and more.",
       logo: "/placeholder.svg?height=40&width=40",
       viewLink: "#",
       projectLink: "#",
@@ -48,9 +72,19 @@ export default function PortfolioPage() {
             </p>
           </div>
 
-          <div className="space-y-8 sm:space-y-10 md:space-y-12">
+          <motion.div
+            className="space-y-8 sm:space-y-10 md:space-y-12"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
             {projects.map((project) => (
-              <div key={project.id} className="border-t border-gray-700 pt-8 sm:pt-12 md:pt-20 pb-8 sm:pb-10 md:pb-15">
+              <motion.div
+                key={project.id}
+                variants={projectVariants}
+                className="border-t border-gray-700 pt-8 sm:pt-12 md:pt-20 pb-8 sm:pb-10 md:pb-15"
+              >
                 <div className="flex flex-col lg:flex-row lg:justify-between gap-6 sm:gap-8 md:gap-10 px-2 sm:px-4 md:px-5">
                   {/* Left Section (ID + Title) */}
                   <div className="flex items-start gap-4 sm:gap-6 md:gap-8 lg:gap-[101px]">
@@ -80,9 +114,9 @@ export default function PortfolioPage() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </section>
       </main>
     </div>
@@ -93,7 +127,6 @@ export default function PortfolioPage() {
 function formatTitle(title: string) {
   const words = title.split(" ")
 
-  // For "Recipe Nook" and "Date Game"
   if (words.length === 2) {
     return (
       <>
@@ -107,7 +140,6 @@ function formatTitle(title: string) {
     )
   }
 
-  // For "Tailor my clothes"
   if (words.length === 3) {
     return (
       <>
