@@ -44,13 +44,13 @@ export default function Home() {
 
               {/* Social Media Icons */}
               <div className="absolute bottom-30 right-6 flex gap-4 bg-[#FFFFFF33] px-7 py-4 rounded-3xl z-10">
-                <Link href="#" className="rounded-full hover:bg-gray-700 transition">
+                <Link href="https://www.linkedin.com/company/appitura/" className="rounded-full hover:bg-gray-700 transition">
                   <Image src="/linkedin.png" alt="LinkedIn" width={40} height={40} className="object-contain" />
                 </Link>
-                <Link href="#" className="rounded-full hover:bg-gray-700 transition">
+                <Link href="https://www.tiktok.com/@appituralife?_t=ZS-8vcui3Km9ha&_r=1" className="rounded-full hover:bg-gray-700 transition">
                   <Image src="/tik tok.png" alt="TikTok" width={40} height={40} className="object-contain" />
                 </Link>
-                <Link href="#" className="rounded-full hover:bg-gray-700 transition">
+                <Link href="https://www.instagram.com/appituralife?igsh=MTFxZWNpN3YxYmtvNQ==" className="rounded-full hover:bg-gray-700 transition">
                   <Image src="/insta.png" alt="Instagram" width={40} height={40} className="object-contain" />
                 </Link>
               </div>
