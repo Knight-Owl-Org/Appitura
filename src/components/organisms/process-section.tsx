@@ -57,18 +57,18 @@ export default function ProcessSection() {
                 className="w-full h-full object-cover opacity-70"
               />
               <div className="absolute bottom-0 left-0 p-6 sm:p-8 z-20">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-medium mb-4 leading-tight">
-                  Our Process for{" "}
-                  <span className="text-[#3aa8c1] block">
-                    App
-                    <br />
-                    Development
-                  </span>
-                </h2>
-                <p className="text-sm md:text-base text-gray-300 max-w-md">
-                  From ideation to deployment, we ensure every step is tailored to your unique needs
-                </p>
-              </div>
+  <h2
+    className="text-2xl sm:text-3xl md:text-4xl font-[600] mb-4 leading-tight"
+    style={{ fontFamily: "Inter" }}
+  >
+    Our Process for{" "}
+    <span className="text-[#3aa8c1]">App Development</span>
+  </h2>
+  <p className="text-sm md:text-base text-gray-300 max-w-md" style={{ fontFamily: "Inter" }}>
+    From ideation to deployment, we ensure every step is tailored to your unique needs
+  </p>
+</div>
+
             </motion.div>
           </div>
 
@@ -81,19 +81,19 @@ export default function ProcessSection() {
             viewport={{ once: true, amount: 0.3 }}
           >
             {/* Step 1 */}
-            <motion.div className="flex mb-12" variants={stepVariants}>
+            <motion.div className="flex mb-12" style={{ fontFamily: "Inter" }} variants={stepVariants}>
               <StepIcon icon={<Lightbulb className="w-6 h-6 sm:w-7 sm:h-7 text-white" />} />
               <StepContent title="Consultation & Strategy" text="Understanding your vision and defining clear objectives" />
             </motion.div>
 
             {/* Step 2 */}
-            <motion.div className="flex mb-12" variants={stepVariants}>
+            <motion.div className="flex mb-12" style={{ fontFamily: "Inter" }} variants={stepVariants}>
               <StepIcon icon={<CodeXml className="w-6 h-6 sm:w-7 sm:h-7 text-white" />} />
               <StepContent title="Design & Development" text="Creating user focused designs and robust functionalities" />
             </motion.div>
 
             {/* Step 3 */}
-            <motion.div className="flex" variants={stepVariants}>
+            <motion.div className="flex" style={{ fontFamily: "Inter" }} variants={stepVariants}>
               <StepIcon icon={<Rocket className="w-6 h-6 sm:w-7 sm:h-7 text-white" />} />
               <StepContent title="Launch & Support" text="Deploying your app and providing ongoing maintenance." />
             </motion.div>

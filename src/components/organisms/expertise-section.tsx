@@ -36,12 +36,12 @@ export default function ExpertiseSection() {
 
       <div className="max-w-7xl mx-auto">
         <div className="mb-16">
-          <h2 className={`text-4xl md:text-5xl font-light mb-4 leading-tight ${jura.className}`}>
+          <h2 className={`text-4xl md:text-5xl font-light mb-4 leading-tight `} style={{ fontFamily: "Jura" }}>
             {formattedText}
             <span className="animate-pulse">|</span>
           </h2>
 
-          <p className="max-w-2xl text-base md:text-lg">
+          <p className="max-w-2xl text-base md:text-lg"style={{ fontFamily: "Inter" }}>
             Discover how Appitura's tailored solutions can transform your business. Navigate our services and unlock
             your potential.
           </p>
@@ -58,8 +58,8 @@ export default function ExpertiseSection() {
 
               {/* Right column for the text */}
               <div className="w-5/6">
-                <h3 className="text-[#3aa8c1] text-lg font-medium mb-1">Custom Development</h3>
-                <p className="text-sm text-gray-300">Building apps that align perfectly with your business goals.</p>
+                <h3 className="text-[#3aa8c1] max-w-[200px]  text-lg font-[700] mb-1" style={{ fontFamily: "Inter", background: "linear-gradient(to right, #00a8ff 40% , #FFFFFF )" , WebkitBackgroundClip: "text",WebkitTextFillColor: "transparent", }}>Custom Development</h3>
+                <p className="text-sm text-gray-300" style={{ fontFamily: "Inter" }}>Building apps that align perfectly with your business goals.</p>
               </div>
             </div>
           </div>
@@ -74,8 +74,8 @@ export default function ExpertiseSection() {
 
               {/* Right column for text */}
               <div className="w-5/6">
-                <h3 className="text-[#3aa8c1] text-lg font-medium mb-1">Platform Expertise</h3>
-                <p className="text-sm text-gray-300">
+                <h3 className="text-[#3aa8c1] max-w-[200px] text-lg font-[700] mb-1" style={{ fontFamily: "Inter", background: "linear-gradient(to right, #00a8ff 40% , #FFFFFF )" , WebkitBackgroundClip: "text",WebkitTextFillColor: "transparent", }}>Platform Expertise</h3>
+                <p className="text-sm text-gray-300" style={{ fontFamily: "Inter" }}>
                   Delivering seamless experience across iOS and Android platforms.
                 </p>
               </div>
@@ -92,8 +92,8 @@ export default function ExpertiseSection() {
 
               {/* Right column for text */}
               <div className="w-5/6">
-                <h3 className="text-[#3aa8c1] text-lg font-medium mb-1">Scalable Solutions</h3>
-                <p className="text-sm text-gray-300">Creating apps that grow with your business needs.</p>
+                <h3 className="text-[#3aa8c1] max-w-[200px] text-lg font-[700] mb-1" style={{ fontFamily: "Inter", background: "linear-gradient(to right, #00a8ff 40% , #FFFFFF )" , WebkitBackgroundClip: "text",WebkitTextFillColor: "transparent", }}>Scalable Solutions</h3>
+                <p className="text-sm text-gray-300" style={{ fontFamily: "Inter" }}>Creating apps that grow with your business needs.</p>
               </div>
             </div>
           </div>

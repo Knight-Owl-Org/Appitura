@@ -42,7 +42,7 @@ export default function MobileAppSolutions() {
       } else {
         clearInterval(interval)
       }
-    }, 800)
+    }, 600)
 
     return () => clearInterval(interval)
   }, [inView])
@@ -114,9 +114,9 @@ export default function MobileAppSolutions() {
 
       {/* Main content */}
       <div className="relative z-10 flex flex-col items-center justify-center w-full h-full px-4 text-white text-center">
-        <h2 className="text-blue-400 text-xl md:text-sm lg:text-md font-bold mb-8">Mobile App Development</h2>
-        <h3 className="text-3xl md:text-xl lg:text-3xl font-bold mb-16">Innovative Mobile App Solutions</h3>
-        <p className="max-w-3xl text-sm md:text-base lg:text-lg px-4">
+        <h2 className="text-blue-400 text-xl md:text-sm lg:text-md font-[500] mb-8" style={{fontFamily:"Inter"}}>Mobile App Development</h2>
+        <h3 className="text-3xl md:text-xl lg:text-3xl font-[600] mb-16" style={{fontFamily:"Inter"}}>Innovative Mobile App Solutions</h3>
+        <p className="max-w-3xl text-sm md:text-base lg:text-lg px-4 font-[400]" style={{fontFamily:"Inter"}}>
           At Appitura, we combine creativity, technical expertise, and industry insights to deliver tailored mobile app
           solutions that meet unique business needs. Appitura's innovative mobile app solutions are designed to enhance
           user experiences and drive business growth.
@@ -132,7 +132,7 @@ export default function MobileAppSolutions() {
           }`}
         >
           <div className="relative">
-            <p className="text-xs md:text-sm text-gray-200 whitespace-nowrap">{item.text}</p>
+            <p className="text-xs md:text-sm text-gray-200 whitespace-nowrap" style={{fontFamily:"Inter"}}>{item.text}</p>
             <Image
               src={item.arrowSrc}
               alt="Arrow"
