@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="w-full">
       <div className="container bg-white mx-auto px-4 py-18">
         <nav className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8 md:space-x-20">
-          <Link href="/about" className="text-gray-800 hover:text-gray-600 font-semibold"
+          <Link href="/aboutUs" className="text-gray-800 hover:text-gray-600 font-semibold"
           style={{ fontFamily: "Inter"}}>
             About Appitura
           </Link>
@@ -13,7 +13,7 @@ export default function Footer() {
           style={{ fontFamily: "Inter"}}>
             Services
           </Link>
-          <Link href="/about" className="text-gray-800 hover:text-gray-600 font-semibold"
+          <Link href="/aboutUs" className="text-gray-800 hover:text-gray-600 font-semibold"
           style={{ fontFamily: "Inter"}}>
             Portfolio
           </Link>
