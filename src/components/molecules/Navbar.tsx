@@ -15,6 +15,8 @@ export default function Navbar() {
   ];
 
   useEffect(() => {
+    if (!pathname) return;
+  
     if (pathname === "/aboutUs" || pathname.startsWith("/projects")) {
       setActive("About Us");
     } else {
@@ -24,6 +26,7 @@ export default function Navbar() {
       }
     }
   }, [pathname]);
+  
 
   return (
     <nav
