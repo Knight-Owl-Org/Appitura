@@ -1,8 +1,16 @@
 "use client";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import buildWithUsArrow from "/public/buildWithUsArrow.png";
+import { useRouter } from "next/navigation"; 
 
 export default function BuildWithUs() {
+
+  const router = useRouter(); // Initialize the useRouter hook
+
+  // Function to handle the redirection
+  const handleLearnMoreClick = () => {
+    router.push("/services"); // Redirect to the Services page
+  };
   return (
     <div className="container mx-auto py-8">
       {/* Top section */}
@@ -26,8 +34,9 @@ export default function BuildWithUs() {
             solutions and unmatched expertise.
           </p>
           <div>
-            <button className="bg-[#1A2730] text-white px-6 py-2.5 rounded flex items-center gap-2 hover:bg-gray-800 transition-colors">
-              Learn More <ArrowRight className="h-4 w-4" />
+            <button onClick={handleLearnMoreClick} className="bg-[#1A2730] text-white px-6 py-2.5 rounded flex items-center gap-2 hover:bg-gray-800 transition-colors">
+              Learn More 
+              <Image src={buildWithUsArrow} alt="Arrow" className="6 w-6" />
             </button>
           </div>
         </div>

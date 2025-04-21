@@ -3,7 +3,7 @@ import ContactForm from "@/components/home/contactUs/contactForm"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white flex items-center justify-center p-4 md:pt-8 md:pb-[100px]">
+    <main id="contactUs" className="min-h-screen bg-black text-white flex items-center justify-center p-4 md:pt-8 md:pb-[100px]">
       <div className="w-full flex flex-col md:flex-row items-center justify-center mt-10 md:mt-20 space-y-10 md:space-y-0">
         {/* Left Column - Contact Information */}
         <div className="w-full md:w-1/2 space-y-8 text-center md:text-left px-4 md:px-0">

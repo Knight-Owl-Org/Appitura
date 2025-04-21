@@ -27,9 +27,9 @@ export default function Navbar() {
 
   return (
     <nav
-      className="absolute flex items-center space-x-4 p-4 top-[108px] right-[364px]"
+      className="absolute flex items-center space-x-4 p-6 top-[108px] md:right-20 lg:right-[394px]"
       style={{
-        width: "365px",
+        
         backgroundColor: "#FFFFFF80",
         borderRadius: "10px",
         whiteSpace: "nowrap", // Prevent wrapping
