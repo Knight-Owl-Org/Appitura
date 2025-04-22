@@ -50,7 +50,7 @@ export default function ContactForm() {
 
   return (
     <div className="bg-white p-6 rounded-lg">
-      <form onSubmit={handleSubmit} className="space-y-4 px-6 pt-8" >
+      <form onSubmit={handleSubmit} className="md:space-y-4 space-y-7 md:px-6 md:pt-8 px-4 py-3" >
         <div>
           <input
             type="text"
@@ -58,7 +58,7 @@ export default function ContactForm() {
             value={formData.name}
             onChange={handleChange}
             placeholder="Your Name"
-            className="w-full py-1.5 px-5 border border-[#1A97C7] rounded bg-white text-black"
+            className="w-full md:py-1.5 py-1 px-3 md:text-[18px] text-[12px] md:px-5 border border-[#1A97C7] rounded bg-white text-black "
             style={{ fontFamily: "Inter" }}
             required
           />
@@ -70,7 +70,7 @@ export default function ContactForm() {
             value={formData.email}
             onChange={handleChange}
             placeholder="Your Email"
-            className="w-full py-1.5 px-5 border border-[#1A97C7] rounded bg-white text-black"
+            className="w-full md:py-1.5 md:px-5 py-1 px-3 md:text-[18px] text-[12px] border border-[#1A97C7] rounded bg-white text-black"
             style={{ fontFamily: "Inter" }}
             required
           />
@@ -82,7 +82,7 @@ export default function ContactForm() {
             value={formData.subject}
             onChange={handleChange}
             placeholder="Subject"
-            className="w-full py-1.5 px-5 border border-[#1A97C7] rounded bg-white text-black"
+            className="w-full md:py-1.5 md:px-5 py-1 px-3 md:text-[18px] text-[12px] border border-[#1A97C7] rounded bg-white text-black"
             style={{ fontFamily: "Inter" }}
             required
           />
@@ -93,7 +93,7 @@ export default function ContactForm() {
             value={formData.message}
             onChange={handleChange}
             placeholder="Your Message"
-            className="w-full p-2 px-5 border border-[#1A97C7] rounded bg-white text-black min-h-[120px] resize-none"
+            className="w-full md:p-2 p-1 md:px-5 py-1 px-3 md:text-[18px] text-[12px] border border-[#1A97C7] rounded bg-white text-black md:min-h-[120px]  min-h-[82px] resize-none"
             style={{ fontFamily: "Inter" }}
             required
           />
@@ -105,7 +105,7 @@ export default function ContactForm() {
         <div className="flex justify-center">
           <Button
             type="submit"
-            className="bg-[#1A2730] hover:bg-[#263845] text-white w-65 py-5 rounded-lg font-[400] text-[18px]"
+            className="bg-[#1A2730] hover:bg-[#263845] text-white md:w-65 md:py-5 rounded-lg font-[400] text-[12px] md:text-[18px] px-10 "
             disabled={loading} // Disable button while loading
             style={{ fontFamily: "Inter" }}
           >

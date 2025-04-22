@@ -28,21 +28,31 @@ export default function TestimonialsSection() {
       role: "CTO",
       image: "/profile.png",
     },
+    {
+      text: "Their technical expertise and understanding of user experience made all the difference.",
+      name: "Michael Brown",
+      role: "CTO",
+      image: "/profile.png",
+    },
   ];
 
-  const duplicatedFeedbacks = [...feedbacks, ...feedbacks]; // Duplicate the feedbacks for infinite loop
+  const duplicatedFeedbacks = [...feedbacks, ...feedbacks];
 
   const containerRef = useRef<HTMLDivElement>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
 
+  const maxDots = 4;
+  const visibleFeedbacks = feedbacks.slice(0, maxDots);
+  const [currentMobileIndex, setCurrentMobileIndex] = useState(0);
+
   const handleMouseDown = (e: React.MouseEvent) => {
     setIsDragging(true);
     setStartX(e.pageX - (containerRef.current?.offsetLeft || 0));
     setScrollLeft(containerRef.current?.scrollLeft || 0);
     if (containerRef.current) {
-      containerRef.current.style.animationPlayState = "paused"; // Pause animation while dragging
+      containerRef.current.style.animationPlayState = "paused";
     }
   };
 
@@ -50,7 +60,7 @@ export default function TestimonialsSection() {
     if (!isDragging) return;
     e.preventDefault();
     const x = e.pageX - (containerRef.current?.offsetLeft || 0);
-    const walk = (x - startX) * 2; // Reverse the direction of the scroll (Right to Left)
+    const walk = (x - startX) * 2;
     if (containerRef.current) {
       containerRef.current.scrollLeft = scrollLeft - walk;
     }
@@ -59,31 +69,40 @@ export default function TestimonialsSection() {
   const handleMouseUpOrLeave = () => {
     setIsDragging(false);
     if (containerRef.current) {
-      containerRef.current.style.animationPlayState = "running"; // Resume animation after dragging
+      containerRef.current.style.animationPlayState = "running";
     }
   };
 
   useEffect(() => {
     const container = containerRef.current;
     if (container) {
-      // Ensure the scroll starts at the middle of the duplicated feedbacks to avoid showing blank space
       container.scrollLeft = container.scrollWidth / 2;
     }
   }, []);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentMobileIndex((prevIndex) => (prevIndex + 1) % visibleFeedbacks.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [visibleFeedbacks.length]);
+
   return (
     <section className="w-full bg-black text-white py-20 px-4 overflow-hidden">
-      <div className="text-center mb-[120px]">
-        <h2 className="text-3xl md:text-[40px] font-[600] mb-[75px]" style={{ fontFamily: "Inter" }}>
+      <div className="text-center md:mb-[120px] mb-20">
+        <h2 className="text-[18px] md:text-[40px] font-[600] md:mb-[90px] mb-7" style={{ fontFamily: "Inter" }}>
           What Our Clients Say <br /> About Us
         </h2>
-        <p className="text-lg font-[400] md:font-[20px] mx-auto " style={{ fontFamily: "Inter" }}>
-          Our clients trust Appitura to deliver exceptional mobile app solutions that drive results.
+        <p className="text-[10px] font-[400] md:text-[20px] mx-auto " style={{ fontFamily: "Inter" }}>
+          <span className="block md:inline">Our clients trust Appitura to deliver exceptional mobile</span>
+          <span className="block md:inline">app solutions that drive results.</span>
         </p>
       </div>
 
+      {/* Desktop view */}
       <div
-        className="relative w-[1270px] overflow-hidden mx-auto"
+        className="hidden md:block relative w-[1270px] overflow-hidden mx-auto mb-20"
         ref={containerRef}
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
@@ -132,13 +151,62 @@ export default function TestimonialsSection() {
         </div>
       </div>
 
+      {/* Mobile view */}
+<div className="md:hidden max-w-sm mx-auto text-black">
+  <div className="bg-white rounded-3xl pt-10 px-6 pb-6">
+    <div
+      className="mb-6 px-4 overflow-hidden"
+      style={{
+        height: "78px",
+        fontFamily: "Inter",
+      }}
+    >
+      <p className="text-[10px] font-[500]">
+        {visibleFeedbacks[currentMobileIndex].text}
+      </p>
+    </div>
+    <hr className="border border-black/10 mb-4" />
+    <div className="flex items-center gap-3">
+      <Image
+        src={visibleFeedbacks[currentMobileIndex].image}
+        alt={visibleFeedbacks[currentMobileIndex].name}
+        width={30}
+        height={30}
+        className="rounded-full"
+      />
+      <div>
+        <h4 className="text-[12px] font-[700]" style={{ fontFamily: "Inter" }}>
+          {visibleFeedbacks[currentMobileIndex].name}
+        </h4>
+        <p className="text-[8px] text-black/60 font-[600]">
+          {visibleFeedbacks[currentMobileIndex].role}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {/* Dots */}
+  <div className="flex justify-center gap-2 mt-8">
+    {visibleFeedbacks.map((_, index) => (
+      <button
+        key={index}
+        onClick={() => setCurrentMobileIndex(index)}
+        className={`w-3 h-3 rounded-full ${
+          currentMobileIndex === index ? "bg-white" : "bg-white/30"
+        }`}
+      ></button>
+    ))}
+  </div>
+</div>
+
+
       <style jsx>{`
         @keyframes scroll {
           0% {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(50%); /* Scroll from right to left */
+            transform: translateX(50%);
           }
         }
         .animate-scroll {
