@@ -45,7 +45,7 @@ export default function Home() {
                   <span className="block md:inline text-cyan-400">Mobile Apps</span>
                 </h2>
                 <p
-                  className="mt-6 md:mt-6 max-w-lg text-white text-sm md:text-base font-[400]"
+                  className="mt-6 md:mt-6  text-white text-[12px] md:text-base font-[400]"
                   style={{ fontFamily: "Inter" }}
                 >
                   <span className="block md:inline">At Appitura, we transform ideas into cutting-edge</span>
