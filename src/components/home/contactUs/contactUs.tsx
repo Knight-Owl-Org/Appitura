@@ -70,7 +70,7 @@ export default function Home() {
           </div>
 
           {/* Contact Info + Image side by side */}
-          <div className="flex w-full px-2 space-x-4 items-start">
+          <div className="flex w-full  space-x-4 items-start">
             {/* Contact Info */}
             <div className="w-1/2 space-y-12 text-left" style={{fontFamily:"Inter"}}>
               <div>
@@ -92,8 +92,8 @@ export default function Home() {
             </div>
 
             {/* Image */}
-            <div className="w-1/2 flex justify-end">
-              <div className="w-[152px] h-[329px] relative  overflow-hidden">
+            <div className=" flex justify-end">
+              <div className="w-[152px] h-[339px] relative  overflow-hidden">
                 <Image
                   src="/contactUs.png"
                   alt="Workspace"
