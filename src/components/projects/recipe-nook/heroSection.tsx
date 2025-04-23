@@ -4,7 +4,6 @@ import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
 
-
 export default function HeroSection() {
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
@@ -21,7 +20,13 @@ export default function HeroSection() {
       <div className="min-h-[300px] w-full flex flex-col px-4 py-6 md:px-[108px] md:py-25">
         {/* Back to Portfolio Link */}
         <div className="flex items-center mb-12 md:mb-[122px]">
-          <Link href="/aboutUs" className="flex items-center text-white hover:text-blue-400 transition-colors">
+          <div className="flex items-center md:hidden">
+            <img src="/logo.png" alt="Logo" className="h-8 w-8 mr-2" />
+            <span className="text-[25px] font-[700]" style={{ fontFamily: "Jura" }}>
+              Appitura
+            </span>
+          </div>
+          <Link href="/aboutUs" className="hidden md:flex items-center text-white hover:text-blue-400 transition-colors">
             <img src="/projectArrow.png" alt="Back" className="h-4 w-8 mr-2 md:mr-3" />
             <span className="text-base md:text-[20px] font-medium" style={{ fontFamily: "Inter" }}>
               Back to Portfolio
@@ -31,11 +36,11 @@ export default function HeroSection() {
 
         {/* Main Content */}
         <div className="flex-grow flex flex-col items-center justify-center text-center">
-          <h1 className="text-3xl sm:text-5xl md:text-[80px] font-bold text-[#1A97C7] mb-40">
+          <h1 className="text-[20px]  md:text-[80px] font-[700] text-[#1A97C7] md:mb-40 mb-[31px]">
             Recipe Nook
           </h1>
           <p
-            className="sm:text-xl md:text-2xl lg:text-[40px] font-semibold"
+            className="text-[12px]  lg:text-[40px] font-semibold"
             style={{
               fontFamily: "Inter",
               background: "linear-gradient(to right, #1A97C7 50%, #FFFFFF )",
@@ -43,22 +48,23 @@ export default function HeroSection() {
               WebkitTextFillColor: "transparent",
             }}
           >
-            Home for Your Recipes Where Every Dish Tells a Story
+            <span className="block md:inline">Home for Your Recipes Where Every Dish </span>
+                  <span className="block md:inline">Tells a Story</span>
           </p>
         </div>
       </div>
 
       {/* About Section */}
-      <div className="px-4 py-10 md:px-[91px] md:py-20 flex flex-col gap-8">
+      <div className="px-4  md:px-[91px] md:py-20   flex flex-col md:gap-8 gap-5">
         <motion.div className="flex flex-col md:flex-row justify-between md:gap-[100px] mb-10 md:mb-20"variants={fadeInUp}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}>
-          <h2 className="text-[#1A97C7] sm:mb-7 text-2xl sm:text-4xl md:text-[50px] font-bold">
+          <h2 className="text-[#1A97C7] mb-2 text-[20px] md:text-[50px] font-bold">
             About
           </h2>
           <p
-            className="text-white text-base sm:text-lg md:text-[25px] leading-relaxed max-w-full md:max-w-[753px] font-normal"
+            className="text-white text-[10px] md:text-[25px] leading-relaxed max-w-full md:max-w-[753px] font-[400] "
             style={{ fontFamily: "Inter" }}
           >
             Recipe Nook is a modern mobile app designed for home cooks, food enthusiasts, and kitchen creatives. It
@@ -68,15 +74,15 @@ export default function HeroSection() {
           </p>
         </motion.div>
 
-        <div className="w-full mb-8">
+        <div className="w-full md:mb-4 ">
           <p
-            className="text-white mb-4 text-base sm:text-lg md:text-[25px] font-normal"
+            className="text-white mb-5 md:mb-8 text-[12px]  md:text-[25px] font-[normal]"
             style={{ fontFamily: "Inter" }}
           >
             <span className="font-semibold">INDUSTRY :</span> Food & Beverage Technology
           </p>
           <p
-            className="text-white text-base sm:text-lg md:text-[25px] font-normal"
+            className="text-white text-[12px]  md:text-[25px] font-normal "
             style={{ fontFamily: "Inter" }}
           >
             <span className="font-semibold">Location :</span> Sri Lanka
@@ -87,20 +93,20 @@ export default function HeroSection() {
           <img
             src="/projectBook.png"
             alt="Recipe book with hand"
-            className="w-full max-h-[500px] sm:max-h-[600px] md:max-h-[677px] rounded-md object-cover"
+            className="w-full max-h-[97px] md:max-h-[677px] md:rounded-xl object-cover"
           />
         </div>
       </div>
 
       {/* Objective Section */}
-      <motion.div className="p-4 md:p-[91px] flex flex-col md:flex-row justify-between md:gap-[100px]"
+      <motion.div className="p-4 mt-10 md:mt-0 md:p-[91px] flex flex-col md:flex-row justify-between "
       variants={fadeInUp}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.5 }}>
 
-        <h2 className="text-[#1A97C7] text-3xl md:text-[50px] font-[700] mb-8 md:mb-0">Objective</h2>
-        <p className="text-white font-[400] text-xl md:text-[25px] leading-relaxed max-w-[753px]" style={{ fontFamily: "Inter" }}>
+        <h2 className="text-[#1A97C7] text-[20px] md:text-[50px] font-[700] mb-3 md:mb-0">Objective</h2>
+        <p className="text-white font-[400] text-[10px] md:text-[25px] leading-relaxed max-w-[753px]" style={{ fontFamily: "Inter" }}>
           Recipe Nook is a modern mobile app designed for home cooks, food enthusiasts, and kitchen creatives. It offers
           a cozy and intuitive space to store, organize, and revisit your favorite recipes—whether they're handwritten
           family treasures or new discoveries. With features like photo uploads, personal notes, and a visual recipe
@@ -109,12 +115,12 @@ export default function HeroSection() {
       </motion.div>
 
       {/* User Section */}
-      <motion.div className="p-4 md:p-[91px] flex flex-col md:flex-row justify-between md:gap-[100px]"variants={fadeInUp}
+      <motion.div className="p-4 md:p-[91px] flex flex-col md:flex-row justify-between md:gap-[100px] md:mt-0 mt-8"variants={fadeInUp}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.5 }}>
-        <h2 className="text-[#1A97C7] text-3xl md:text-[50px] font-[700] mb-8 md:mb-0">User</h2>
-        <p className="text-white font-[400] text-xl md:text-[25px] leading-relaxed max-w-[753px]" style={{ fontFamily: "Inter" }}>
+        <h2 className="text-[#1A97C7] text-[20px] md:text-[50px] font-[700] mb-3 md:mb-0">User</h2>
+        <p className="text-white font-[400] text-[10px] md:text-[25px] leading-relaxed max-w-[753px]" style={{ fontFamily: "Inter" }}>
           Recipe Nook is a modern mobile app designed for home cooks, food enthusiasts, and kitchen creatives. It offers
           a cozy and intuitive space to store, organize, and revisit your favorite recipes—whether they're handwritten
           family treasures or new discoveries. With features like photo uploads, personal notes, and a visual recipe
@@ -123,38 +129,38 @@ export default function HeroSection() {
       </motion.div>
 
       {/* Solutions Section */}
-      <motion.div className="p-4 md:p-[91px] flex flex-col md:flex-row justify-between mb-17"variants={fadeInUp}
+      <motion.div className="p-4 md:p-[91px] flex flex-col md:flex-row justify-between mb-17 md:mt-0 mt-8"variants={fadeInUp}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.5 }}>
-        <h2 className="text-[#1A97C7] text-3xl md:text-[50px] font-[700] mb-8 md:mb-0">Solutions</h2>
+        <h2 className="text-[#1A97C7] text-[20px] md:text-[50px] font-[700] mb-3 md:mb-0">Solutions</h2>
         <div className="max-w-[753px]">
-          <p className="text-white font-[400] text-xl md:text-[25px] leading-relaxed mb-8" style={{ fontFamily: "Inter" }}>
+          <p className="text-white font-[400] text-[10px] md:text-[25px] leading-relaxed md:mb-8 mb-2" style={{ fontFamily: "Inter" }}>
             Whether it's grandma's legendary lasagna, your latest TikTok-inspired bake, or a quick weeknight stir-fry,
             this is the place where every recipe gets the spotlight it deserves. Built for cooks of all kinds, Recipe
             Nook helps you:
           </p>
 
-          <ul className="text-white font-[400] text-xl md:text-[25px] space-y-6" style={{ fontFamily: "Inter" }}>
+          <ul className="text-white font-[400] text-[10px] md:text-[25px] md:space-y-6 space-y-3 " style={{ fontFamily: "Inter" }}>
             <li className="flex items-start">
-              <span className="text-white mr-3">•</span>
+              <span className="text-white mr-3 md:ml-3 ml-2">•</span>
               <span>Save and organize your favorite recipes with ease</span>
             </li>
             <li className="flex items-start">
-              <span className="text-white mr-3">•</span>
+              <span className="text-white mr-3 md:ml-3 ml-2">•</span>
               <span>Add photos and personal notes so your creations tell your story</span>
             </li>
             <li className="flex items-start">
-              <span className="text-white mr-3">•</span>
+              <span className="text-white mr-3 md:ml-3 ml-2">•</span>
               <span>Browse a beautiful dashboard of all your culinary adventures</span>
             </li>
             <li className="flex items-start">
-              <span className="text-white mr-3">•</span>
+              <span className="text-white mr-3 md:ml-3 ml-2">•</span>
               <span>Share your dishes with friends, family, or keep them just for you</span>
             </li>
           </ul>
 
-          <p className="text-white font-[400] text-xl md:text-[25px] leading-relaxed mt-8" style={{ fontFamily: "Inter" }}>
+          <p className="text-white font-[400] text-[10px] md:text-[25px] leading-relaxed md:mt-8 mt-2" style={{ fontFamily: "Inter" }}>
             We believe cooking is more than just food — it's connection, creativity, and comfort. Recipe Nook is here to
             support you every step of the way, from planning to plating. So grab your apron, let's cook, and let's cook
             up something extraordinary together.
@@ -163,69 +169,71 @@ export default function HeroSection() {
       </motion.div>
 
       {/* Gallery Section */}
-      <div className=" "> 
-        <div className="flex flex-wrap gap-4 justify-center ">
-          <div className="flex flex-raw gap-4">
-            <Image
-              src="/recipeNookGallery1.png"
-              alt="People cooking together"
-              width={346}
-              height={264}
-              className="w-[346px] h-[264px] object-cover rounded-md"
-            />
-            <Image
-              src="/recipeNookGellary2.png"
-              alt="Dessert on white table"
-              width={226}
-              height={346}
-              className="w-[226px] h-[346px] object-cover rounded-md self-end"
-            />
-            <Image
-              src="/recipeNookGellary3.png"
-              alt="Dessert on white table"
-              width={639}
-              height={346}
-              className="w-[639px] h-[346px] object-cover rounded-md self-end"
-            />
-          </div>
-          <div className="flex flex-raw gap-7 mt-[-81px]">
-            <Image
-              src="/recipeNookGellary4.png"
-              alt="People cooking together"
-              width={226}
-              height={455}
-              className="w-[226px] h-[455px] object-cover rounded-md"
-            />
-            <Image
-              src="/recipeNookGellary5.png"
-              alt="Dessert on white table"
-              width={346}
-              height={374}
-              className="w-[346px] h-[374px] object-cover rounded-md self-end"
-            />
-            <Image
-              src="/recipeNookGellary6.png"
-              alt="Dessert on white table"
-              width={244}
-              height={374}
-              className="w-[244px] h-[374px] object-cover rounded-md self-end "
-            />
-            <Image
-              src="/recipeNookGellary7.png"
-              alt="Dessert on white table"
-              width={346}
-              height={374}
-              className="w-[346px] h-[374px] object-cover rounded-md self-end"
-            />
-          </div>
-        </div>
+<div className=" ">
+  <div className="flex flex-wrap md:gap-4 justify-center">
+    <div className="flex flex-row md:gap-4 gap-1.5 flex-wrap md:flex-nowrap">
+      <Image
+        src="/recipeNookGallery1.png"
+        alt="People cooking together"
+        width={346}
+        height={264}
+        className="object-cover rounded-md md:w-[346px] md:h-[264px] w-[94px] h-[89px]"
+      />
+      <Image
+        src="/recipeNookGellary2.png"
+        alt="Dessert on white table"
+        width={226}
+        height={346}
+        className="object-cover rounded-md self-end md:w-[226px] md:h-[346px] w-[61px] h-[116px]"
+      />
+      <Image
+        src="/recipeNookGellary3.png"
+        alt="Dessert on white table"
+        width={639}
+        height={346}
+        className="object-cover rounded-md self-end md:w-[639px] md:h-[346px] w-[175px] h-[116px]"
+      />
+    </div>
 
-        <div className="flex justify-center mt-[110px] pb-[164px]">
-          <a href="#" className="bg-black text-white text-[30px] font-[700]">
-            <span>View Website</span>
-          </a>
-        </div>
-      </div>
+    <div className="flex flex-row md:gap-7 gap-2 md:mt-[-81px] mt-[-19px]  flex-wrap md:flex-nowrap">
+      <Image
+        src="/recipeNookGellary4.png"
+        alt="People cooking together"
+        width={226}
+        height={455}
+        className="object-cover rounded-md md:w-[226px] md:h-[455px] w-[62px] h-[153px]"
+      />
+      <Image
+        src="/recipeNookGellary5.png"
+        alt="Dessert on white table"
+        width={346}
+        height={374}
+        className="object-cover rounded-md self-end md:w-[346px] md:h-[374px] w-[94px] h-[126px]"
+      />
+      <Image
+        src="/recipeNookGellary6.png"
+        alt="Dessert on white table"
+        width={244}
+        height={374}
+        className="object-cover rounded-md self-end md:w-[244px] md:h-[374px] w-[66px] h-[126px]"
+      />
+      <Image
+        src="/recipeNookGellary7.png"
+        alt="Dessert on white table"
+        width={346}
+        height={374}
+        className="object-cover rounded-md self-end md:w-[346px] md:h-[374px] w-[94px] h-[126px]"
+      />
+    </div>
+  </div>
+
+  <div className="flex justify-center md:mt-[110px] mt-[50px] md:pb-[164px] pb-[50px]">
+    <a href="#" className="bg-black text-white text-[16px] md:text-[30px] font-[700]">
+      <span>View Website</span>
+    </a>
+  </div>
+</div>
+
     </div>
   )
 }

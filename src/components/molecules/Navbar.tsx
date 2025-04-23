@@ -29,7 +29,7 @@ export default function Navbar() {
   }, [pathname]);
 
   return (
-    <nav className="absolute top-4 right-4 md:top-[108px] md:right-20 lg:right-[394px]">
+    <nav className="absolute top-7.5 right-4 md:top-[108px] md:right-20 lg:right-[394px]">
       {/* Mobile Dropdown Button */}
       <div className="md:hidden z-50 relative">
         <button
