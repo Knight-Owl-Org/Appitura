@@ -9,11 +9,11 @@ export default function Home() {
         {/* LEFT SECTION - Only for md and up */}
         <div className="hidden md:block w-full md:w-1/2 space-y-8 text-left px-4 md:px-0" style={{fontFamily:"Inter"}}>
           <div className="space-y-4">
-            <h1 className="text-[18px] md:text-5xl font-[600]"
+            <h1 className="text-[18px] md:text-3xl lg:text-5xl font-[600]"
               style={{ color: "#FFFFFF", fontFamily: "Inter", fontWeight: 600 }}>
               Connect with Appitura
             </h1>
-            <p className="text-[10px] md:text-[20px] mt-6 md:mt-20 md:max-w-[722px] mx-auto md:mx-0"
+            <p className="text-[10px] md:text-[15px] lg:text-[20px] mt-6 md:mt-15 lg:mt-20 md:max-w-[722px] mx-auto md:mx-0"
               style={{ color: "#FFFFFF", fontFamily: "Inter", fontWeight: 400 }}>
               <span className="block md:inline">We are here to collaborate and bring your app ideas to life.</span>
               <span className="block md:inline">Reach out to discuss your project or learn more about our</span>
@@ -21,30 +21,30 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="space-y-7 mt-8 md:mt-30">
-            <h2 className="text-[10px] md:text-[20px] text-[#1A97C7] uppercase tracking-wider font-bold">SRILANKAN OFFICE HOURS</h2>
-            <p className="text-[10px] md:text-[20px]">Monday-Friday 9:00 am to 6:00 pm</p>
+          <div className="lg:space-y-7 md:space-y-5  mt-8 md:mt-15 lg:mt-30">
+            <h2 className="text-[10px] md:text-[15px] lg:text-[20px] text-[#1A97C7] uppercase tracking-wider font-bold">SRILANKAN OFFICE HOURS</h2>
+            <p className="text-[10px] md:text-[15px] lg:text-[20px]">Monday-Friday 9:00 am to 6:00 pm</p>
           </div>
 
-          <div className="space-y-5 mt-6 md:mt-18">
-            <h2 className="text-[10px] md:text-[20px] text-[#1A97C7] uppercase tracking-wider font-bold">OUR ADDRESS</h2>
-            <p className="text-[10px] md:text-[20px]">158/A, Horana Road, Piliyandala</p>
+          <div className="space-y-5 mt-6 lg:mt-18 md:mt-15">
+            <h2 className="text-[10px] md:text-[15px] lg:text-[20px] text-[#1A97C7] uppercase tracking-wider font-bold">OUR ADDRESS</h2>
+            <p className="text-[10px] md:text-[15px] lg:text-[20px]">158/A, Horana Road, Piliyandala</p>
           </div>
 
-          <div className="space-y-5 mt-6 md:mt-18">
-            <h2 className="text-[10px] md:text-[20px] text-[#1A97C7] uppercase tracking-wider font-bold">GET IN TOUCH</h2>
-            <p className="text-[10px] md:text-[20px]">+94 720102135</p>
+          <div className="space-y-5 mt-6 lg:mt-18 md:mt-15">
+            <h2 className="text-[10px] md:text-[15px] lg:text-[20px] text-[#1A97C7] uppercase tracking-wider font-bold">GET IN TOUCH</h2>
+            <p className="text-[10px] md:text-[15px] lg:text-[20px]">+94 720102135</p>
           </div>
 
-          <div className="space-y-5 mt-6 md:mt-18">
-            <h2 className="text-[10px] md:text-[20px] text-[#1A97C7] uppercase tracking-wider font-bold">EMAIL</h2>
-            <p className="text-[10px] md:text-[20px]">appitura@gmail.com</p>
+          <div className="space-y-5 mt-6 lg:mt-18 md:mt-15">
+            <h2 className="text-[10px] md:text-[15px] lg:text-[20px] text-[#1A97C7] uppercase tracking-wider font-bold">EMAIL</h2>
+            <p className="text-[10px] md:text-[15px] lg:text-[20px]">appitura@gmail.com</p>
           </div>
         </div>
 
         {/* RIGHT SIDE - md: image + form, mobile: handled separately below */}
         <div className="hidden md:flex w-full md:w-auto space-y-4 px-4 md:px-0 flex-col items-center">
-          <div className="rounded-sm overflow-hidden w-[152px] h-[336px] md:w-[457px] md:h-[402px] relative">
+          <div className="rounded-sm overflow-hidden w-[152px] h-[336px] lg:w-[457px] lg:h-[402px]  md:w-[357px] md:h-[262px] relative">
             <Image
               src="/contactUs.png"
               alt="Workspace with laptop and phone"

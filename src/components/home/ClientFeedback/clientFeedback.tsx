@@ -91,10 +91,10 @@ export default function TestimonialsSection() {
   return (
     <section className="w-full bg-black text-white py-20 px-4 overflow-hidden">
       <div className="text-center md:mb-[120px] mb-20">
-        <h2 className="text-[18px] md:text-[40px] font-[600] md:mb-[90px] mb-7" style={{ fontFamily: "Inter" }}>
+        <h2 className="text-[18px] md:text-[30px] lg:text-[40px] font-[600] md:mb-[60px] lg:mb-[90px] mb-7" style={{ fontFamily: "Inter" }}>
           What Our Clients Say <br /> About Us
         </h2>
-        <p className="text-[10px] font-[400] md:text-[20px] mx-auto " style={{ fontFamily: "Inter" }}>
+        <p className="text-[10px] font-[400]  md:text-[20px] mx-auto " style={{ fontFamily: "Inter" }}>
           <span className="block md:inline">Our clients trust Appitura to deliver exceptional mobile</span>
           <span className="block md:inline">app solutions that drive results.</span>
         </p>
@@ -102,7 +102,7 @@ export default function TestimonialsSection() {
 
       {/* Desktop view */}
       <div
-        className="hidden md:block relative w-[1270px] overflow-hidden mx-auto mb-20"
+        className="hidden md:block relative lg:w-[1270px] overflow-hidden mx-auto mb-20"
         ref={containerRef}
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}

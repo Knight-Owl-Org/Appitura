@@ -50,7 +50,7 @@ export default function ContactForm() {
 
   return (
     <div className="bg-white p-6 rounded-lg">
-      <form onSubmit={handleSubmit} className="md:space-y-4 space-y-7 md:px-6 md:pt-8 px-4 py-3" >
+      <form onSubmit={handleSubmit} className="lg:space-y-4 md:space-y-3 space-y-7 lg:px-6 md:px-2 lg:pt-8 md:pt-3 px-4 py-3" >
         <div>
           <input
             type="text"

@@ -12,10 +12,10 @@ export default function BuildWithUs() {
 
   return (
     <div className="container mx-auto py-8 px-4">
-      {/* Desktop Section (unchanged) */}
+      {/* Desktop + Tablet Section */}
       <div className="hidden md:block">
         {/* Top section */}
-        <div className="flex flex-col md:flex-row md:gap-27 mb-6 justify-center">
+        <div className="flex flex-col md:flex-row md:gap-14 lg:gap-27 mb-6 justify-center">
           <div className="flex flex-col text-center md:text-left items-center md:items-start">
             <h2
               className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight"
@@ -46,7 +46,7 @@ export default function BuildWithUs() {
           </div>
           <div
             style={{ aspectRatio: "639 / 346" }}
-            className="relative flex-shrink-0 w-full md:w-[639px] mt-6 md:mt-0"
+            className="relative flex-shrink-0 w-full md:w-[300px] lg:w-[639px] mt-6 md:mt-0"
           >
             <Image
               src="/buildwithus1.png"
@@ -59,10 +59,10 @@ export default function BuildWithUs() {
         </div>
 
         {/* Bottom image row */}
-        <div className="flex flex-wrap justify-center items-start gap-6 sm:gap-[41px]">
+        <div className="flex flex-wrap justify-center items-start gap-4 md:gap-2 lg:gap-[41px]">
           <div
             style={{ aspectRatio: "226 / 216" }}
-            className="relative w-[45%] sm:w-[226px] md:mt-[9.8rem]"
+            className="relative w-[45%] md:w-[150px] lg:w-[226px] md:mt-[6rem] lg:mt-[9.8rem]"
           >
             <Image
               src="/buildwithus2.png"
@@ -73,7 +73,7 @@ export default function BuildWithUs() {
           </div>
           <div
             style={{ aspectRatio: "606 / 374" }}
-            className="relative w-full sm:w-[606px]"
+            className="relative w-full md:w-[400px] lg:w-[606px]"
           >
             <Image
               src="/buildwithus3.png"
@@ -84,7 +84,7 @@ export default function BuildWithUs() {
           </div>
           <div
             style={{ aspectRatio: "346 / 314" }}
-            className="relative w-[45%] sm:w-[346px]"
+            className="relative w-[45%] md:w-[160px] lg:w-[346px]"
           >
             <Image
               src="/buildwithus4.png"
@@ -100,13 +100,13 @@ export default function BuildWithUs() {
       <div className="md:hidden flex flex-col items-center max-w-[370px] mx-auto">
         <div className="w-full flex items-start gap-3 justify-center">
           <div className="flex-1">
-            <h2 className="text-[18px] font-bold leading-snug" style={{ fontFamily: "Inter" }}>
+            <h2 className="text-[18px]  font-bold leading-snug" style={{ fontFamily: "Inter" }}>
               Ready to Build Your Next <br /> Mobile App?
             </h2>
             <p className="mt-2 text-[10px]" style={{ fontFamily: "Inter" }}>
-              <span className="block md:inline">Partner with Appitura to bring your vision to life</span>
-              <span className="block md:inline">with cutting-edge solutions and unmatched</span>
-              <span className="block md:inline">expertise.</span>
+              <span className="block">Partner with Appitura to bring your vision to life</span>
+              <span className="block">with cutting-edge solutions and unmatched</span>
+              <span className="block">expertise.</span>
             </p>
             <button
               onClick={handleLearnMoreClick}
@@ -116,7 +116,7 @@ export default function BuildWithUs() {
               <Image src={buildWithUsArrow} alt="Arrow" className="w-5 h-5" />
             </button>
           </div>
-          <div className=" w-[88px] h-[121px] flex-shrink-0 relative">
+          <div className="w-[88px] h-[121px] flex-shrink-0 relative">
             <Image
               src="/buildwithus1mobile.png"
               alt="Team Work"

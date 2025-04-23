@@ -15,7 +15,7 @@ export default function Home() {
       {/* Main Content */}
       <div className="flex flex-col md:flex-row">
         {/* Left Section with Video */}
-        <div className="flex-1 relative md:pl-25 md:pt-20">
+        <div className="flex-1 relative md:pl-15 md:pt-10 lg:pl-25 lg:pt-20">
           {/* Video Background */}
           <div className="relative h-screen md:h-[calc(100vh-80px)]">
             {/* Video Container */}
@@ -27,25 +27,25 @@ export default function Home() {
               </video>
 
               {/* 🔥 Logo on top-left corner of video - Desktop only */}
-              <div className="absolute top-0 z-20 hidden md:flex items-center gap-3 bg-black/70 rounded-3xl py-2 pr-4">
+              <div className="absolute top-0 z-20 hidden md:flex items-center gap-3 bg-black/70 rounded-3xl lg:py-2 lg:pr-4 md:py-1 md:pr-2">
                 <div className="relative">
-                  <Image src="/logo.png" alt="Appitura Logo" width={84} height={86} className="object-contain" />
+                  <Image src="/logo.png" alt="Appitura Logo" width={50} height={50} className="object-contain lg:w-[84px] lg:h-[86px]" />
                 </div>
-                <h1 className="text-6xl font-light">Appitura</h1>
+                <h1 className="lg:text-6xl md:text-4xl font-light">Appitura</h1>
               </div>
 
               {/* Text Overlay - Adjusted for mobile */}
-              <div className="absolute top-[30%] md:bottom-20 left-4 md:left-10 flex flex-col z-10 p-4 md:p-0">
+              <div className="absolute top-[30%] md:bottom-20 left-4  lg:left-10 flex flex-col z-10 p-4 md:p-0">
                 <h2
-                  className="text-2xl md:text-6xl font-[700] leading-tight max-w-xl"
+                  className="text-2xl md:text-3xl lg:text-6xl font-[700] leading-tight max-w-xl"
                   style={{ color: "#FFFFFF", fontFamily: "Inter" }}
                 >
                   <span className="block md:inline">Empowering your vision</span>
                   <span className="block md:inline">Through Innovative</span>
-                  <span className="block md:inline text-cyan-400">Mobile Apps</span>
+                  <span className="block md:inline text-cyan-400"> Mobile Apps</span>
                 </h2>
                 <p
-                  className="mt-6 md:mt-6  text-white text-[12px] md:text-base font-[400]"
+                  className="mt-6 md:mt-6  text-white text-[12px] md:text-base font-[400] max-w-[500px]"
                   style={{ fontFamily: "Inter" }}
                 >
                   <span className="block md:inline">At Appitura, we transform ideas into cutting-edge</span>
@@ -66,7 +66,7 @@ export default function Home() {
               </div>
 
               {/* Social Media Icons - Adjusted for mobile */}
-              <div className="absolute bottom-15 md:bottom-30 left-1/2 transform -translate-x-1/2 md:left-auto md:translate-x-0 md:right-3 flex gap-6 bg-[#FFFFFF33] px-5 md:px-7 md:py-4 py-2 rounded-3xl z-10">
+              <div className="absolute bottom-15 md:bottom-25 lg:bottom-30 left-1/2 transform -translate-x-1/2 md:left-auto md:translate-x-0 md:right-3 flex gap-6 bg-[#FFFFFF33] px-5 lg:px-7 lg:py-4 md:px-5 md:py-2 py-2 rounded-3xl z-10">
                 <Link
                   href="https://www.linkedin.com/company/appitura/"
                   className="rounded-full hover:bg-gray-700 transition"
@@ -76,7 +76,7 @@ export default function Home() {
                     alt="LinkedIn"
                     width={24}
                     height={24}
-                    className="md:w-[40px] md:h-[40px] object-contain"
+                    className="md:w-[30px] md:h-[30px] lg:w-[40px] lg:h-[40px] object-contain"
                   />
                 </Link>
                 <Link
@@ -88,7 +88,7 @@ export default function Home() {
                     alt="TikTok"
                     width={24}
                     height={24}
-                    className="md:w-[40px] md:h-[40px] object-contain"
+                    className="lg:w-[40px] lg:h-[40px] md:w-[30px] md:h-[30px] object-contain"
                   />
                 </Link>
                 <Link
@@ -100,7 +100,7 @@ export default function Home() {
                     alt="Instagram"
                     width={24}
                     height={24}
-                    className="md:w-[40px] md:h-[40px] object-contain"
+                    className="lg:w-[40px] lg:h-[40px] md:w-[30px] md:h-[30px] object-contain"
                   />
                 </Link>
               </div>
@@ -114,11 +114,11 @@ export default function Home() {
               <div className="absolute bottom-0 right-0 z-10 hidden md:block">
                 <Link
                   href="/explore"
-                  className="flex w-[461px] h-[84px] items-center justify-between px-6 border border-[#FFFFFF80] rounded-3xl hover:border-gray-600 transition"
+                  className="flex md:w-[361px] md:h-[64px] lg:w-[461px] lg:h-[84px] items-center justify-between px-6 border border-[#FFFFFF80] rounded-3xl hover:border-gray-600 transition"
                 >
-                  <span className="text-lg font-medium flex-grow text-center">Explore the Experience</span>
+                  <span className="md:text-md lg:text-lg font-medium flex-grow text-center">Explore the Experience</span>
                   <div className="rounded-full flex items-center justify-center mr-0">
-                    <Image src="/explore.png" alt="Explore Icon" width={64} height={62} className="object-contain" />
+                    <Image src="/explore.png" alt="Explore Icon" width={54} height={52} className="object-contain lg:w-[64px] lg:h-[64px]" />
                   </div>
                 </Link>
               </div>

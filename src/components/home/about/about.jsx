@@ -7,7 +7,7 @@ export default function Home() {
   {/* topic and description */}
   <div className="text-center md:mt-20 w-full px-4 mt-8 ">
     <h1
-      className="text-[18px] md:text-[40px]  mb-10 md:mb-20"
+      className="text-[18px] md:text-[30px] lg:text-[40px]  mb-10 md:mb-20"
       style={{ color: "#FFFFFF", fontFamily: "Inter", fontWeight: 600 }}
     >
       Transforming Ideas into Exceptional
@@ -39,7 +39,7 @@ export default function Home() {
     </div>
 
     {/* Line */}
-    <div className="h-[1px] bg-gray-700 w-11 md:w-50"></div>
+    <div className="h-[1px] bg-gray-700 w-11 lg:w-50 md:w-18"></div>
 
     {/* Icon 2 */}
     <div
@@ -49,14 +49,14 @@ export default function Home() {
       <Image src="/rocket.png" alt="Rocket icon" width={18} height={18} className="md:w-[30px] md:h-[30px]" />
     </div>
 
-    <div className="h-[1px] bg-gray-700 w-11 md:w-50"></div>
+    <div className="h-[1px] bg-gray-700 w-11 lg:w-50 md:w-18"></div>
 
     {/* Icon 3 */}
     <div className="bg-white rounded-full p-3 md:p-5 z-10">
       <Image src="/growth.png" alt="Chart icon" width={18} height={18} className="md:w-[30px] md:h-[30px]" />
     </div>
 
-    <div className="h-[1px] bg-gray-700 w-11 md:w-50"></div>
+    <div className="h-[1px] bg-gray-700 w-11 lg:w-50 md:w-18"></div>
 
     {/* Icon 4 */}
     <div
@@ -68,7 +68,7 @@ export default function Home() {
   </div>
 
   {/* Labels under icons */}
-  <div className="flex justify-between w-full mt-5 md:mt-8 px-5 md:px-70">
+  <div className="flex justify-between w-full mt-5 md:mt-8 px-5 lg:px-70 ">
     <p className="text-[8px] md:text-[18px] text-center " style={{ fontWeight: 400, fontFamily: "Inter" }}>
     <span className="block md:inline">Founded in</span>
     <span className="block md:inline"> 2025</span>
@@ -89,33 +89,34 @@ export default function Home() {
 </div>
 
 {/* Image Gallery */}
-<div className="mt-6 md:mt-10 flex flex-col gap-2  md:gap-4 items-center">
+<div className="mt-6 md:mt-8 lg:mt-10 flex flex-col gap-2 md:gap-3 lg:gap-4 items-center">
   {/* Top row */}
-  <div className="flex flex-row flex-wrap gap-1.5 md:flex-nowrap md:gap-7  items-center justify-center">
-    <div className="w-[109px] md:w-[400px] h-[153px] md:h-[430px] relative">
-      <Image src="/gallery1.png" alt="UI design process" fill className="object-cover " />
+  <div className="flex flex-row flex-wrap gap-1.5 md:gap-4 lg:flex-nowrap lg:gap-7 items-center justify-center">
+    <div className="w-[109px] md:w-[200px] lg:w-[400px] h-[153px] md:h-[250px] lg:h-[430px] relative">
+      <Image src="/gallery1.png" alt="UI design process" fill className="object-cover" />
     </div>
-    <div className="w-[80px] md:w-[294px] h-[153px] md:h-[430px] relative">
-      <Image src="/gallery2.png" alt="Hand holding smartphone" fill className="object-cover " />
+    <div className="w-[80px] md:w-[160px] lg:w-[294px] h-[153px] md:h-[250px] lg:h-[430px] relative">
+      <Image src="/gallery2.png" alt="Hand holding smartphone" fill className="object-cover" />
     </div>
-    <div className="w-[138px] md:w-[505px] h-[153px] md:h-[430px] relative">
-      <Image src="/gallery3.png" alt="Multiple mobile screens" fill className="object-cover " />
+    <div className="w-[138px] md:w-[240px] lg:w-[505px] h-[153px] md:h-[250px] lg:h-[430px] relative">
+      <Image src="/gallery3.png" alt="Multiple mobile screens" fill className="object-cover" />
     </div>
   </div>
 
   {/* Bottom row */}
-  <div className="flex flex-row flex-wrap gap-1 md:flex-nowrap md:gap-4 items-center justify-center">
-    <div className="w-[74px] md:w-[274px] h-[153px] md:h-[430px] relative">
-      <Image src="/gallery4.png" alt="Hand holding phone with app" fill className="object-cover " />
+  <div className="flex flex-row flex-wrap gap-1 md:gap-3 lg:flex-nowrap lg:gap-4 items-center justify-center">
+    <div className="w-[74px] md:w-[140px] lg:w-[274px] h-[153px] md:h-[250px] lg:h-[430px] relative">
+      <Image src="/gallery4.png" alt="Hand holding phone with app" fill className="object-cover" />
     </div>
-    <div className="w-[178px] md:w-[651px] h-[153px] md:h-[430px] relative">
-      <Image src="/gallery5.png" alt="Food delivery app mockups" fill className="object-cover " />
+    <div className="w-[178px] md:w-[310px] lg:w-[651px] h-[153px] md:h-[250px] lg:h-[430px] relative">
+      <Image src="/gallery5.png" alt="Food delivery app mockups" fill className="object-cover" />
     </div>
-    <div className="w-[81px] md:w-[299px] h-[153px] md:h-[430px] relative">
-      <Image src="/gallery4.png" alt="Hand holding phone with app" fill className="object-cover " />
+    <div className="w-[81px] md:w-[160px] lg:w-[299px] h-[153px] md:h-[250px] lg:h-[430px] relative">
+      <Image src="/gallery4.png" alt="Hand holding phone with app" fill className="object-cover" />
     </div>
   </div>
 </div>
+
 
 
 
