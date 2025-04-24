@@ -1,7 +1,7 @@
 
 export default function VideoSection() {
     return (
-      <section className="relative h-[781px] w-full overflow-hidden">
+      <section className="relative h-[204px] md:h-[481px] lg:h-[781px] w-full overflow-hidden">
         <video
           className="absolute top-0 left-0 w-full h-full object-cover"
           autoPlay

@@ -105,7 +105,7 @@ export default function MobileAppSolutions() {
   ]
 
   return (
-    <div ref={sectionRef} className="relative w-full h-screen overflow-hidden bg-black">
+    <div ref={sectionRef} className="relative w-full h-[407px] md:h-screen overflow-hidden bg-black">
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image src="/bg1.png" alt="Background" fill className="object-cover" priority />
@@ -113,11 +113,18 @@ export default function MobileAppSolutions() {
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 flex flex-col items-center justify-center w-full h-full px-4 text-white text-center">
-        <h2 className="text-blue-400 text-xl md:text-sm lg:text-md font-[500] mb-8" style={{fontFamily:"Inter"}}>Mobile App Development</h2>
-        <h3 className="text-3xl md:text-xl lg:text-3xl font-[600] mb-16" style={{fontFamily:"Inter"}}>Innovative Mobile App Solutions</h3>
-        <p className="text-sm md:text-base lg:text-[20px] font-[400] max-w-[705px]" style={{fontFamily:"Inter"}}>
-        At Appitura, we combine creativity,technical expertise, and industry insights to deliver tailored mobile app solutions that meet unique bussiness needs.Appitura's innovative mobile app solutions are designed to enhance user experiences and drive business growth.
+      <div className="relative z-10 flex flex-col items-center justify-center w-full h-full p-6 md:px-4 text-white text-center">
+        {/* Display h2 only on screens larger than md */}
+        <h2 className="hidden md:block text-blue-400 text-xl lg:text-md font-[500] mb-8" style={{ fontFamily: "Inter" }}>
+          Mobile App Development
+        </h2>
+        {/* Display h3 and p on all screen sizes */}
+        <h3 className="text-[20px] md:text-xl lg:text-3xl font-[600] mb-10 md:mb-16" style={{ fontFamily: "Inter" }}>
+          <span className="block md:inline">Innovative Mobile App</span>
+          <span className="block md:inline"> Solutions</span>
+        </h3>
+        <p className="text-[10px] md:text-base lg:text-[20px] font-[400] max-w-[705px]" style={{ fontFamily: "Inter" }}>
+          At Appitura, we combine creativity, technical expertise, and industry insights to deliver tailored mobile app solutions that meet unique business needs. Appitura's innovative mobile app solutions are designed to enhance user experiences and drive business growth.
         </p>
       </div>
 
@@ -125,7 +132,7 @@ export default function MobileAppSolutions() {
       {textElements.map((item) => (
         <div
           key={item.id}
-          className={`absolute ${item.position} transition-opacity duration-500 ${
+          className={`hidden md:block absolute ${item.position} transition-opacity duration-500 ${
             visibleTexts.includes(item.id) ? "opacity-100" : "opacity-0"
           }`}
         >

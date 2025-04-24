@@ -95,9 +95,9 @@ export default function PortfolioPage() {
                   </div>
 
                   {/* Right Section (Description + Links) */}
-                  <div className="max-w-full lg:max-w-[430px] space-y-4 sm:space-y-6 mt-4 lg:mt-0">
+                  <div className="max-w-full lg:max-w-[430px] space-y-4 sm:space-y-6 mt-4 lg:mt-0 ">
                     <p className={`text-sm sm:text-base md:text-[16px] ${inter.className}`}>{project.description}</p>
-                    <div className="flex justify-between items-center pr-0 sm:pr-4 md:pr-9">
+                    <div className="flex justify-between items-center pr-5 sm:pr-4 md:pr-9">
                       <Link
                         href={project.viewLink}
                         className={`text-base sm:text-lg md:text-[20px] ${inter.className}`}

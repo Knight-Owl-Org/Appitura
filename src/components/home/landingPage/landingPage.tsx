@@ -5,10 +5,10 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white relative overflow-hidden">
       {/* Mobile Header - Only visible on mobile */}
-      <div className="md:hidden flex justify-between items-center p-4 absolute top-2 left-0 z-20 w-full">
+      <div className="md:hidden  flex justify-between items-center p-4 absolute top-2 left-0 z-20 w-full">
         <div className="flex items-center gap-2">
           <Image src="/logo.png" alt="Appitura Logo" width={30} height={30} className="object-contain" />
-          <span className="text-[25px] font-[400]">Appitura</span>
+          <span className="text-[25px] font-[400] text-white">Appitura</span>
         </div>
       </div>
 

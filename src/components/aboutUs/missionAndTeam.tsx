@@ -7,7 +7,7 @@ export default function Page() {
           <div className="relative rounded-3xl mb-6 md:mb-0">
             {/* Blurred Border Line */}
             <div className="absolute inset-0 rounded-3xl  bg-transparent z-15">
-              <div className="w-full h-full rounded-3xl border-[5px] border-[#00a8ff] blur-[1.5px]"></div>
+              <div className="w-full h-full rounded-3xl border-[3px] md:border-[5px] border-[#00a8ff] blur-[1.5px]"></div>
             </div>
 
             {/* Content */}
@@ -26,7 +26,7 @@ export default function Page() {
           {/* Our Team Section */}
           <div className="relative rounded-3xl">
             <div className="absolute inset-0 rounded-3xl  bg-transparent z-20">
-              <div className="w-full h-full p- rounded-3xl border-[5px] border-[#00a8ff] blur-[1.5px]"></div>
+              <div className="w-full h-full p- rounded-3xl border-[3px] md:border-[5px] border-[#00a8ff] blur-[1.5px]"></div>
             </div>
             <div className="relative px-5 z-10 bg-black rounded-3xl pb-[109px] pt-[39px] flex flex-col h-full">
               <h2 className="text-[#00a8ff] text-2xl sm:text-3xl md:text-[40px] font-medium text-center mb-[30px]">
