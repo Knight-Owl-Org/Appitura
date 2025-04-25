@@ -45,12 +45,14 @@ export default function Home() {
         {/* RIGHT SIDE - md: image + form, mobile: handled separately below */}
         <div className="hidden md:flex w-full md:w-auto space-y-4 px-4 md:px-0 flex-col items-center">
           <div className="rounded-sm overflow-hidden w-[152px] h-[336px] lg:w-[457px] lg:h-[402px]  md:w-[357px] md:h-[262px] relative">
-            <Image
-              src="/contactUs.png"
-              alt="Workspace with laptop and phone"
-              fill
-              className="object-cover"
-            />
+          <Image
+  src="/contactUs.png"
+  alt="Workspace with laptop and phone"
+  fill
+  className="object-cover"
+  priority // 👈 Tells Next.js: "This image is important and visible immediately"
+/>
+
           </div>
           <div className="w-full max-w-md">
             <ContactForm />

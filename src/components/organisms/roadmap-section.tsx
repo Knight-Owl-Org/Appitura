@@ -4,10 +4,13 @@ export default function DevelopmentRoadmap() {
   return (
     <div className="w-full bg-white max-w-7xl mx-auto px-4 py-12">
       <div className="text-center mb-12">
-        <h1 className="text-3xl text-black md:text-4xl font-[600] mb-4" style={{ fontFamily: "Inter" }}>Our Development Roadmap</h1>
-        <p className="max-w-3xl mx-auto text-black" style={{ fontFamily: "Inter" }}>
-          A structured approach to delivering innovative app solutions that drive <br /> business success
-        </p>
+        <h1 className="text-2xl text-black md:text-4xl font-[600] mb-4" style={{ fontFamily: "Inter" }}>
+        <span className="block md:inline">Our Development </span>
+        <span className="block md:inline">Roadmap</span></h1>
+        <p className="max-w-3xl mx-auto text-black text-[12px] md:text-[16px]" style={{ fontFamily: "Inter" }}>
+  A structured approach to delivering innovative app solutions that drive 
+  <span className="hidden md:inline"><br /></span> business success
+</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-10">

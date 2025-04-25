@@ -35,7 +35,7 @@ export default function PortfolioPage() {
       description:
         "Recipe Nook is a simple, friendly app for saving and organizing your favorite home-cooked recipes. From family staples to creative experiments, you can add photos, notes, and cooking instructions. We believe every recipe has a story, and Recipe Nook helps you keep them close and easy to share.",
       logo: "/placeholder.svg?height=40&width=40",
-      viewLink: "#",
+      viewLink: "/projects/recipe-nook",
       projectLink: "/projects/recipe-nook",
     },
     {

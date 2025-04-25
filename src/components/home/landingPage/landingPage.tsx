@@ -57,7 +57,7 @@ export default function Home() {
                 {/* Contact Us Button - Mobile Only */}
                 <div className="mt-6 md:hidden">
                   <Link
-                    href="/contact"
+                    href="/#contactUs"
                     className="inline-block border border-[#FFFFFF80] rounded-full py-2 px-8 text-center hover:bg-gray-900 transition"
                   >
                     Contact Us
@@ -229,7 +229,7 @@ export default function Home() {
 
           <div className="mt-9">
             <Link
-              href="/contact"
+              href="/#contactUs"
               className="border border-[#FFFFFF80] rounded-full py-4 px-20 text-center hover:bg-gray-900 transition"
             >
               Contact Us
