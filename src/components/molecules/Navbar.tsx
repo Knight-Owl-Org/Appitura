@@ -28,8 +28,8 @@ export default function Navbar() {
   }, [pathname]);
 
   return (
-    <nav className="absolute top-[30px] right-4 md:top-[108px] md:right-20 lg:right-[394px] z-50">
-      <div className="flex items-center space-x-2 md:space-x-4 p-1 md:p-6 h-[28px] md:h-[53px] bg-white/50 rounded-[10px] whitespace-nowrap select-none touch-manipulation">
+    <nav className="absolute top-[30px] right-4  md:top-[55px] lg:top-[108px] md:right-85 lg:right-[394px] z-50">
+      <div className="flex items-center space-x-2 md:space-x-3 lg:space-x-4 p-1 md:p-4 lg:p-6 h-[28px] md:h-[45px] lg:h-[53px] bg-white/50 rounded-[10px] whitespace-nowrap select-none touch-manipulation">
         {navItems.map((item) => {
           const isActive = active === item.name;
 
@@ -40,7 +40,7 @@ export default function Navbar() {
                 setActive(item.name);
                 router.push(item.path);
               }}
-              className={`px-2 md:px-[15.5px] py-1 md:py-[3.5px] rounded-[8px] md:rounded-[10px] text-[10px] md:text-[18px] font-normal font-[Poly] transition-all duration-200 ease-in-out flex items-center justify-center active:scale-95 focus:outline-none ${
+              className={`px-2 md:px-[12px] lg:px-[15.5px] py-1 md:py-[2.5px] lg:py-[3.5px] rounded-[8px] md:rounded-[10px] text-[10px] md:text-[16px] lg:text-[18px] font-normal font-[Poly] transition-all duration-200 ease-in-out flex items-center justify-center active:scale-95 focus:outline-none ${
                 isActive ? "bg-[#1A2730] text-white" : "bg-transparent text-black"
               }`}
             >
