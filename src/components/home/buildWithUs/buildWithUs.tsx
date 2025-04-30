@@ -15,7 +15,7 @@ export default function BuildWithUs() {
       {/* Desktop + Tablet Section */}
       <div className="hidden md:block">
         {/* Top section */}
-        <div className="flex flex-col md:flex-row md:gap-14 lg:gap-27 mb-6 justify-center">
+        <div className="flex flex-col md:flex-row md:gap-14 lg:gap-16 xl:gap-20 mb-6 justify-center">
           <div className="flex flex-col text-center md:text-left items-center md:items-start">
             <h2
               className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight"
@@ -46,7 +46,7 @@ export default function BuildWithUs() {
           </div>
           <div
             style={{ aspectRatio: "639 / 346" }}
-            className="relative flex-shrink-0 w-full md:w-[300px] lg:w-[639px] mt-6 md:mt-0"
+            className="relative flex-shrink-0 w-full md:w-[300px] lg:w-[50%] max-w-[639px] mt-6 md:mt-0"
           >
             <Image
               src="/buildwithus1.png"
@@ -59,10 +59,10 @@ export default function BuildWithUs() {
         </div>
 
         {/* Bottom image row */}
-        <div className="flex flex-wrap justify-center items-start gap-4 md:gap-2 lg:gap-[41px]">
+        <div className="flex flex-wrap justify-center items-start gap-4 md:gap-2 lg:gap-12 xl:gap-[41px]">
           <div
             style={{ aspectRatio: "226 / 216" }}
-            className="relative w-[45%] md:w-[150px] lg:w-[226px] md:mt-[6rem] lg:mt-[9.8rem]"
+            className="relative w-[45%] md:w-[150px] lg:w-[20%] max-w-[226px] md:mt-[6rem] lg:mt-[7rem] xl:mt-[9.8rem]"
           >
             <Image
               src="/buildwithus2.png"
@@ -73,7 +73,7 @@ export default function BuildWithUs() {
           </div>
           <div
             style={{ aspectRatio: "606 / 374" }}
-            className="relative w-full md:w-[400px] lg:w-[606px]"
+            className="relative w-full md:w-[400px] lg:w-[50%] max-w-[606px]"
           >
             <Image
               src="/buildwithus3.png"
@@ -84,7 +84,7 @@ export default function BuildWithUs() {
           </div>
           <div
             style={{ aspectRatio: "346 / 314" }}
-            className="relative w-[45%] md:w-[160px] lg:w-[346px]"
+            className="relative w-[45%] md:w-[160px] lg:w-[20%] max-w-[346px]"
           >
             <Image
               src="/buildwithus4.png"

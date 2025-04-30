@@ -2,41 +2,70 @@
 
 import { Lightbulb, CodeXml, Rocket } from "lucide-react"
 import { motion } from "framer-motion"
+import { useEffect, useState } from "react"
 
-const containerVariants = {
+// Use a custom hook to detect mobile devices
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(false)
+  
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    
+    checkIsMobile()
+    window.addEventListener('resize', checkIsMobile)
+    
+    return () => {
+      window.removeEventListener('resize', checkIsMobile)
+    }
+  }, [])
+  
+  return isMobile
+}
+
+// Create responsive variants
+const getContainerVariants = (isMobile: boolean) => ({
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.6, // Increased stagger duration for slower appearance
+      staggerChildren: isMobile ? 0.45 : 0.6, // Less reduction for mobile stagger
     },
   },
-}
+})
 
-const stepVariants = {
-  hidden: { opacity: 0, y: 30 },
+const getStepVariants = (isMobile: boolean) => ({
+  hidden: { opacity: 0, y: isMobile ? 15 : 30 }, // Smaller displacement on mobile
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 1.2, // Increased duration for slower animation
+      duration: isMobile ? 1.5 : 1.2, // Slowed down from 0.7 to 1.0 for mobile
       ease: "easeOut",
     },
   },
-}
+})
 
-const imageVariants = {
-  hidden: { opacity: 0, scale: 0.9 },
+const getImageVariants = (isMobile: boolean) => ({
+  hidden: { opacity: 0, scale: isMobile ? 0.95 : 0.9 }, // Less scaling on mobile
   visible: {
     opacity: 1,
     scale: 1,
     transition: {
-      duration: 1.2,
+      duration: isMobile ? 1.1 : 1.2, // Slowed down from 0.8 to 1.1 for mobile
       ease: "easeInOut",
     },
   },
-}
+})
 
 export default function ProcessSection() {
+  const isMobile = useIsMobile()
+  
+  // Get responsive variants
+  const containerVariants = getContainerVariants(isMobile)
+  const stepVariants = getStepVariants(isMobile)
+  const imageVariants = getImageVariants(isMobile)
+  
   return (
     <section className="bg-black text-white py-16 px-4 md:px-8 lg:px-16">
       <div className="max-w-6xl mx-auto">
@@ -48,7 +77,7 @@ export default function ProcessSection() {
               variants={imageVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: isMobile ? 0.1 : 0.3 }}
             >
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent z-10"></div>
               <img
@@ -77,7 +106,7 @@ export default function ProcessSection() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: isMobile ? 0.1 : 0.3 }}
           >
             {/* Step 1 */}
             <motion.div className="flex mb-12" style={{ fontFamily: "Inter" }} variants={stepVariants}>
