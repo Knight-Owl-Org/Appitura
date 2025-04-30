@@ -27,20 +27,20 @@ export default function Home() {
               </video>
 
               {/* 🔥 Logo on top-left corner of video - Desktop only */}
-              <div className="absolute top-0 z-20 hidden md:flex items-center gap-3 bg-black/70 rounded-3xl lg:py-2 lg:pr-4 md:py-1 md:pr-2">
+              <div className="absolute top-0 z-20 hidden md:flex items-center gap-3  lg:gap-3 bg-black/70 rounded-3xl lg:py-1 lg:pr-2 md:py-1 md:pr-2 xl:py2 xl:pr-4">
                 <div className="relative">
-                  <Image src="/logo.png" alt="Appitura Logo" width={50} height={50} className="object-contain lg:w-[84px] lg:h-[86px]" />
+                  <Image src="/logo.png" alt="Appitura Logo" width={50} height={50} className="object-contain xl:w-[84px] xl:h-[86px] lg:w-[74px] lg:h-[76px] " />
                 </div>
-                <h1 className="lg:text-6xl md:text-4xl font-light">Appitura</h1>
+                <h1 className="lg:text-4xl md:text-3xl xl:text-6xl font-light">Appitura</h1>
               </div>
 
               {/* Text Overlay - Adjusted for mobile */}
               <div className="absolute top-[30%] md:bottom-20 left-4  lg:left-10 flex flex-col z-10 p-4 md:p-0">
                 <h2
-                  className="text-2xl md:text-3xl lg:text-6xl font-[700] leading-tight max-w-xl"
+                  className="text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-[700] leading-tight max-w-xl md:max-w-[360px] lg:max-w-xl xl:max-w-3xl"
                   style={{ color: "#FFFFFF", fontFamily: "Inter" }}
                 >
-                  <span className="block md:inline">Empowering your vision</span>
+                  <span className="block md:inline">Empowering your vision </span>
                   <span className="block md:inline">Through Innovative</span>
                   <span className="block md:inline text-cyan-400"> Mobile Apps</span>
                 </h2>
@@ -107,7 +107,7 @@ export default function Home() {
 
               {/* Appitura Experience - Mobile Only */}
               <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 md:hidden text-center z-10">
-                <span className="text-[12px] md:text-xs text-cyan-400">Appitura Experience</span>
+                <span className="text-[12px] md:text-xs text-cyan-400" >Appitura Experience</span>
               </div>
 
               {/* Explore the Experience Button - Desktop Only */}
@@ -177,21 +177,26 @@ export default function Home() {
         </div>
 
         {/* Right Sidebar - Hidden on mobile, visible on desktop */}
-        <div className="w-full md:w-80 bg-black p-3 hidden md:flex flex-col justify-center">
+        <div className="w-full md:w-64 lg:w-80 bg-black p-3 hidden md:flex flex-col justify-center">
           <div className="flex justify-center mb-8">
-            <span className="text-sm text-cyan-400">Appitura Experience</span>
+            <span className="text-sm text-cyan-400"
+            style={{
+              background: "linear-gradient(to right, #00a8ff 40%, #FFFFFF )",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}>Appitura Experience</span>
           </div>
 
           <div className="space-y-12">
             <div>
-              <h3 className="text-5xl font-bold mb-6">
-                Your <br /> App&apos;s Blueprint
+              <h3 className=" text-4xl md:text-4xl lg:text-5xl font-bold mb-6">
+                Your <br /> App&apos;s <br />Blueprint
               </h3>
             </div>
 
             <div className="space-y-8">
               <div className="flex items-center justify-between">
-                <h1 className="text-xl font-semibold">Top-notch Services</h1>
+                <h1 className="text-lg md:text-base lg:text-xl font-semibold">Top-notch Services</h1>
               </div>
 
               <div className="space-y-8">
@@ -199,27 +204,27 @@ export default function Home() {
                   <Image
                     src="/innavetive.png"
                     alt="Innovative Solutions Logo"
-                    width={24}
-                    height={24}
+                    width={20}
+                    height={20}
                     className="mr-4"
                   />
-                  <span className="text-lg">Innovative <br /> Solutions</span>
+                  <span className="text-base md:text-sm lg:text-lg">Innovative <br /> Solutions</span>
                 </div>
 
                 <div className="flex items-center">
-                  <Image src="/expert.png" alt="Expert Development Logo" width={24} height={24} className="mr-4" />
-                  <span className="text-lg">Expert <br /> Development</span>
+                  <Image src="/expert.png" alt="Expert Development Logo" width={20} height={20} className="mr-4" />
+                  <span className="text-base md:text-sm lg:text-lg">Expert <br /> Development</span>
                 </div>
 
                 <div className="flex items-center">
                   <Image
                     src="/collabaration.png"
                     alt="Collaborative Approach Logo"
-                    width={24}
-                    height={24}
+                    width={20}
+                    height={20}
                     className="mr-4"
                   />
-                  <span className="text-lg">
+                  <span className="text-base md:text-sm lg:text-lg">
                     Collaborative <br /> Approach
                   </span>
                 </div>
@@ -230,7 +235,7 @@ export default function Home() {
           <div className="mt-9">
             <Link
               href="/#contactUs"
-              className="border border-[#FFFFFF80] rounded-full py-4 px-20 text-center hover:bg-gray-900 transition"
+              className="border border-[#FFFFFF80] rounded-full py-3 md:py-2 lg:py-4 px-16 md:px-12 lg:px-20 text-center hover:bg-gray-900 transition"
             >
               Contact Us
             </Link>
