@@ -28,65 +28,62 @@ export default function Home() {
 
 
 
-{/* Timeline with metrics - Unified for all screens */}
-
-<div className="flex flex-col items-center mb-12 md:mb-40 px-2 ">
+<div className="flex flex-col items-center mb-12 md:mb-40  md:max-w-4xl mx-auto">
   {/* Icons and Lines */}
-  <div className="flex items-center space-x-1 md:space-x-4 ">
+  <div className="flex items-center whitespace-nowrap space-x-1 md:space-x-0">
     {/* Icon 1 */}
-    <div className="bg-white rounded-full p-3 md:p-5 z-10">
-      <Image src="/calander.png" alt="Calendar icon" width={18} height={18} className="md:w-[30px] md:h-[30px]" />
+    <div className="flex flex-col items-center space-y-9 px-1">
+      <div className="bg-white rounded-full p-3 md:p-4 lg:p-5 z-10">
+        <Image src="/calander.png" alt="Calendar icon" width={18} height={18} className="md:w-[30px] md:h-[30px]" />
+      </div>
+      <p className="text-[8px] md:text-[13px] lg:text-[18px] text-center mt-2 whitespace-nowrap" style={{ fontWeight: 400, fontFamily: "Inter" }}>
+        Founded in <br className="md:hidden" /> 2025
+      </p>
     </div>
 
     {/* Line */}
-    <div className="h-[1px] bg-gray-700 w-11 lg:w-50 md:w-18"></div>
+    <div className="h-[1px] bg-gray-700 w-8 lg:w-30 md:w-18 self-center mb-15"></div>
 
     {/* Icon 2 */}
-    <div
-      className="rounded-full p-3 md:p-5 z-10"
-      style={{ background: "linear-gradient(90deg, #1A97C7 60%, #FFFFFF)" }}
-    >
-      <Image src="/rocket.png" alt="Rocket icon" width={18} height={18} className="md:w-[30px] md:h-[30px]" />
+    <div className="flex flex-col items-center space-y-9">
+      <div className="rounded-full p-3 md:p-4 lg:p-5 z-10" style={{ background: "linear-gradient(90deg, #1A97C7 60%, #FFFFFF)" }}>
+        <Image src="/rocket.png" alt="Rocket icon" width={18} height={18} className="md:w-[30px] md:h-[30px]" />
+      </div>
+      <p className="text-[8px] md:text-[13px] lg:text-[18px] text-center mt-2 whitespace-nowrap" style={{ fontWeight: 400, fontFamily: "Inter" }}>
+        1 Successful <br className="md:hidden" /> Project
+      </p>
     </div>
 
-    <div className="h-[1px] bg-gray-700 w-11 lg:w-50 md:w-18"></div>
+    {/* Line */}
+    <div className="h-[1px] bg-gray-700 w-8 lg:w-30 md:w-18 self-center mb-15"></div>
 
     {/* Icon 3 */}
-    <div className="bg-white rounded-full p-3 md:p-5 z-10">
-      <Image src="/growth.png" alt="Chart icon" width={18} height={18} className="md:w-[30px] md:h-[30px]" />
+    <div className="flex flex-col items-center space-y-9">
+      <div className="bg-white rounded-full p-3 md:p-4 lg:p-5 z-10 ">
+        <Image src="/growth.png" alt="Chart icon" width={18} height={18} className="md:w-[30px] md:h-[30px]" />
+      </div>
+      <p className="text-[8px] md:text-[13px] lg:text-[18px] text-center mt-2 whitespace-nowrap" style={{ fontWeight: 400, fontFamily: "Inter" }}>
+        Driving Business <br className="md:hidden" /> Growth
+      </p>
     </div>
 
-    <div className="h-[1px] bg-gray-700 w-11 lg:w-50 md:w-18"></div>
+    {/* Line */}
+    <div className="h-[1px] bg-gray-700 w-8 lg:w-30 md:w-18 self-center mb-15 "></div>
 
     {/* Icon 4 */}
-    <div
-      className="rounded-full p-3 md:p-5 z-10"
-      style={{ background: "linear-gradient(90deg, #1A97C7 60%, #FFFFFF)" }}
-    >
-      <Image src="/group.png" alt="Globe icon" width={18} height={18} className="md:w-[30px] md:h-[30px]" />
+    <div className="flex flex-col items-center space-y-9">
+      <div className="rounded-full p-3 md:p-4 lg:p-5 z-10" style={{ background: "linear-gradient(90deg, #1A97C7 60%, #FFFFFF)" }}>
+        <Image src="/group.png" alt="Globe icon" width={18} height={18} className="md:w-[30px] md:h-[30px]" />
+      </div>
+      <p className="text-[8px] md:text-[13px] lg:text-[18px] text-center mt-2 whitespace-nowrap" style={{ fontWeight: 400, fontFamily: "Inter" }}>
+        Global <br className="md:hidden" /> Clientele
+      </p>
     </div>
   </div>
-
-  {/* Labels under icons */}
-  <div className="flex justify-between w-full mt-5 md:mt-8 px-5 lg:px-70 ">
-    <p className="text-[8px] md:text-[18px] text-center " style={{ fontWeight: 400, fontFamily: "Inter" }}>
-    <span className="block md:inline">Founded in</span>
-    <span className="block md:inline"> 2025</span>
-    </p>
-    <p className="text-[8px] md:text-[18px] text-center " style={{ fontWeight: 400, fontFamily: "Inter" }}>
-    <span className="block md:inline">1 Successful</span>
-    <span className="block md:inline"> Project</span>
-    </p>
-    <p className="text-[8px] md:text-[18px] text-center " style={{ fontWeight: 400, fontFamily: "Inter" }}>
-    <span className="block md:inline">Driving Business</span>
-    <span className="block md:inline"> Growth</span>
-    </p>
-    <p className="text-[8px] md:text-[18px] text-center " style={{ fontWeight: 400, fontFamily: "Inter" }}>
-    <span className="block md:inline">Global </span>
-    <span className="block md:inline">Clientele</span>
-    </p>
-  </div>
 </div>
+
+
+
 
 {/* Image Gallery */}
 <div className="mt-6 md:mt-8 lg:mt-10 flex flex-col gap-2 md:gap-3 lg:gap-4 items-center">
