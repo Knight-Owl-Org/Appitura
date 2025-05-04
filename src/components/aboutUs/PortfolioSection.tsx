@@ -1,10 +1,11 @@
-"use client"
+"use client";
 
-import { Inter } from "next/font/google"
-import Link from "next/link"
-import { motion } from "framer-motion"
+import { Inter } from "next/font/google";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import projects from "@/data/projectData";
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
 
 const containerVariants = {
   hidden: {},
@@ -13,7 +14,7 @@ const containerVariants = {
       staggerChildren: 0.8, // increased stagger delay for slower animation
     },
   },
-}
+};
 
 const projectVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -25,39 +26,9 @@ const projectVariants = {
       ease: "easeInOut",
     },
   },
-}
+};
 
 export default function PortfolioPage() {
-  const projects = [
-    {
-      id: "01",
-      title: "Recipe Nook",
-      description:
-        "Recipe Nook is a simple, friendly app for saving and organizing your favorite home-cooked recipes. From family staples to creative experiments, you can add photos, notes, and cooking instructions. We believe every recipe has a story, and Recipe Nook helps you keep them close and easy to share.",
-      logo: "/placeholder.svg?height=40&width=40",
-      viewLink: "/projects/recipe-nook",
-      projectLink: "/projects/recipe-nook",
-    },
-    {
-      id: "02",
-      title: "Date Game",
-      description:
-        "Date Game is a fun app for couples to explore creative date ideas. Browse challenges, track memories, and unlock experiences together.",
-      logo: "/placeholder.svg?height=40&width=40",
-      viewLink: "#",
-      projectLink: "#",
-    },
-    {
-      id: "03",
-      title: "Tailor my clothes",
-      description:
-        "Tailor My Clothes helps you schedule fittings and manage alterations from the comfort of your home. Upload designs, get quotes, and more.",
-      logo: "/placeholder.svg?height=40&width=40",
-      viewLink: "#",
-      projectLink: "#",
-    },
-  ]
-
   return (
     <div className="min-h-screen bg-black text-white">
       <main className="container mx-auto px-4 py-10 sm:py-16 md:py-24">
@@ -96,17 +67,17 @@ export default function PortfolioPage() {
 
                   {/* Right Section (Description + Links) */}
                   <div className="max-w-full lg:max-w-[430px] space-y-4 sm:space-y-6 mt-4 lg:mt-0 ">
-                    <p className={`text-sm sm:text-base md:text-[16px] ${inter.className}`}>{project.description}</p>
+                    <p className={`text-sm sm:text-base md:text-[16px] ${inter.className}`}>{project.about.description}</p>
                     <div className="flex justify-between items-center pr-5 sm:pr-4 md:pr-9">
                       <Link
-                        href={project.viewLink}
+                        href={`/projects/${project.id}`}
                         className={`text-base sm:text-lg md:text-[20px] ${inter.className}`}
                       >
                         View
                       </Link>
                       <hr className="mx-2 sm:mx-4 border-t border-white w-full" />
                       <Link
-                        href={project.projectLink}
+                        href={`/projects/${project.id}`}
                         className={`text-base sm:text-lg md:text-[20px] ${inter.className}`}
                       >
                         Project
@@ -120,12 +91,12 @@ export default function PortfolioPage() {
         </section>
       </main>
     </div>
-  )
+  );
 }
 
 // Helper function to format title with line breaks for larger screens
 function formatTitle(title: string) {
-  const words = title.split(" ")
+  const words = title.split(" ");
 
   if (words.length === 2) {
     return (
@@ -137,7 +108,7 @@ function formatTitle(title: string) {
           {words[1]}
         </span>
       </>
-    )
+    );
   }
 
   if (words.length === 3) {
@@ -150,8 +121,8 @@ function formatTitle(title: string) {
           {words[2]}
         </span>
       </>
-    )
+    );
   }
 
-  return title
+  return title;
 }

@@ -1,41 +1,9 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import { feedbacks } from "../../../data/feedBackData";
 
 export default function TestimonialsSection() {
-  const feedbacks = [
-    {
-      text: "Appitura exceeded our expectations with their innovative solutions and seamless app development process. Partnering with Appitura was a game-changer for our business. Their expertise brought our vision to life.",
-      name: "Alex Morgan",
-      role: "Startup Founder",
-      image: "/profile.png",
-    },
-    {
-      text: "Appitura exceeded our expectations with their innovative solutions and seamless app development process. Partnering with Appitura was a game-changer for our business. Their expertise brought our vision to life.",
-      name: "Sophi Alex Morgan",
-      role: "Startup Founder",
-      image: "/profile.png",
-    },
-    {
-      text: "Appitura exceeded our expectations with their innovative solutions and seamless app development process. Partnering with Appitura was a game-changer for our business. Their expertise brought our vision to life.",
-      name: "Jessica Lee",
-      role: "Product Manager",
-      image: "/profile.png",
-    },
-    {
-      text: "Their technical expertise and understanding of user experience made all the difference.",
-      name: "Michael Brown",
-      role: "CTO",
-      image: "/profile.png",
-    },
-    {
-      text: "Their technical expertise and understanding of user experience made all the difference.",
-      name: "Michael Brown",
-      role: "CTO",
-      image: "/profile.png",
-    },
-  ];
-
   const duplicatedFeedbacks = [...feedbacks, ...feedbacks];
 
   const containerRef = useRef<HTMLDivElement>(null);
@@ -75,8 +43,23 @@ export default function TestimonialsSection() {
 
   useEffect(() => {
     const container = containerRef.current;
+
     if (container) {
-      container.scrollLeft = container.scrollWidth / 2;
+      const feedbackWidth = 406; // Width of a single feedback card
+      const visibleFeedbackCount = 3; // Number of feedbacks visible at a time
+      const totalScrollWidth = feedbackWidth * feedbacks.length;
+
+      const handleScroll = () => {
+        if (container.scrollLeft >= totalScrollWidth) {
+          container.scrollLeft = 0; // Reset to the start
+        }
+      };
+
+      container.addEventListener("scroll", handleScroll);
+
+      return () => {
+        container.removeEventListener("scroll", handleScroll);
+      };
     }
   }, []);
 
@@ -206,11 +189,11 @@ export default function TestimonialsSection() {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(50%);
+            transform: translateX(-${406 * 3}px); /* Scroll by 3 feedbacks */
           }
         }
         .animate-scroll {
-          animation: scroll 20s linear infinite;
+          animation: scroll 10s linear infinite;
         }
       `}</style>
     </section>
