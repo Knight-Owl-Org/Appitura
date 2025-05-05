@@ -1,7 +1,11 @@
 import projects from "@/data/projectData";
 import Project from "@/components/projects/project";
 
-export default function ProjectPage({ params }: { params: { id: string } }) {
+export async function generateStaticParams() {
+  return projects.map((project) => ({ id: project.id }));
+}
+
+export default async function ProjectPage({ params }: { params: { id: string } }) {
   const project = projects.find((p) => p.id === params.id);
 
   if (!project) {
