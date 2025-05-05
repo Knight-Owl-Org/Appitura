@@ -20,7 +20,7 @@ export default function HeroSection() {
         className="
         relative
         mx-5 sm:mx-10 md:mx-14 lg:mx-24
-        my-25 md:my-20
+        my-25 lg:my-20 md:my-10
         rounded-3xl 
         h-[500px] md:h-[685px]
         z-0 

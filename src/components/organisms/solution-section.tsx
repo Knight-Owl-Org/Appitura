@@ -13,11 +13,16 @@ export default function MobileAppSolutions() {
       (entries) => {
         if (entries[0].isIntersecting) {
           setInView(true)
+        } else {
+          // Optional: Reset animation when out of view
+          // setInView(false);
+          // setVisibleTexts([]);
         }
       },
       {
-        threshold: 0.3, // Trigger when 30% of the section is in view
-      }
+        threshold: 0.2, // Reduced threshold to 20% visibility
+        rootMargin: "0px 0px -10% 0px", // Trigger earlier when scrolling down
+      },
     )
 
     if (sectionRef.current) {
@@ -35,6 +40,9 @@ export default function MobileAppSolutions() {
     const textElements = [0, 1, 2, 3, 4, 5]
     let currentIndex = 0
 
+    // Clear any existing visible texts when coming into view again
+    setVisibleTexts([])
+
     const interval = setInterval(() => {
       if (currentIndex < textElements.length) {
         setVisibleTexts((prev) => [...prev, textElements[currentIndex]])
@@ -42,10 +50,15 @@ export default function MobileAppSolutions() {
       } else {
         clearInterval(interval)
       }
-    }, 600)
+    }, 400) // Reduced delay to 400ms for faster animation
 
     return () => clearInterval(interval)
   }, [inView])
+
+  // Add debugging to check if "Secure Solutions" is in the visibleTexts array
+  useEffect(() => {
+    console.log("Currently visible texts:", visibleTexts)
+  }, [visibleTexts])
 
   const textElements = [
     {
@@ -96,7 +109,7 @@ export default function MobileAppSolutions() {
     {
       id: 5,
       text: "Secure Solutions",
-      position: "top-[40%] right-[10%]",
+      position: "top-[35%] right-[10%]", // Original position
       arrowSrc: "/arrows/arrow3.png",
       arrowClass: "-top-8 right-25 rotate-[-20deg]",
       arrowWidth: 180,
@@ -105,7 +118,12 @@ export default function MobileAppSolutions() {
   ]
 
   return (
-    <div ref={sectionRef} className="relative w-full h-[407px] md:h-screen overflow-hidden bg-black">
+    <div
+      ref={sectionRef}
+      className="relative w-full h-[407px] md:h-screen overflow-hidden bg-black"
+      // Add data attribute for debugging
+      data-visible-texts={visibleTexts.join(",")}
+    >
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image src="/bg1.png" alt="Background" fill className="object-cover" priority />
@@ -115,7 +133,10 @@ export default function MobileAppSolutions() {
       {/* Main content */}
       <div className="relative z-10 flex flex-col items-center justify-center w-full h-full p-6 md:px-4 text-white text-center">
         {/* Display h2 only on screens larger than md */}
-        <h2 className="hidden md:block text-blue-400 text-xl lg:text-md font-[500] mb-8" style={{ fontFamily: "Inter" }}>
+        <h2
+          className="hidden md:block text-blue-400 text-xl lg:text-md font-[500] mb-8"
+          style={{ fontFamily: "Inter" }}
+        >
           Mobile App Development
         </h2>
         {/* Display h3 and p on all screen sizes */}
@@ -124,7 +145,9 @@ export default function MobileAppSolutions() {
           <span className="block md:inline"> Solutions</span>
         </h3>
         <p className="text-[10px] md:text-base lg:text-[20px] font-[400] max-w-[705px]" style={{ fontFamily: "Inter" }}>
-          At Appitura, we combine creativity, technical expertise, and industry insights to deliver tailored mobile app solutions that meet unique business needs. Appitura's innovative mobile app solutions are designed to enhance user experiences and drive business growth.
+          At Appitura, we combine creativity, technical expertise, and industry insights to deliver tailored mobile app
+          solutions that meet unique business needs. Appitura's innovative mobile app solutions are designed to enhance
+          user experiences and drive business growth.
         </p>
       </div>
 
@@ -135,11 +158,17 @@ export default function MobileAppSolutions() {
           className={`hidden md:block absolute ${item.position} transition-opacity duration-500 ${
             visibleTexts.includes(item.id) ? "opacity-100" : "opacity-0"
           }`}
+          // Add data attribute for debugging
+          data-text-id={item.id}
+          data-text-content={item.text}
+          data-is-visible={visibleTexts.includes(item.id).toString()}
         >
           <div className="relative">
-            <p className="text-xs md:text-sm text-gray-200 whitespace-nowrap" style={{fontFamily:"Inter"}}>{item.text}</p>
+            <p className="text-xs md:text-sm text-gray-200 whitespace-nowrap" style={{ fontFamily: "Inter" }}>
+              {item.text}
+            </p>
             <Image
-              src={item.arrowSrc}
+              src={item.arrowSrc || "/placeholder.svg"}
               alt="Arrow"
               width={item.arrowWidth}
               height={item.arrowHeight}

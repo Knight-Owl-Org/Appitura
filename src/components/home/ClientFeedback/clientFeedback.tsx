@@ -85,7 +85,7 @@ export default function TestimonialsSection() {
 
       {/* Desktop view */}
       <div
-        className="hidden md:block relative lg:w-[1270px] overflow-hidden mx-auto mb-20"
+        className="hidden md:block relative   overflow-hidden mx-auto mb-20"
         ref={containerRef}
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}

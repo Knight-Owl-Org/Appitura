@@ -42,7 +42,7 @@ export default function Home() {
     </div>
 
     {/* Line */}
-    <div className="h-[1px] bg-gray-700 w-8 lg:w-30 md:w-18 self-center mb-15"></div>
+    <div className="h-[1px] bg-gray-700 w-8 lg:w-20 md:w-18 self-center mb-15"></div>
 
     {/* Icon 2 */}
     <div className="flex flex-col items-center space-y-9">
@@ -55,7 +55,7 @@ export default function Home() {
     </div>
 
     {/* Line */}
-    <div className="h-[1px] bg-gray-700 w-8 lg:w-30 md:w-18 self-center mb-15"></div>
+    <div className="h-[1px] bg-gray-700 w-8 lg:w-20 md:w-18 self-center mb-15"></div>
 
     {/* Icon 3 */}
     <div className="flex flex-col items-center space-y-9">
@@ -68,7 +68,7 @@ export default function Home() {
     </div>
 
     {/* Line */}
-    <div className="h-[1px] bg-gray-700 w-8 lg:w-30 md:w-18 self-center mb-15 "></div>
+    <div className="h-[1px] bg-gray-700 w-8 lg:w-20 md:w-18 self-center mb-15 "></div>
 
     {/* Icon 4 */}
     <div className="flex flex-col items-center space-y-9">
@@ -84,35 +84,37 @@ export default function Home() {
 
 
 
-
 {/* Image Gallery */}
-<div className="mt-6 md:mt-8 lg:mt-10 flex flex-col gap-2 md:gap-3 lg:gap-4 items-center">
+<div className="mt-6 md:mt-8 lg:mt-9 xl:mt-10 flex flex-col gap-2 md:gap-3 lg:gap-3.5 xl:gap-4 items-center">
   {/* Top row */}
-  <div className="flex flex-row flex-wrap gap-1.5 md:gap-4 lg:flex-nowrap lg:gap-7 items-center justify-center">
-    <div className="w-[109px] md:w-[200px] lg:w-[400px] h-[153px] md:h-[250px] lg:h-[430px] relative">
+  <div className="flex flex-row flex-wrap gap-1.5 md:gap-4 lg:flex-nowrap lg:gap-6 xl:gap-7 items-center justify-center">
+    <div className="w-[109px] md:w-[200px] lg:w-[260px] xl:w-[320px] h-[153px] md:h-[250px] lg:h-[300px] xl:h-[340px] relative">
       <Image src="/gallery1.png" alt="UI design process" fill className="object-cover" />
     </div>
-    <div className="w-[80px] md:w-[160px] lg:w-[294px] h-[153px] md:h-[250px] lg:h-[430px] relative">
+    <div className="w-[80px] md:w-[160px] lg:w-[200px] xl:w-[240px] h-[153px] md:h-[250px] lg:h-[300px] xl:h-[340px] relative">
       <Image src="/gallery2.png" alt="Hand holding smartphone" fill className="object-cover" />
     </div>
-    <div className="w-[138px] md:w-[240px] lg:w-[505px] h-[153px] md:h-[250px] lg:h-[430px] relative">
+    <div className="w-[138px] md:w-[240px] lg:w-[320px] xl:w-[400px] h-[153px] md:h-[250px] lg:h-[300px] xl:h-[340px] relative">
       <Image src="/gallery3.png" alt="Multiple mobile screens" fill className="object-cover" />
     </div>
   </div>
 
   {/* Bottom row */}
-  <div className="flex flex-row flex-wrap gap-1 md:gap-3 lg:flex-nowrap lg:gap-4 items-center justify-center">
-    <div className="w-[74px] md:w-[140px] lg:w-[274px] h-[153px] md:h-[250px] lg:h-[430px] relative">
+  <div className="flex flex-row flex-wrap gap-1 md:gap-3 lg:flex-nowrap lg:gap-3.5 xl:gap-4 items-center justify-center">
+    <div className="w-[74px] md:w-[140px] lg:w-[180px] xl:w-[220px] h-[153px] md:h-[250px] lg:h-[300px] xl:h-[340px] relative">
       <Image src="/gallery4.png" alt="Hand holding phone with app" fill className="object-cover" />
     </div>
-    <div className="w-[178px] md:w-[310px] lg:w-[651px] h-[153px] md:h-[250px] lg:h-[430px] relative">
+    <div className="w-[178px] md:w-[310px] lg:w-[420px] xl:w-[538px] h-[153px] md:h-[250px] lg:h-[300px] xl:h-[340px] relative">
       <Image src="/gallery5.png" alt="Food delivery app mockups" fill className="object-cover" />
     </div>
-    <div className="w-[81px] md:w-[160px] lg:w-[299px] h-[153px] md:h-[250px] lg:h-[430px] relative">
-      <Image src="/gallery4.png" alt="Hand holding phone with app" fill className="object-cover" />
+    <div className="w-[81px] md:w-[160px] lg:w-[200px] xl:w-[230px] h-[153px] md:h-[250px] lg:h-[300px] xl:h-[340px] relative">
+      <Image src="/gallery6.png" alt="Hand holding phone with app" fill className="object-cover" />
     </div>
   </div>
 </div>
+
+
+
 
 
 

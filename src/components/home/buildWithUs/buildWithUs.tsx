@@ -87,7 +87,7 @@ export default function BuildWithUs() {
             className="relative w-[45%] md:w-[160px] lg:w-[20%] max-w-[346px]"
           >
             <Image
-              src="/buildwithus4.png"
+              src="/buildwithus5.png"
               alt="Chess piece"
               fill
               className="object-cover rounded-md"

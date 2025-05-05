@@ -68,21 +68,17 @@ export default function PortfolioPage() {
                   {/* Right Section (Description + Links) */}
                   <div className="max-w-full lg:max-w-[430px] space-y-4 sm:space-y-6 mt-4 lg:mt-0 ">
                     <p className={`text-sm sm:text-base md:text-[16px] ${inter.className}`}>{project.about.description}</p>
-                    <div className="flex justify-between items-center pr-5 sm:pr-4 md:pr-9">
-                      <Link
-                        href={`/projects/${project.id}`}
-                        className={`text-base sm:text-lg md:text-[20px] ${inter.className}`}
-                      >
-                        View
-                      </Link>
-                      <hr className="mx-2 sm:mx-4 border-t border-white w-full" />
-                      <Link
-                        href={`/projects/${project.id}`}
-                        className={`text-base sm:text-lg md:text-[20px] ${inter.className}`}
-                      >
-                        Project
-                      </Link>
-                    </div>
+                    <div className="flex items-center gap-4 -2">
+  <Link
+    href={`/projects/${project.id}`}
+    className={`text-base sm:text-lg md:text-[20px] whitespace-nowrap ${inter.className}`}
+  >
+    View Project
+  </Link>
+  <hr className="border-t border-white flex-grow" />
+</div>
+
+
                   </div>
                 </div>
               </motion.div>

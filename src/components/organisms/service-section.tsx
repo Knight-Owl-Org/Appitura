@@ -40,7 +40,7 @@ export default function ServiceSection() {
             >
               UI/UX Design
             </h3>
-            <p className="text-[10px] md:text-sm md:mt-4 text-center md:text-left" style={{fontFamily:"Inter"}}>Creating high-performing apps tailored to your business needs.</p>
+            <p className="text-[10px] md:text-sm md:mt-4 text-center md:text-left" style={{fontFamily:"Inter"}}>Designing intuitive and visually appealing user interfaces.</p>
           </div>
 
           {/* Cloud Integration */}
@@ -54,7 +54,7 @@ export default function ServiceSection() {
             >
               Cloud Integration
             </h3>
-            <p className="text-[10px] md:text-sm md:mt-4 text-center md:text-left" style={{fontFamily:"Inter"}}>Creating high-performing apps tailored to your business needs.</p>
+            <p className="text-[10px] md:text-sm md:mt-4 text-center md:text-left" style={{fontFamily:"Inter"}}>Integrating apps with secure cloud-based solutions.</p>
           </div>
 
           {/* AI-Powered Features */}
@@ -70,7 +70,7 @@ export default function ServiceSection() {
               <br />
               Features
             </h3>
-            <p className="text-[10px] md:text-sm md:mt-4 text-center md:text-left" style={{fontFamily:"Inter"}}>Creating high-performing apps tailored to your business needs.</p>
+            <p className="text-[10px] md:text-sm md:mt-4 text-center md:text-left" style={{fontFamily:"Inter"}}>Incorporating AI to enhance app functionality and user experience.</p>
           </div>
 
           {/* App Consulting */}
@@ -84,7 +84,7 @@ export default function ServiceSection() {
             >
               App Consulting
             </h3>
-            <p className="text-[10px] md:text-sm md:mt-4 text-center md:text-left" style={{fontFamily:"Inter"}}>Creating high-performing apps tailored to your business needs.</p>
+            <p className="text-[10px] md:text-sm md:mt-4 text-center md:text-left" style={{fontFamily:"Inter"}}>Providing expert guidance to align your app strategy with business goals.</p>
           </div>
 
           {/* App Maintenance & Growth Packages */}
@@ -99,7 +99,7 @@ export default function ServiceSection() {
               App Maintenance &<br />
               Growth Packages
             </h3>
-            <p className="text-[10px] md:text-sm md:mt-4 text-center md:text-left" style={{fontFamily:"Inter"}}>Creating high-performing apps tailored to your business needs.</p>
+            <p className="text-[10px] md:text-sm md:mt-4 text-center md:text-left" style={{fontFamily:"Inter"}}>Ensuring your app stays updated, secure, and primed for long-term growth.</p>
           </div>
 
         </div>

@@ -9,9 +9,11 @@ const navItems = [
   { name: "About Us", path: "/aboutUs" },
 ];
 
+// Same imports and navItems
+
 export default function Navbar() {
   const [active, setActive] = useState("Home");
-  const [menuOpen, setMenuOpen] = useState(false); // State to control menu visibility
+  const [menuOpen, setMenuOpen] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
 
@@ -27,51 +29,32 @@ export default function Navbar() {
   }, [pathname]);
 
   return (
-    <nav className="absolute top-[30px] right-4 md:top-[50px] lg:top-[100px] xl:top-[100px] md:right-68 lg:right-[354px] xl:right-[400px] z-50">
+    <nav className="absolute top-[30px] right-4 md:top-[55px] lg:top-[100px] xl:top-[100px] md:right-[240px] lg:right-[280px] xl:right-[350px] z-50">
       {/* Hamburger Icon */}
       <div className="md:hidden flex items-center">
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="p-2 rounded-lg focus:outline-none relative"
         >
-          <span
-            className={`block w-5 h-0.5 bg-white mb-1 transition-transform duration-300 ${
-              menuOpen ? "rotate-45 translate-y-1.5" : ""
-            }`}
-          ></span>
-          <span
-            className={`block w-5 h-0.5 bg-white mb-1 transition-opacity duration-300 ${
-              menuOpen ? "opacity-0" : ""
-            }`}
-          ></span>
-          <span
-            className={`block w-5 h-0.5 bg-white transition-transform duration-300 ${
-              menuOpen ? "-rotate-45 -translate-y-1.5" : ""
-            }`}
-          ></span>
+          <span className={`block w-5 h-0.5 bg-white mb-1 transition-transform duration-300 ${menuOpen ? "rotate-45 translate-y-1.5" : ""}`} />
+          <span className={`block w-5 h-0.5 bg-white mb-1 transition-opacity duration-300 ${menuOpen ? "opacity-0" : ""}`} />
+          <span className={`block w-5 h-0.5 bg-white transition-transform duration-300 ${menuOpen ? "-rotate-45 -translate-y-1.5" : ""}`} />
         </button>
       </div>
 
-      {/* Menu for Mobile */}
-      <div
-        className={`absolute top-[30px] right-4 bg-white/90 rounded-lg shadow-lg p-3 md:hidden transition-transform duration-300 w-[100px] ${
-          menuOpen ? "scale-100 opacity-100" : "scale-95 opacity-0 pointer-events-none"
-        }`}
-      >
+      {/* Mobile Menu */}
+      <div className={`absolute top-[30px] right-4 bg-white/90 rounded-lg shadow-lg p-3 md:hidden transition-transform duration-300 w-[100px] ${menuOpen ? "scale-100 opacity-100" : "scale-95 opacity-0 pointer-events-none"}`}>
         {navItems.map((item) => {
           const isActive = active === item.name;
-
           return (
             <button
               key={item.name}
               onClick={() => {
                 setActive(item.name);
                 router.push(item.path);
-                setMenuOpen(false); // Close menu on selection
+                setMenuOpen(false);
               }}
-              className={`block w-full text-left px-3 py-1 rounded-lg text-[14px] font-[Poly] 
-                transition-all duration-200 ease-in-out whitespace-nowrap 
-                ${isActive ? "bg-[#1A2730] text-white" : "bg-transparent text-black"}`}
+              className={`block w-full text-left px-3 py-1 rounded-lg text-[13px] font-[Poly] transition-all duration-200 ease-in-out whitespace-nowrap ${isActive ? "bg-[#1A2730] text-white" : "bg-transparent text-black"}`}
             >
               {item.name}
             </button>
@@ -79,11 +62,10 @@ export default function Navbar() {
         })}
       </div>
 
-      {/* Desktop Navigation */}
-      <div className="hidden md:flex items-center space-x-2 p-1 md:p-2 xl:p-4 h-[28px] md:h-[38px] lg:h-[50px] xl:h-[53px] bg-white/50 rounded-[10px] whitespace-nowrap select-none touch-manipulation">
+      {/* Desktop Menu */}
+      <div className="hidden md:flex items-center space-x-1 md:space-x-2 lg:space-x-2.5 xl:space-x-3 p-[4px] md:p-[6px] lg:p-[8px] xl:p-3 h-[28px] md:h-[32px] lg:h-[40px] xl:h-[48px] bg-white/50 rounded-[10px] select-none touch-manipulation">
         {navItems.map((item) => {
           const isActive = active === item.name;
-
           return (
             <button
               key={item.name}
@@ -91,12 +73,7 @@ export default function Navbar() {
                 setActive(item.name);
                 router.push(item.path);
               }}
-              className={`px-2 md:px-[12px] lg:px-[15.5px] xl:px-[23px] py-1 md:py-[2px] lg:py-[3.5px] xl:py-[4px] 
-                rounded-lg text-[10px] md:text-[13px] lg:text-[18px] xl:text-[20px] font-[Poly] 
-                transition-all duration-200 ease-in-out 
-                flex items-center justify-center 
-                active:scale-95 focus:outline-none
-                ${isActive ? "bg-[#1A2730] text-white" : "bg-transparent text-black"}`}
+              className={`px-[6px] md:px-[10px] lg:px-[12px] xl:px-[15px] py-[2px] md:py-[2.5px] lg:py-[3px] xl:py-[2.5px] md:rounded-sm lg:rounded-lg text-[10px] md:text-[12px] lg:text-[14px] xl:text-[18px] font-[Poly] transition-all duration-200 ease-in-out flex items-center justify-center active:scale-95 focus:outline-none ${isActive ? "bg-[#1A2730] text-white" : "bg-transparent text-black"}`}
             >
               {item.name}
             </button>

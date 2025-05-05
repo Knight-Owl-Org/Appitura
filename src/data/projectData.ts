@@ -8,7 +8,7 @@ const projects = [
         "about": {
           "industry": "Food & Beverage Technology",
           "location": "Sri Lanka",
-          "description": "Recipe Nook is a modern mobile app designed for home cooks, food enthusiasts, and kitchen creatives. It offers a cozy and intuitive space to store, organize, and revisit your favorite recipes—whether they're handwritten family treasures or new discoveries. With features like smart search, personal notes, and a visual recipe dashboard, Recipe Nook turns everyday cooking into a more joyful and personal experience.",
+          "description": "Recipe Nook is a simple, friendly app for saving and organizing your favorite home-cooked recipes. From family staples to creative experiments, you can add photos, notes, and ingredients all in one place. We believe every recipe has a story, and Recipe Nook helps you keep them close and easy to share.",
           "image": "/projectBook.png"
         },
         "objective": {
@@ -47,7 +47,7 @@ const projects = [
         "about": {
           "industry": "",
           "location": "",
-          "description": "Date Game is a fun app for couples to explore creative date ideas. Browse challenges, track memories, and unlock experiences together.",
+          "description": "Recipe Nook is a simple, friendly app for saving and organizing your favorite home-cooked recipes. From family staples to creative experiments, you can add photos, notes, and ingredients all in one place. We believe every recipe has a story, and Recipe Nook helps you keep them close and easy to share.",
           "image": ""
         },
         "objective": {
@@ -74,7 +74,7 @@ const projects = [
         "about": {
           "industry": "",
           "location": "",
-          "description": "Tailor My Clothes helps you schedule fittings and manage alterations from the comfort of your home. Upload designs, get quotes, and more.",
+          "description": "Recipe Nook is a simple, friendly app for saving and organizing your favorite home-cooked recipes. From family staples to creative experiments, you can add photos, notes, and ingredients all in one place. We believe every recipe has a story, and Recipe Nook helps you keep them close and easy to share.",
           "image": ""
         },
         "objective": {
