@@ -38,10 +38,10 @@ export default function Project({ project }: { project: any }) {
             <img
               src="/projectArrow.png"
               alt="Back"
-              className="h-4 w-8 mr-2 md:mr-2 lg:mr-3"
+              className="md:h-3 md:w-6  xl:h-4 xl:w-8  mr-2 md:mr-2 lg:mr-3"
             />
             <span
-              className="text-base md:text-[18px] lg:text-[20px] font-medium"
+              className="text-base md:text-[14px] lg:text-[17px] xl:text-[20px] font-medium"
               style={{ fontFamily: "Inter" }}
             >
               Back to Portfolio
@@ -51,11 +51,11 @@ export default function Project({ project }: { project: any }) {
 
         {/* Main Content */}
         <div className="flex-grow flex flex-col items-center justify-center text-center">
-          <h1 className="text-[20px] md:text-[50px] lg:text-[80px] font-[700] text-[#1A97C7] md:mb-20 lg:mb-40 mb-[31px]">
+          <h1 className="text-[20px] md:text-[40px] lg:text-[40px] xl:text-[50px] font-[700] text-[#1A97C7] md:mb-15 lg:mb-15 xl:mb-20 mb-[31px]">
             {project.title}
           </h1>
           <p
-            className="text-[12px] md:text-[25px] lg:text-[40px] font-semibold"
+            className="text-[12px] md:text-[18px] lg:text-[18px] xl:text-[25px] font-semibold"
             style={{
               fontFamily: "Inter",
               background: "linear-gradient(to right, #1A97C7 50%, #FFFFFF )",
@@ -77,11 +77,11 @@ export default function Project({ project }: { project: any }) {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          <h2 className="text-[#1A97C7] mb-2 text-[20px] md:text-[35px] lg:text-[50px] font-bold">
+          <h2 className="text-[#1A97C7] mb-2 text-[20px] md:text-[32px] lg:text-[32px] xl:text-[45px] font-bold">
             About
           </h2>
           <p
-            className="text-white text-[10px] md:text-[18px] lg:text-[25px] leading-relaxed max-w-full md:max-w-[600px] lg:max-w-[753px] font-[400]"
+            className="text-white text-[10px] md:text-[18px] lg:text-[18px] xl:text-[25px] leading-relaxed max-w-full lg:max-w-[600px] xl:max-w-[753px] font-[400]"
             style={{ fontFamily: "Inter" }}
           >
             {project.about?.description}
@@ -90,13 +90,13 @@ export default function Project({ project }: { project: any }) {
 
         <div className="w-full md:mb-3 lg:mb-4">
           <p
-            className="text-white mb-5 md:mb-6 lg:mb-8 text-[12px] md:text-[18px] lg:text-[25px] font-[normal]"
+            className="text-white mb-5 md:mb-6 lg:mb-6 xl:mb-8 text-[12px] md:text-[18px] lg:text-[18px] xl:text-[25px] font-[normal]"
             style={{ fontFamily: "Inter" }}
           >
             <span className="font-semibold">INDUSTRY :</span> {project.about?.industry}
           </p>
           <p
-            className="text-white text-[12px] md:text-[18px] lg:text-[25px] font-normal"
+            className="text-white text-[12px] md:text-[18px] lg:text-[18px] xl:text-[25px] font-normal"
             style={{ fontFamily: "Inter" }}
           >
             <span className="font-semibold">Location :</span> {project.about?.location}
@@ -108,7 +108,7 @@ export default function Project({ project }: { project: any }) {
             <img
               src={project.about.image}
               alt="Project Image"
-              className="w-full max-h-[97px] md:max-h-[400px] lg:max-h-[677px] md:rounded-lg lg:rounded-xl object-cover"
+              className="w-full max-h-[97px] md:max-h-[400px] lg:max-h-[400px] xl:max-h-[677px] md:rounded-lg lg:rounded-lg xl:rounded-xl object-cover"
             />
           )}
         </div>
@@ -122,11 +122,11 @@ export default function Project({ project }: { project: any }) {
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
       >
-        <h2 className="text-[#1A97C7] text-[20px] md:text-[35px] lg:text-[50px] font-[700] mb-3 md:mb-0 lg:mb-0">
+        <h2 className="text-[#1A97C7] text-[20px] md:text-[32px] lg:text-[32px] xl:text-[45px] font-[700] mb-3 md:mb-0 lg:mb-0 xl:mb-0">
           Objective
         </h2>
         <p
-          className="text-white font-[400] text-[10px] md:text-[18px] lg:text-[25px] leading-relaxed lg:max-w-[753px] md:ml-10"
+          className="text-white font-[400] text-[10px] md:text-[18px] lg:text-[18px] xl:text-[25px] leading-relaxed xl:max-w-[753px] lg:max-w-[590px] md:ml-10 lg:ml-10"
           style={{ fontFamily: "Inter" }}
         >
           {project.objective?.description}
@@ -141,11 +141,11 @@ export default function Project({ project }: { project: any }) {
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
       >
-        <h2 className="text-[#1A97C7] text-[20px] md:text-[35px] lg:text-[50px] font-[700] mb-3 md:mb-0 lg:mb-0">
+        <h2 className="text-[#1A97C7] text-[20px] md:text-[32px] lg:text-[32px] xl:text-[45px] font-[700] mb-3 md:mb-0 lg:mb-0 xl:mb-0">
           User
         </h2>
         <p
-          className="text-white font-[400] text-[10px] md:text-[18px] lg:text-[25px] leading-relaxed lg:max-w-[753px] md:ml-15"
+          className="text-white font-[400] text-[10px] md:text-[18px] lg:text-[18px] xl:text-[25px] leading-relaxed lg:max-w-[753px] md:ml-15"
           style={{ fontFamily: "Inter" }}
         >
           {project.user?.description}
@@ -160,31 +160,31 @@ export default function Project({ project }: { project: any }) {
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
       >
-        <h2 className="text-[#1A97C7] text-[20px] md:text-[35px] lg:text-[50px] font-[700] mb-3 md:mb-0 lg:mb-0">
+        <h2 className="text-[#1A97C7] text-[20px] md:text-[32px] lg:text-[32px] xl:text-[45px] font-[700] mb-3 md:mb-0 lg:mb-0 xl:mb-0">
           Solutions
         </h2>
-        <div className="max-w-[793px]">
+        <div className="lg:max-w-[625px] xl:max-w-[793px]">
           <p
-            className="text-white font-[400] text-[10px] md:text-[18px] lg:text-[25px] leading-relaxed md:mb-6 lg:mb-8 mb-2 md:ml-10"
+            className="text-white font-[400] text-[10px] md:text-[18px] lg:text-[18px] xl:text-[25px] leading-relaxed md:mb-6 lg:mb-8 mb-2 md:ml-10"
             style={{ fontFamily: "Inter" }}
           >
             {project.solutions?.summary}
           </p>
 
           <ul
-            className="text-white font-[400] text-[10px] md:text-[18px] lg:text-[25px] md:space-y-4 lg:space-y-6 space-y-3 md:ml-10"
+            className="text-white font-[400] text-[10px] md:text-[18px] lg:text-[18px] xl:text-[25px] md:space-y-4 lg:space-y-4 xl:space-y-6 md:ml-10 lg:ml-10"
             style={{ fontFamily: "Inter" }}
           >
             {project.solutions?.features?.map((feature: string, index: number) => (
               <li key={index} className="flex items-start">
-                <span className="text-white mr-3 lg:ml-3 ml-2">•</span>
+                <span className="text-white mr-3 xl:ml-3 lg:ml-3 ml-2">•</span>
                 <span>{feature}</span>
               </li>
             ))}
           </ul>
 
           <p
-            className="text-white font-[400] text-[10px] md:text-[18px] lg:text-[25px] leading-relaxed md:mt-6 lg:mt-8 mt-2 md:ml-10"
+            className="text-white font-[400] text-[10px] md:text-[18px] lg:text-[18px] xl:text-[25px] leading-relaxed md:mt-6 lg:mt-8 mt-2 md:ml-10"
             style={{ fontFamily: "Inter" }}
           >
             {project.solutions?.conclusion}
@@ -201,7 +201,7 @@ export default function Project({ project }: { project: any }) {
               alt={project.gallery?.[0]?.alt || "Gallery image 1"}
               width={346}
               height={264}
-              className="object-cover rounded-md xl:w-[346px] xl:h-[264px] lg:w-[260px] lg:h-[220px] md:w-[210px] md:h-[160px] w-[94px] h-[89px]"
+              className="object-cover rounded-md xl:w-[346px] xl:h-[264px] lg:w-[346px] lg:h-[264px] md:w-[210px] md:h-[160px] w-[94px] h-[89px]"
             />
             <Image
               src={project.gallery?.[1]?.src || "/placeholder.png"}

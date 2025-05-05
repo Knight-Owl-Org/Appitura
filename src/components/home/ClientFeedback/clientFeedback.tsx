@@ -104,7 +104,7 @@ export default function TestimonialsSection() {
               className="shrink-0"
               style={{ flex: "0 0 auto", width: "406px" }}
             >
-              <div className="bg-white rounded-3xl pt-[64px] px-[27px] pb-[20px] text-black h-full flex flex-col justify-between">
+              <div className="bg-white rounded-3xl pt-[64px]   px-[27px] pb-[20px] text-black h-full flex flex-col justify-between">
                 <p className="text-[12px] text-left font-[500] mb-[28px]" style={{ fontFamily: "Inter" }}>
                   {feedback.text}
                 </p>
