@@ -3,29 +3,41 @@ const projects = [
     {
         "id": "01",
         "title": "Recipe Nook",
+        "portfolio": {
+          "description": "Recipe Nook is a simple, friendly app for saving and organizing your favorite home-cooked recipes. From family staples to creative experiments, you can add photos, notes, and ingredients all in one place. We believe every recipe has a story, and Recipe Nook helps you keep them close and easy to share.",
+        },
         "tagline": "Home for Your Recipes Where Every Dish Tells a Story",
         
         "about": {
           "industry": "Food & Beverage Technology",
           "location": "Sri Lanka",
-          "description": "Recipe Nook is a simple, friendly app for saving and organizing your favorite home-cooked recipes. From family staples to creative experiments, you can add photos, notes, and ingredients all in one place. We believe every recipe has a story, and Recipe Nook helps you keep them close and easy to share.",
+          "description": "Recipe Nook is a user friendly mobile app designed to help you store, organize, and view your favorite recipes in one place. Built with Flutter and powered by AWS, Recipe Nook allows you to upload recipes with images to S3, browse them on a sleek dashboard, and access detailed views with metadata from DynamoDB. Whether you're a home cook or a culinary enthusiast, Recipe Nook makes recipe management simple, intuitive, and delightful.",
           "image": "/projectBook.png"
         },
         "objective": {
-          "description": "Recipe Nook provides a cozy and intuitive space to store, organize, and revisit your favorite recipes. With features like photo uploads, personal notes, and a visual recipe dashboard, it enhances everyday cooking with a personalized touch."
+          "description": "Our goal is to empower food lovers to preserve and share their culinary creations effortlessly. Recipe Nook provides a seamless, cloud based platform where users can add recipes with photos, access them from anywhere, and celebrate their passion for cooking. Launched as an MVP in April 2025, Recipe Nook delivers a reliable experience with plans for future enhancements like recipe editing and user authentication."
         },
+
         "user": {
-          "description": "Designed for home cooks, food enthusiasts, and kitchen creatives. Recipe Nook helps users store cherished recipes, organize them visually, and relive the joy of cooking in a more intimate and accessible way."
-        },
-        "solutions": {
-          "summary": "Whether it's grandma’s legendary lasagna, your latest TikTok-inspired bake, or a quick weeknight stir-fry, this is the place where every recipe gets the spotlight it deserves.Built for cooks of all kinds, Recipe Nook helps you:",
+          "summary": "Recipe Nook is designed for:",
           "features": [
-            "Save and organize your favorite recipes with ease",
-            "Add photos and personal notes so your creations tell your story",
-            "Browse a beautiful dashboard of all your culinary adventures",
-            "Share your dishes with friends, family, or keep them just for you"
+            "Home cooks who want to save family recipes or experiment with new dishes.",
+            "Food enthusiasts eager to document and showcase their culinary creations",
+            "Busy individuals needing quick access to organized recipes on the go.",
+            "Aspiring chefs looking for a simple tool to store and refine their recipes."
           ],
-          "conclusion": "We believe cooking is more than just food — it's connection, creativity, and comfort. Recipe Nook is here to support you every step of the way, from planning to plating."
+          "conclusion": ""
+        },
+      
+        "solutions": {
+          "summary": "Recipe Nook addresses common recipe management challenges by offering:",
+          "features": [
+            "Easy Recipe Uploads: Add recipes with titles, ingredients, steps, and images in a few taps, securely stored in AWS S3.",
+            "Visual Dashboard: Browse all your recipes as beautiful cards with titles and images for quick selection.",
+            "Detailed Views: Access full recipe details, including ingredients, steps, and high-quality images, powered by AWS DynamoDB.",
+            "Cloud-Based Access: With AWS, your recipes are safe, accessible, and ready wherever you are."
+          ],
+          "conclusion": ""
         },
         "gallery": [
           { "src": "/recipeNookGallery1.png"},
@@ -42,6 +54,9 @@ const projects = [
     {
         "id": "02",
         "title": "Date Game",
+        "portfolio": {
+          description: "Recipe Nook is a simple, friendly app for saving and organizing your favorite home-cooked recipes. From family staples to creative experiments, you can add photos, notes, and ingredients all in one place. We believe every recipe has a story, and Recipe Nook helps you keep them close and easy to share.",
+        },
         "tagline": "",
         
         "about": {
@@ -69,6 +84,9 @@ const projects = [
     {
         "id": "03",
         "title": "Tailor my clothes",
+        "portfolio": {
+          description: "Recipe Nook is a simple, friendly app for saving and organizing your favorite home-cooked recipes. From family staples to creative experiments, you can add photos, notes, and ingredients all in one place. We believe every recipe has a story, and Recipe Nook helps you keep them close and easy to share.",
+        },
         "tagline": "",
         
         "about": {

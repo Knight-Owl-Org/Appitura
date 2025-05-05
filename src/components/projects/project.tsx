@@ -144,12 +144,26 @@ export default function Project({ project }: { project: any }) {
         <h2 className="text-[#1A97C7] text-[20px] md:text-[32px] lg:text-[32px] xl:text-[45px] font-[700] mb-3 md:mb-0 lg:mb-0 xl:mb-0">
           User
         </h2>
-        <p
-          className="text-white font-[400] text-[10px] md:text-[18px] lg:text-[18px] xl:text-[25px] leading-relaxed lg:max-w-[753px] md:ml-15"
-          style={{ fontFamily: "Inter" }}
-        >
-          {project.user?.description}
-        </p>
+        <div className="lg:max-w-[625px] xl:max-w-[793px]">
+          <p
+            className="text-white font-[400] text-[10px] md:text-[18px] lg:text-[18px] xl:text-[25px] leading-relaxed md:mb-6 lg:mb-8 mb-2 md:ml-10"
+            style={{ fontFamily: "Inter" }}
+          >
+            {project.user?.summary}
+          </p>
+
+          <ul
+            className="text-white font-[400] text-[10px] md:text-[18px] lg:text-[18px] xl:text-[25px] md:space-y-4 lg:space-y-4 xl:space-y-6 md:ml-10 lg:ml-10"
+            style={{ fontFamily: "Inter" }}
+          >
+            {project.user?.features?.map((feature: string, index: number) => (
+              <li key={index} className="flex items-start">
+                <span className="text-white mr-3 xl:ml-3 lg:ml-3 ml-2">•</span>
+                <span>{feature}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </motion.div>
 
       {/* Solutions Section */}

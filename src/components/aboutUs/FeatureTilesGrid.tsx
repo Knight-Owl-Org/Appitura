@@ -38,14 +38,18 @@ export default function FeatureGrid() {
         </div>
 
         {/* Tile 4 */}
-        <div className="rounded-lg overflow-hidden relative mb-4 w-[260px] md:w-[260px] lg:w-[260px] xl:w-[320px] h-[260px] md:h-[260px] lg:h-[260px] xl:h-[320px]">
-          <Image src="/FeatureTile3.png" alt="Build something background" fill className="object-cover" />
-          <div className="absolute inset-0 p-6 flex items-center justify-center">
-            <p className="text-black text-lg md:text-xl font-[400] text-center" style={{ fontFamily: "Inter" }}>
-              Let's build<br />something<br />amazing<br />together.
-            </p>
-          </div>
-        </div>
+<div className="rounded-lg overflow-hidden relative mb-4 w-[260px] md:w-[260px] lg:w-[260px] xl:w-[320px] h-[260px] md:h-[260px] lg:h-[260px] xl:h-[320px]">
+  <Image src="/FeatureTile3.png" alt="Build something background" fill className="object-cover" />
+  <div className="absolute inset-0 p-6 flex items-center justify-start">
+    <p
+      className="text-black text-lg md:text-xl font-[400] text-start"
+      style={{ fontFamily: "Inter", marginLeft: "35px" }}
+    >
+      Let's build<br />something<br />amazing<br />together.
+    </p>
+  </div>
+</div>
+
 
         {/* Tile 5 */}
         <div className="rounded-lg overflow-hidden relative mb-4 w-[260px] md:w-[260px] lg:w-[260px] xl:w-[320px] h-[260px] md:h-[260px] lg:h-[260px] xl:h-[320px]">

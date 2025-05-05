@@ -67,7 +67,9 @@ export default function PortfolioPage() {
 
                   {/* Right Section (Description + Links) */}
                   <div className="max-w-full lg:max-w-[430px] space-y-4 sm:space-y-6 mt-4 lg:mt-0 ">
-                    <p className={`text-sm sm:text-base md:text-[16px] ${inter.className}`}>{project.about.description}</p>
+                    {project.portfolio && (
+                      <p className={`text-sm sm:text-base md:text-[16px] ${inter.className}`}>{project.portfolio.description}</p>
+                    )}
                     <div className="flex items-center gap-4 -2">
   <Link
     href={`/projects/${project.id}`}
