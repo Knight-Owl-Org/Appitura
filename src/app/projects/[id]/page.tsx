@@ -1,17 +1,25 @@
+import { notFound } from "next/navigation";
 import projects from "@/data/projectData";
 import Project from "@/components/projects/project";
 
-export default function ProjectPage({ params }: { params: { id: string } }) {
+type ProjectPageProps = {
+  params: {
+    id: string;
+  };
+};
+
+export default function ProjectPage({ params }: ProjectPageProps) {
   const project = projects.find((p) => p.id === params.id);
 
   if (!project) {
-    return <div>Project not found. Please check the URL and try again.</div>;
+    notFound(); // this will trigger the built-in 404 page
   }
 
   return <Project project={project} />;
 }
 
-// Fix: Ensure the type of `params` matches the expected type for dynamic routes
 export async function generateStaticParams() {
-  return projects.map((project) => ({ id: project.id }));
+  return projects.map((project) => ({
+    id: project.id,
+  }));
 }
