@@ -1,11 +1,7 @@
 import projects from "@/data/projectData";
 import Project from "@/components/projects/project";
 
-export async function generateStaticParams() {
-  return projects.map((project) => ({ id: project.id }));
-}
-
-export default function ProjectPage({ params }: { params: Record<string, string> }) {
+export default function ProjectPage({ params }: { params: { id: string } }) {
   const project = projects.find((p) => p.id === params.id);
 
   if (!project) {
@@ -13,4 +9,9 @@ export default function ProjectPage({ params }: { params: Record<string, string>
   }
 
   return <Project project={project} />;
+}
+
+// Fix: Ensure the type of `params` matches the expected type for dynamic routes
+export async function generateStaticParams() {
+  return projects.map((project) => ({ id: project.id }));
 }
