@@ -21,7 +21,7 @@ export default function Home() {
             {/* Video Container */}
             <div className="md:rounded-3xl overflow-hidden h-full relative">
               {/* Video */}
-              <video autoPlay muted loop className="w-full h-full object-cover">
+              <video autoPlay muted loop controls={false} className="w-full h-full object-cover">
                 <source src="/home.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
