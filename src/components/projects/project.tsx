@@ -51,11 +51,11 @@ export default function Project({ project }: { project: any }) {
 
         {/* Main Content */}
         <div className="flex-grow flex flex-col items-center justify-center text-center">
-          <h1 className="text-[20px] md:text-[40px] lg:text-[40px] xl:text-[50px] font-[700] text-[#1A97C7] md:mb-15 lg:mb-15 xl:mb-20 mb-[31px]">
+          <h1 className="text-[20px] md:text-[25px] lg:text-[35px] xl:text-[50px] font-[700] text-[#1A97C7] md:mb-10 lg:mb-15 xl:mb-20 mb-[31px]">
             {project.title}
           </h1>
           <p
-            className="text-[12px] md:text-[18px] lg:text-[18px] xl:text-[25px] font-semibold"
+            className="text-[12px] md:text-[14px] lg:text-[16px] xl:text-[25px] font-semibold"
             style={{
               fontFamily: "Inter",
               background: "linear-gradient(to right, #1A97C7 50%, #FFFFFF )",
@@ -77,11 +77,11 @@ export default function Project({ project }: { project: any }) {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          <h2 className="text-[#1A97C7] mb-2 text-[20px] md:text-[32px] lg:text-[32px] xl:text-[45px] font-bold">
+          <h2 className="text-[#1A97C7] mb-2 text-[20px] md:text-[24px] lg:text-[30px] xl:text-[45px] font-bold">
             About
           </h2>
           <p
-            className="text-white text-[10px] md:text-[18px] lg:text-[18px] xl:text-[25px] leading-relaxed max-w-full lg:max-w-[600px] xl:max-w-[753px] font-[400]"
+            className="text-white text-[10px] md:text-[13px] lg:text-[17px] xl:text-[25px] leading-relaxed max-w-full md:max-w-[400px] lg:max-w-[600px] xl:max-w-[753px] font-[400]"
             style={{ fontFamily: "Inter" }}
           >
             {project.about?.description}
@@ -90,13 +90,13 @@ export default function Project({ project }: { project: any }) {
 
         <div className="w-full md:mb-3 lg:mb-4">
           <p
-            className="text-white mb-5 md:mb-6 lg:mb-6 xl:mb-8 text-[12px] md:text-[18px] lg:text-[18px] xl:text-[25px] font-[normal]"
+            className="text-white mb-5 md:mb-5 lg:mb-6 xl:mb-8 text-[12px] md:text-[14px] lg:text-[18px] xl:text-[25px] font-[normal]"
             style={{ fontFamily: "Inter" }}
           >
             <span className="font-semibold">INDUSTRY :</span> {project.about?.industry}
           </p>
           <p
-            className="text-white text-[12px] md:text-[18px] lg:text-[18px] xl:text-[25px] font-normal"
+            className="text-white text-[12px] md:text-[14px] lg:text-[18px] xl:text-[25px] font-normal"
             style={{ fontFamily: "Inter" }}
           >
             <span className="font-semibold">Location :</span> {project.about?.location}
@@ -122,11 +122,11 @@ export default function Project({ project }: { project: any }) {
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
       >
-        <h2 className="text-[#1A97C7] text-[20px] md:text-[32px] lg:text-[32px] xl:text-[45px] font-[700] mb-3 md:mb-0 lg:mb-0 xl:mb-0">
+        <h2 className="text-[#1A97C7] text-[20px] md:text-[24px] lg:text-[30px] xl:text-[45px] font-[700] mb-3 md:mb-2 lg:mb-0 xl:mb-0">
           Objective
         </h2>
         <p
-          className="text-white font-[400] text-[10px] md:text-[18px] lg:text-[18px] xl:text-[25px] leading-relaxed xl:max-w-[753px] lg:max-w-[590px] md:ml-10 lg:ml-10"
+          className="text-white font-[400] text-[10px] md:text-[13px] lg:text-[17px] xl:text-[25px] leading-relaxed md:max-w-[400px] xl:max-w-[753px] lg:max-w-[555px] md:ml-10 lg:ml-10"
           style={{ fontFamily: "Inter" }}
         >
           {project.objective?.description}
@@ -141,19 +141,18 @@ export default function Project({ project }: { project: any }) {
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
       >
-        <h2 className="text-[#1A97C7] text-[20px] md:text-[32px] lg:text-[32px] xl:text-[45px] font-[700] mb-3 md:mb-0 lg:mb-0 xl:mb-0">
+        <h2 className="text-[#1A97C7] text-[20px] md:text-[24px] lg:text-[30px] xl:text-[45px] font-[700] mb-3 md:mb-2 lg:mb-0 xl:mb-0">
           User
         </h2>
-        <div className="lg:max-w-[625px] xl:max-w-[793px]">
+        <div className="xl:max-w-[793px] lg:max-w-[590px] md:max-w-[435px]">
           <p
-            className="text-white font-[400] text-[10px] md:text-[18px] lg:text-[18px] xl:text-[25px] leading-relaxed md:mb-6 lg:mb-8 mb-2 md:ml-10"
+            className="text-white font-[400] text-[10px] md:text-[13px] lg:text-[17px] xl:text-[25px] leading-relaxed md:mb-5 lg:mb-8 mb-2 md:ml-10"
             style={{ fontFamily: "Inter" }}
           >
             {project.user?.summary}
           </p>
-
           <ul
-            className="text-white font-[400] text-[10px] md:text-[18px] lg:text-[18px] xl:text-[25px] md:space-y-4 lg:space-y-4 xl:space-y-6 md:ml-10 lg:ml-10"
+            className="text-white font-[400] text-[10px] md:text-[13px] lg:text-[17px] xl:text-[25px] md:space-y-3 lg:space-y-4 xl:space-y-6 md:ml-10 lg:ml-10"
             style={{ fontFamily: "Inter" }}
           >
             {project.user?.features?.map((feature: string, index: number) => (
@@ -174,19 +173,18 @@ export default function Project({ project }: { project: any }) {
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
       >
-        <h2 className="text-[#1A97C7] text-[20px] md:text-[32px] lg:text-[32px] xl:text-[45px] font-[700] mb-3 md:mb-0 lg:mb-0 xl:mb-0">
+        <h2 className="text-[#1A97C7] text-[20px] md:text-[24px] lg:text-[30px] xl:text-[45px] font-[700] mb-3 md:mb-2 lg:mb-0 xl:mb-0">
           Solutions
         </h2>
-        <div className="lg:max-w-[625px] xl:max-w-[793px]">
+        <div className=" lg:max-w-[590px] xl:max-w-[793px] md:max-w-[435px]">
           <p
-            className="text-white font-[400] text-[10px] md:text-[18px] lg:text-[18px] xl:text-[25px] leading-relaxed md:mb-6 lg:mb-8 mb-2 md:ml-10"
+            className="text-white font-[400] text-[10px] md:text-[13px] lg:text-[17px] xl:text-[25px] leading-relaxed md:mb-5 lg:mb-8 mb-2 md:ml-10"
             style={{ fontFamily: "Inter" }}
           >
             {project.solutions?.summary}
           </p>
-
           <ul
-            className="text-white font-[400] text-[10px] md:text-[18px] lg:text-[18px] xl:text-[25px] md:space-y-4 lg:space-y-4 xl:space-y-6 md:ml-10 lg:ml-10"
+            className="text-white font-[400] text-[10px] md:text-[13px] lg:text-[17px] xl:text-[25px] md:space-y-3 lg:space-y-4 xl:space-y-6 md:ml-10 lg:ml-10"
             style={{ fontFamily: "Inter" }}
           >
             {project.solutions?.features?.map((feature: string, index: number) => (
@@ -196,7 +194,6 @@ export default function Project({ project }: { project: any }) {
               </li>
             ))}
           </ul>
-
           <p
             className="text-white font-[400] text-[10px] md:text-[18px] lg:text-[18px] xl:text-[25px] leading-relaxed md:mt-6 lg:mt-8 mt-2 md:ml-10"
             style={{ fontFamily: "Inter" }}
@@ -215,21 +212,21 @@ export default function Project({ project }: { project: any }) {
               alt={project.gallery?.[0]?.alt || "Gallery image 1"}
               width={346}
               height={264}
-              className="object-cover rounded-md xl:w-[346px] xl:h-[264px] lg:w-[346px] lg:h-[264px] md:w-[210px] md:h-[160px] w-[94px] h-[89px]"
+              className="object-cover rounded-md xl:w-[346px] xl:h-[264px] lg:w-[300px] lg:h-[230px] md:w-[210px] md:h-[160px] w-[94px] h-[89px]"
             />
             <Image
               src={project.gallery?.[1]?.src || "/placeholder.png"}
               alt={project.gallery?.[1]?.alt || "Gallery image 2"}
               width={226}
               height={346}
-              className="object-cover rounded-md self-end xl:w-[226px] xl:h-[346px] lg:w-[190px] lg:h-[270px] md:w-[130px] md:h-[200px] w-[61px] h-[116px]"
+              className="object-cover rounded-md self-end xl:w-[226px] xl:h-[346px] lg:w-[180px] lg:h-[290px] md:w-[130px] md:h-[200px] w-[61px] h-[116px]"
             />
             <Image
               src={project.gallery?.[2]?.src || "/placeholder.png"}
               alt={project.gallery?.[2]?.alt || "Gallery image 3"}
               width={639}
               height={346}
-              className="object-cover rounded-md self-end xl:w-[639px] xl:h-[346px] lg:w-[450px] lg:h-[270px] md:w-[300px] md:h-[200px] w-[175px] h-[116px]"
+              className="object-cover rounded-md self-end xl:w-[639px] xl:h-[346px] lg:w-[500px] lg:h-[290px] md:w-[300px] md:h-[200px] w-[175px] h-[116px]"
             />
           </div>
 
@@ -239,28 +236,28 @@ export default function Project({ project }: { project: any }) {
               alt={project.gallery?.[3]?.alt || "Gallery image 4"}
               width={226}
               height={455}
-              className="object-cover rounded-md xl:w-[226px] xl:h-[455px] lg:w-[180px] lg:h-[350px] md:w-[130px] md:h-[250px] w-[62px] h-[153px]"
+              className="object-cover rounded-md xl:w-[226px] xl:h-[455px] lg:w-[190px] lg:h-[380px] md:w-[130px] md:h-[250px] w-[62px] h-[153px]"
             />
             <Image
               src={project.gallery?.[4]?.src || "/placeholder.png"}
               alt={project.gallery?.[4]?.alt || "Gallery image 5"}
               width={346}
               height={374}
-              className="object-cover rounded-md self-end xl:w-[346px] xl:h-[374px] lg:w-[280px] lg:h-[300px] md:w-[190px] md:h-[220px] w-[94px] h-[126px]"
+              className="object-cover rounded-md self-end xl:w-[346px] xl:h-[374px] lg:w-[300px] lg:h-[320px] md:w-[190px] md:h-[220px] w-[94px] h-[126px]"
             />
             <Image
               src={project.gallery?.[5]?.src || "/placeholder.png"}
               alt={project.gallery?.[5]?.alt || "Gallery image 6"}
               width={244}
               height={374}
-              className="object-cover rounded-md self-end xl:w-[244px] xl:h-[374px] lg:w-[180px] lg:h-[300px] md:w-[140px] md:h-[220px] w-[66px] h-[126px]"
+              className="object-cover rounded-md self-end xl:w-[244px] xl:h-[374px] lg:w-[200px] lg:h-[320px] md:w-[140px] md:h-[220px] w-[66px] h-[126px]"
             />
             <Image
               src={project.gallery?.[6]?.src || "/placeholder.png"}
               alt={project.gallery?.[6]?.alt || "Gallery image 7"}
               width={346}
               height={374}
-              className="object-cover rounded-md self-end xl:w-[346px] xl:h-[374px] lg:w-[280px] lg:h-[300px] md:w-[190px] md:h-[220px] w-[94px] h-[126px]"
+              className="object-cover rounded-md self-end xl:w-[346px] xl:h-[374px] lg:w-[300px] lg:h-[320px] md:w-[190px] md:h-[220px] w-[94px] h-[126px]"
             />
           </div>
         </div>
