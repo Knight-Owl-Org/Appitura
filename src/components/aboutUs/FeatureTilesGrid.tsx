@@ -58,7 +58,7 @@ export default function FeatureGrid() {
           <Image src="/FeatureTile1.png" alt="Customers background" fill className="object-cover" />
           <div className="absolute inset-0 p-4 flex flex-col justify-center items-center">
             <div>
-              <h2 className="text-5xl md:text-6xl font-[700] text-black" style={{ fontFamily: "Inter" }}>50</h2>
+              <h2 className="text-5xl md:text-6xl font-[700] text-black" style={{ fontFamily: "Inter" }}>10</h2>
               <p className="text-black text-md md:text-sm lg:text-lg font-[400] text-center" style={{ fontFamily: "Inter" }}>Satisfied<br />Customers</p>
             </div>
             <div className="absolute bottom-2 right-4">
