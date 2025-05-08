@@ -51,11 +51,11 @@ export default function Project({ project }: { project: any }) {
 
         {/* Main Content */}
         <div className="flex-grow flex flex-col items-center justify-center text-center">
-          <h1 className="text-[20px] md:text-[25px] lg:text-[35px] xl:text-[50px] font-[700] text-[#1A97C7] md:mb-10 lg:mb-15 xl:mb-20 mb-[31px]">
+          <h1 className="text-[20px] md:text-[30px] lg:text-[45px] xl:text-[55px] font-[700] text-[#1A97C7] md:mb-10 lg:mb-15 xl:mb-20 mb-[31px]">
             {project.title}
           </h1>
           <p
-            className="text-[12px] md:text-[14px] lg:text-[16px] xl:text-[25px] font-semibold"
+            className="text-[12px] md:text-[18px] lg:text-[25px] xl:text-[30px] font-semibold"
             style={{
               fontFamily: "Inter",
               background: "linear-gradient(to right, #1A97C7 50%, #FFFFFF )",
@@ -69,7 +69,7 @@ export default function Project({ project }: { project: any }) {
       </div>
 
       {/* About Section */}
-      <div className="px-4 md:px-[60px] lg:px-[91px] md:py-12 lg:py-20 flex flex-col md:gap-6 lg:gap-8 gap-5">
+      <div className="px-4 md:px-[60px] lg:px-[91px] md:py-12 lg:py-15 xl:py-20 flex flex-col md:gap-6 lg:gap-8 gap-5">
         <motion.div
           className="flex flex-col md:flex-row lg:flex-row justify-between md:gap-[60px] lg:gap-[100px] mb-10 md:mb-16 lg:mb-20"
           variants={fadeInUp}
@@ -81,7 +81,7 @@ export default function Project({ project }: { project: any }) {
             About
           </h2>
           <p
-            className="text-white text-[10px] md:text-[13px] lg:text-[17px] xl:text-[25px] leading-relaxed max-w-full md:max-w-[400px] lg:max-w-[600px] xl:max-w-[753px] font-[400]"
+            className="text-white text-[10px] md:text-[11px] lg:text-[16px] xl:text-[20px] leading-relaxed max-w-full md:max-w-[400px] lg:max-w-[600px] xl:max-w-[753px] font-[400]"
             style={{ fontFamily: "Inter" }}
           >
             {project.about?.description}
@@ -126,7 +126,7 @@ export default function Project({ project }: { project: any }) {
           Objective
         </h2>
         <p
-          className="text-white font-[400] text-[10px] md:text-[13px] lg:text-[17px] xl:text-[25px] leading-relaxed md:max-w-[400px] xl:max-w-[753px] lg:max-w-[555px] md:ml-10 lg:ml-10"
+          className="text-white font-[400] text-[10px] md:text-[11px] lg:text-[16px] xl:text-[20px] leading-relaxed md:max-w-[400px] xl:max-w-[753px] lg:max-w-[555px] md:ml-10 lg:ml-10"
           style={{ fontFamily: "Inter" }}
         >
           {project.objective?.description}
@@ -146,13 +146,13 @@ export default function Project({ project }: { project: any }) {
         </h2>
         <div className="xl:max-w-[793px] lg:max-w-[590px] md:max-w-[435px]">
           <p
-            className="text-white font-[400] text-[10px] md:text-[13px] lg:text-[17px] xl:text-[25px] leading-relaxed md:mb-5 lg:mb-8 mb-2 md:ml-10"
+            className="text-white font-[400] text-[10px] md:text-[11px] lg:text-[16px] xl:text-[20px] leading-relaxed md:mb-5 lg:mb-8 mb-2 md:ml-10"
             style={{ fontFamily: "Inter" }}
           >
             {project.user?.summary}
           </p>
           <ul
-            className="text-white font-[400] text-[10px] md:text-[13px] lg:text-[17px] xl:text-[25px] md:space-y-3 lg:space-y-4 xl:space-y-6 md:ml-10 lg:ml-10"
+            className="text-white font-[400] text-[10px] md:text-[11px] lg:text-[16px] xl:text-[20px]  md:ml-10 lg:ml-10"
             style={{ fontFamily: "Inter" }}
           >
             {project.user?.features?.map((feature: string, index: number) => (
@@ -178,13 +178,13 @@ export default function Project({ project }: { project: any }) {
         </h2>
         <div className=" lg:max-w-[590px] xl:max-w-[793px] md:max-w-[435px]">
           <p
-            className="text-white font-[400] text-[10px] md:text-[13px] lg:text-[17px] xl:text-[25px] leading-relaxed md:mb-5 lg:mb-8 mb-2 md:ml-10"
+            className="text-white font-[400] text-[10px] md:text-[11px] lg:text-[16px] xl:text-[20px] leading-relaxed md:mb-5 lg:mb-8 mb-2 md:ml-10"
             style={{ fontFamily: "Inter" }}
           >
             {project.solutions?.summary}
           </p>
           <ul
-            className="text-white font-[400] text-[10px] md:text-[13px] lg:text-[17px] xl:text-[25px] md:space-y-3 lg:space-y-4 xl:space-y-6 md:ml-10 lg:ml-10"
+            className="text-white font-[400] text-[10px] md:text-[11px] lg:text-[16px] xl:text-[20px] md:space-y-1 lg:space-y-2 xl:space-y-3 md:ml-10 lg:ml-10"
             style={{ fontFamily: "Inter" }}
           >
             {project.solutions?.features?.map((feature: string, index: number) => (
@@ -195,7 +195,7 @@ export default function Project({ project }: { project: any }) {
             ))}
           </ul>
           <p
-            className="text-white font-[400] text-[10px] md:text-[18px] lg:text-[18px] xl:text-[25px] leading-relaxed md:mt-6 lg:mt-8 mt-2 md:ml-10"
+            className="text-white font-[400] text-[10px] md:text-[11px] lg:text-[16px] xl:text-[20px] leading-relaxed md:mt-6 lg:mt-8 mt-2 md:ml-10"
             style={{ fontFamily: "Inter" }}
           >
             {project.solutions?.conclusion}
