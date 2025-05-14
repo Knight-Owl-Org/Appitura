@@ -10,7 +10,7 @@ export default function Home() {
     <div className="">
       <LandingPage />
       <About />
-      <ClientFeedback />
+      {/*<ClientFeedback />*/}
       <BuildWithUs />
       <ContactUs />
     </div>

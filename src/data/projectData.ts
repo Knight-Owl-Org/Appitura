@@ -51,68 +51,7 @@ const projects = [
 
         "website": "https://recipenook.com",
     },
-    {
-        "id": "02",
-        "title": "Date Game",
-        "portfolio": {
-          description: "Recipe Nook is a simple, friendly app for saving and organizing your favorite home-cooked recipes. From family staples to creative experiments, you can add photos, notes, and ingredients all in one place. We believe every recipe has a story, and Recipe Nook helps you keep them close and easy to share.",
-        },
-        "tagline": "",
-        
-        "about": {
-          "industry": "",
-          "location": "",
-          "description": "Recipe Nook is a simple, friendly app for saving and organizing your favorite home-cooked recipes. From family staples to creative experiments, you can add photos, notes, and ingredients all in one place. We believe every recipe has a story, and Recipe Nook helps you keep them close and easy to share.",
-          "image": ""
-        },
-        "objective": {
-          "description": ""
-        },
-        "user": {
-          "description": ""
-        },
-        "solutions": {
-          "summary": "",
-          "features": [
-            
-          ],
-          "conclusion": ""
-        },
-        "gallery": [],
-        "website": "https://recipenook.com",
-    },
-    {
-        "id": "03",
-        "title": "Tailor my clothes",
-        "portfolio": {
-          description: "Recipe Nook is a simple, friendly app for saving and organizing your favorite home-cooked recipes. From family staples to creative experiments, you can add photos, notes, and ingredients all in one place. We believe every recipe has a story, and Recipe Nook helps you keep them close and easy to share.",
-        },
-        "tagline": "",
-        
-        "about": {
-          "industry": "",
-          "location": "",
-          "description": "Recipe Nook is a simple, friendly app for saving and organizing your favorite home-cooked recipes. From family staples to creative experiments, you can add photos, notes, and ingredients all in one place. We believe every recipe has a story, and Recipe Nook helps you keep them close and easy to share.",
-          "image": ""
-        },
-        "objective": {
-          "description": ""
-        },
-        "user": {
-          "description": ""
-        },
-        "solutions": {
-          "summary": "Tailor My Clothes simplifies the tailoring process for modern users.",
-          "features": [
-            "Schedule fittings and manage alterations",
-            "Upload designs and get quotes",
-            "Track progress and updates"
-          ],
-          "conclusion": "Tailor My Clothes brings convenience and personalization to the tailoring experience."
-        },
-        "gallery": [],
-        "website": "https://recipenook.com",
-    },
+    
   ];
   
   export default projects;
